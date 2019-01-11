@@ -1,0 +1,24 @@
+﻿# Tiled2Unity generated file. Do not modify by hand.
+# Wavefront file for 'Primer-Piso_mesh_0010.obj'
+
+# Vertices (Count = 4)
+v -6 -19 0
+v -7 -19 0
+v -7 -18 0
+v -6 -18 0
+
+# Texture cooridinates (Count = 4)
+vt 0.28125 0.125
+vt 0.3125 0.125
+vt 0.3125 0.1875
+vt 0.28125 0.1875
+
+# Normal
+vn 0 0 -1
+
+# Mesh description
+g Primer-Piso_mesh_0010
+
+# Faces
+f 1/1/1 2/2/1 3/3/1 4/4/1
+

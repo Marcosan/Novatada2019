@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Area
+  - Interact
+  - NPC
+  - Points
+  - Action
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Enemy
+  - Interact
+  - 
+  - 
+  - 
+  - Point
+  - 
+  - Map
+  - 
+  - JoyStick
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 4058428705
+    locked: 0
+  - name: Player
+    uniqueID: 1366375491
+    locked: 0
+  - name: Alert
+    uniqueID: 3123397421
+    locked: 0
+  - name: DialogueBox
+    uniqueID: 2117152111
+    locked: 0
+  - name: TouchPad
+    uniqueID: 3316650357
+    locked: 0
