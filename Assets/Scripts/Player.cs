@@ -14,6 +14,7 @@ public class Player : MonoBehaviour{
 
     CircleCollider2D actionCollider;
     CircleCollider2D interCollider;
+
     bool interacting = false;
     private bool isActionButton = false;
 

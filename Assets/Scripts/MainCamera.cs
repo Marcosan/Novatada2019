@@ -9,6 +9,8 @@ public class MainCamera : MonoBehaviour{
 
     float posX, posY;
     Vector2 velocity;
+
+    private bool isCameraControlling = true;
     //float smoothTime = 0.5f;
 
     void Awake(){
@@ -57,5 +59,13 @@ public class MainCamera : MonoBehaviour{
             transform.position.z
         );
         
+    }
+
+    public bool getisCameraControlling() {
+        return this.isCameraControlling;
+    }
+
+    public void setIsCameraControlling(bool control) {
+        this.isCameraControlling = control;
     }
 }

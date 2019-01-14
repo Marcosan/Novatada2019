@@ -9,6 +9,7 @@ TagManager:
   - NPC
   - Points
   - Action
+  - Zoom
   layers:
   - Default
   - TransparentFX
@@ -51,6 +52,9 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 1366375491
+    locked: 0
+  - name: Ceilings
+    uniqueID: 1439248121
     locked: 0
   - name: Alert
     uniqueID: 3123397421
