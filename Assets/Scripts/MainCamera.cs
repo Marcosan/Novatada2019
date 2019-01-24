@@ -14,7 +14,9 @@ public class MainCamera : MonoBehaviour{
     //float smoothTime = 0.5f;
 
     void Awake(){
+        //("magazine/ammo") Child of magazine
         target = GameObject.FindGameObjectWithTag("Player").transform;
+
     }
 
     private void Start(){
