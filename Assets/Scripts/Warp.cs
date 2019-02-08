@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Assertions;
 
 public class Warp : MonoBehaviour{
@@ -21,6 +22,7 @@ public class Warp : MonoBehaviour{
     // Transición de 1 segundo
     float fadeTime = 1f;
 
+    Text tittleMiniMap;
 
     GameObject area;
 
@@ -55,6 +57,9 @@ public class Warp : MonoBehaviour{
 
             StartCoroutine(area.GetComponent<Area>().ShowArea(targetMap.name));
 
+            SingletonVars.Instance.nameCurrentMap = targetMap.name;
+            tittleMiniMap = GameObject.Find("/Area/MiniMap/TitleMap/TitleText").transform.GetComponent<Text>();
+            tittleMiniMap.text = SingletonVars.Instance.SetNameCurrentMap(targetMap.name);
             // Actualizamos la cámara
             Camera.main.GetComponent<MainCamera>().SetBound(targetMap);
         }

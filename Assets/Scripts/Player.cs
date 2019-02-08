@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour{
     Vector2 mov;
@@ -20,6 +21,8 @@ public class Player : MonoBehaviour{
 
     float offsetCeilingX = 0;
     float offsetCeilingY = 0;
+
+    Text tittleMiniMap;
 
     //Joistick
     public Joystick joystick;
@@ -41,6 +44,10 @@ public class Player : MonoBehaviour{
 
         actionCollider.enabled = false;
 
+        //Para cambiar el titulo del minimapa
+        SingletonVars.Instance.nameCurrentMap = initialMap.name;
+        tittleMiniMap = GameObject.Find("/Area/MiniMap/TitleMap/TitleText").transform.GetComponent<Text>();
+        tittleMiniMap.text = SingletonVars.Instance.SetNameCurrentMap(initialMap.name);
         //MainCamera es el script, se llama a la funcion SetBound creada allí, se pasa el mapa inicial
         Camera.main.GetComponent<MainCamera>().SetBound(initialMap);
         
