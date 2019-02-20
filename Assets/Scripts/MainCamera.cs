@@ -11,29 +11,32 @@ public class MainCamera : MonoBehaviour{
     Vector2 velocity;
 
     private bool isCameraControlling = true;
-    //float smoothTime = 0.5f;
+
+    // Para controlar si empieza o no la transición
+    bool start = true;
+    // Opacidad inicial del cuadrado de transición
+    float alpha = 1;
+    // Transición de 1 segundo
+    float fadeTime = 1f;
+    GameObject area;
 
     void Awake(){
-        //("magazine/ammo") Child of magazine
         target = GameObject.FindGameObjectWithTag("Player").transform;
-
+        area = GameObject.FindGameObjectWithTag("Area");
+        transform.position = new Vector3(
+            Mathf.Clamp(target.position.x, tLX, bRX),
+            Mathf.Clamp(target.position.y, bRY, tLY),
+            transform.position.z);
+        Debug.Log(transform.position);
+        Debug.Log(target.position);
     }
 
     private void Start(){
         //Screen.SetResolution(800, 800, true);
+        StartCoroutine(StartFade());
     }
 
-    // Update is called once per frame
-    void Update(){
-        //print(transform.position.y + ", " + target.position.y);
-        //Para dar un efecto suavisado a la camara
-        /*posX = Mathf.Round(
-            Mathf.SmoothDamp(transform.position.x, target.position.x, ref velocity.x, smoothTime) * 1000) / 1000;
-        posY = Mathf.Round(
-            Mathf.SmoothDamp(transform.position.y, target.position.y, ref velocity.y, smoothTime) * 1000) / 1000;
-            */
-        //Mathf.Clamp limitala posicion de target, como minimo tLX (superior izquierda) y maximo bRX (inferior derecha)
-        //z no se le pone target porque debe estar a la misma profundidad actual, no al del player
+    void LateUpdate(){
         transform.position = new Vector3(
             Mathf.Clamp(target.position.x, tLX, bRX),
             Mathf.Clamp(target.position.y, bRY, tLY),
@@ -63,6 +66,38 @@ public class MainCamera : MonoBehaviour{
         
     }
 
+    IEnumerator StartFade() {
+        target.GetComponent<Animator>().enabled = false;
+        target.GetComponent<Player>().enabled = false;
+
+        yield return new WaitForSeconds(fadeTime);
+
+        target.GetComponent<Animator>().enabled = true;
+        target.GetComponent<Player>().enabled = true;
+
+        StartCoroutine(area.GetComponent<Area>().ShowArea("Temporal"));
+    }
+
+    // Dibujaremos un cuadrado con opacidad encima de la pantalla simulando una transición
+    void OnGUI(){
+        GUI.color = new Color(GUI.color.r, GUI.color.g, GUI.color.b, alpha);
+
+        // Creamos una textura temporal para rellenar la pantalla
+        Texture2D tex;
+        tex = new Texture2D(1, 1);
+        tex.SetPixel(0, 0, Color.black);
+        tex.Apply();
+
+        // Dibujamos la textura sobre toda la pantalla
+        GUI.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), tex);
+
+        // Le restamos opacidad
+        alpha = Mathf.Lerp(alpha, -0.1f, fadeTime * Time.deltaTime);
+        // Si la opacidad llega a 0 desactivamos la transición
+        if (alpha < 0) start = false;
+
+    }
+    
     public bool getisCameraControlling() {
         return this.isCameraControlling;
     }

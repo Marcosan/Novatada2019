@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Assertions;
 
-public class Warp : MonoBehaviour{
+public class WarpScenes : MonoBehaviour{
     //Para almacenar el punto de destino
     public GameObject target;
 
