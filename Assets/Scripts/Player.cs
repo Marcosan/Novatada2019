@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour{
     Vector2 mov;
+    Vector2 lastMov;
     Rigidbody2D rb2d;
     public float speed = 4f;
     Animator anim;
@@ -64,7 +65,7 @@ public class Player : MonoBehaviour{
         //Movements();
         MoveMentsJoyStick();
 
-        Animations();
+        Animations(mov);
 
         Interact();
     }
@@ -74,9 +75,12 @@ public class Player : MonoBehaviour{
     }
 
     void MoveMentsJoyStick() {
-        if((joystick.Horizontal > .2f || joystick.Horizontal < -.2f) ||
-            (joystick.Vertical > .2f || joystick.Vertical< -.2f))
+        if ((joystick.Horizontal > .2f || joystick.Horizontal < -.2f) ||
+            (joystick.Vertical > .2f || joystick.Vertical < -.2f))
+        {
             mov = new Vector2(joystick.Horizontal, joystick.Vertical);
+            lastMov = new Vector2(joystick.Horizontal, joystick.Vertical);
+        }
         else
             mov = Vector2.zero;
     }
@@ -86,11 +90,12 @@ public class Player : MonoBehaviour{
         mov = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
     }
 
-    void Animations(){
+    void Animations(Vector2 direction)
+    {
         //Para dejar el la direccion a la que camine
-        if (mov != Vector2.zero){ //Si el vector de movimiento es distinto de cero
-            anim.SetFloat("moveX", mov.x);
-            anim.SetFloat("moveY", mov.y);
+        if (direction != Vector2.zero){ //Si el vector de movimiento es distinto de cero
+            anim.SetFloat("moveX", direction.x);
+            anim.SetFloat("moveY", direction.y);
             anim.SetBool("walking", true);
         } else{
             anim.SetBool("walking", false);
@@ -122,6 +127,16 @@ public class Player : MonoBehaviour{
         return this.mov;
     }
 
+    public Vector2 getLastMov()
+    {
+        return this.lastMov;
+    }
+
+    public Animator getAnimator()
+    {
+        return this.anim;
+    }
+
     public void setMov(Vector2 m) {
         this.mov = m;
     }
@@ -132,5 +147,37 @@ public class Player : MonoBehaviour{
 
     void MoveCharacter(){
         rb2d.MovePosition(rb2d.position + getMov() * speed * Time.deltaTime);
+    }
+
+    public void setPosition(float posX, float posY, float posZ) {
+
+        Vector3 positionPlayer;
+        positionPlayer.x = posX;
+        positionPlayer.y = posY;
+        positionPlayer.z = posZ;
+
+        this.transform.position = positionPlayer;
+    }
+
+    public void setPlayerDirection(Vector2 dir) {
+        if (dir != Vector2.zero)
+        {
+            anim.SetFloat("moveX", dir.x);
+            anim.SetFloat("moveY", dir.y);
+        }
+
+    }
+
+    public void SavePlayer() {
+        SaveSystem.savePlayer(this);
+    }
+
+    public void LoadPlayer() {
+        PlayerData data = SaveSystem.LoadPlayer();
+
+        setPosition(data.GetX(), data.GetY(), data.GetZ());
+
+        setPlayerDirection(data.GetMovement());
+        
     }
 }
