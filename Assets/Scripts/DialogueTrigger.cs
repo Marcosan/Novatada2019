@@ -22,12 +22,11 @@ public class DialogueTrigger : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D col) {
         // Si es un ataque
         if (col.tag == "Action") {
-            print("Boton de accion a " + col.gameObject.name);
+            //print("Boton de accion a " + col.gameObject.name);
             FindObjectOfType<DialogueManager>().StartDialogue(dialogue, npcPosition);
         }
 
         if (col.tag == "Interact") {
-            print("Interactuo con " + col.gameObject.name);
             interCollider.enabled = true;
         }
 

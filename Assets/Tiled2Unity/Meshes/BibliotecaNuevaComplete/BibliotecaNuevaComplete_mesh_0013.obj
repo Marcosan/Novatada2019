@@ -1,0 +1,44 @@
+﻿# Tiled2Unity generated file. Do not modify by hand.
+# Wavefront file for 'BibliotecaNuevaComplete_mesh_0013.obj'
+
+# Vertices (Count = 16)
+v -52 -6 0
+v -53 -6 0
+v -53 -5 0
+v -52 -5 0
+v -53 -6 0
+v -54 -6 0
+v -54 -5 0
+v -53 -5 0
+v -52 -7 0
+v -53 -7 0
+v -53 -6 0
+v -52 -6 0
+v -53 -7 0
+v -54 -7 0
+v -54 -6 0
+v -53 -6 0
+
+# Texture cooridinates (Count = 9)
+vt 0.6363636 0.1875
+vt 0.6666667 0.1875
+vt 0.6666667 0.21875
+vt 0.6363636 0.21875
+vt 0.6969697 0.1875
+vt 0.6969697 0.21875
+vt 0.6363636 0.15625
+vt 0.6666667 0.15625
+vt 0.6969697 0.15625
+
+# Normal
+vn 0 0 -1
+
+# Mesh description
+g BibliotecaNuevaComplete_mesh_0013
+
+# Faces
+f 1/1/1 2/2/1 3/3/1 4/4/1
+f 5/2/1 6/5/1 7/6/1 8/3/1
+f 9/7/1 10/8/1 11/2/1 12/1/1
+f 13/8/1 14/9/1 15/5/1 16/2/1
+

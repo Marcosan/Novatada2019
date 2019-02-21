@@ -47,8 +47,8 @@ public class Player : MonoBehaviour{
 
         //Para cambiar el titulo del minimapa
         SingletonVars.Instance.nameCurrentMap = initialMap.name;
-        tittleMiniMap = GameObject.Find("/Area/MiniMap/TitleMap/TitleText").transform.GetComponent<Text>();
-        tittleMiniMap.text = SingletonVars.Instance.SetNameCurrentMap(initialMap.name);
+        //tittleMiniMap = GameObject.Find("/Area/MiniMap/TitleMap/TitleText").transform.GetComponent<Text>();
+        //tittleMiniMap.text = SingletonVars.Instance.SetNameCurrentMap(initialMap.name);
         //MainCamera es el script, se llama a la funcion SetBound creada allí, se pasa el mapa inicial
         Camera.main.GetComponent<MainCamera>().SetBound(initialMap);
         
