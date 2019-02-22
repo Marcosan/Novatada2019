@@ -21,12 +21,12 @@ TagManager:
   - 
   - Enemy
   - Interact
-  - MiniMap
+  - 
   - Map
   - 
   - Point
-  - AlterMap
-  - Map
+  - 
+  - 
   - 
   - JoyStick
   - 
@@ -49,12 +49,6 @@ TagManager:
     locked: 0
   - name: Background
     uniqueID: 4058428705
-    locked: 0
-  - name: Map
-    uniqueID: 2438087141
-    locked: 0
-  - name: AlterMap
-    uniqueID: 1161722697
     locked: 0
   - name: Player
     uniqueID: 1366375491
