@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using SuperTiled2Unity;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -45,14 +46,16 @@ public class MainCamera : MonoBehaviour{
 
     public void SetBound (GameObject map){
         //atributos del mapa tiled pasado como parametro map
-        Tiled2Unity.TiledMap config = map.GetComponent<Tiled2Unity.TiledMap>();
+        //Tiled2Unity.TiledMap config = map.GetComponent<Tiled2Unity.TiledMap>();
         //cantidad de celdas que tiene la camara, por lo general 5
+        SuperMap config = map.GetComponent<SuperMap>();
         float cameraSize = Camera.main.orthographicSize;
 
         tLX = map.transform.position.x + cameraSize;
         tLY = map.transform.position.y - cameraSize;
-        bRX = map.transform.position.x + config.NumTilesWide - cameraSize;
-        bRY = map.transform.position.y - config.NumTilesHigh + cameraSize;
+        //bRX = map.transform.position.x + config.NumTilesWide - cameraSize;
+        bRX = map.transform.position.x + config.m_Width - cameraSize;
+        bRY = map.transform.position.y - config.m_Height + cameraSize;
 
         //FastMove();
     }

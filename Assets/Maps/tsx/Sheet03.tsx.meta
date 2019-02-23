@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 6c7731d3a899eeb4983f97260686d76c
+ScriptedImporter:
+  fileIDToRecycleName:
+    11400000: _TilesetScriptObject
+    11400002: _superAsset
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: cc34d0f3dc257a442819830b408c5322, type: 3}
+  errors:
+  - 'Missing texture asset for tile 0: Sptites/Tiles/tile_0000.png'
+  warnings: []
+  missingSortingLayers: []
+  missingLayers: []
+  pixelsPerUnit: 16
+  edgesPerEllipse: 32
+  numberOfObjectsImported: 2
+  useSpriteAtlas: 1
+  atlasWidth: 2048
+  atlasHeight: 2048
