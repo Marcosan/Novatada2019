@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Assertions;
 
-public class WarpScenes : MonoBehaviour{
+public class Warp : MonoBehaviour{
     //Para almacenar el punto de destino
     public GameObject target;
 
@@ -57,9 +57,9 @@ public class WarpScenes : MonoBehaviour{
 
             StartCoroutine(area.GetComponent<Area>().ShowArea(targetMap.name));
 
-            SingletonVars.Instance.nameCurrentMap = targetMap.name;
-            tittleMiniMap = GameObject.Find("/Area/MiniMap/TitleMap/TitleText").transform.GetComponent<Text>();
-            tittleMiniMap.text = SingletonVars.Instance.SetNameCurrentMap(targetMap.name);
+            //SingletonVars.Instance.nameCurrentMap = targetMap.name;
+            //tittleMiniMap = GameObject.Find("/Area/MiniMap/TitleMap/TitleText").transform.GetComponent<Text>();
+            //tittleMiniMap.text = SingletonVars.Instance.SetNameCurrentMap(targetMap.name);
             // Actualizamos la cámara
             Camera.main.GetComponent<MainCamera>().SetBound(targetMap);
         }
