@@ -1,13 +1,11 @@
 fileFormatVersion: 2
-guid: bca7308a9d513b54387ad3e45163e635
+guid: 8fee87a50dc74d34dacfe51bed7e3db8
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Sheet01_0
-    21300002: Sheet01_1
-    21300004: Sheet01_2
-    21300006: Sheet01_3
-    21300008: Sheet01_4
-    21300010: Sheet01_5
+    21300000: Animaciones_0
+    21300002: Animaciones_1
+    21300004: Animaciones_2
+    21300006: Animaciones_3
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -123,121 +121,81 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sheet01_0
+      name: Animaciones_0
       rect:
         serializedVersion: 2
-        x: 295
-        y: 393
+        x: 2
+        y: 134
         width: 5
         height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0832fa03900d2dd44a27c74bcf6a7361
+      spriteID: 20d9eb3981be1cc4da30ac99d743f4d9
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sheet01_1
+      name: Animaciones_1
       rect:
         serializedVersion: 2
-        x: 312
-        y: 393
+        x: 19
+        y: 134
         width: 5
         height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6fed2647ba9c2764f861a3f6b627c0d9
+      spriteID: c6e8b6ba561eb5c499fa95bdc086bb44
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sheet01_2
+      name: Animaciones_2
       rect:
         serializedVersion: 2
-        x: 278
-        y: 393
+        x: 36
+        y: 134
         width: 5
         height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 399dd4076710d244392b3ffd6ed8977c
+      spriteID: 7bef3deffa982ae43b97a5b2efe35240
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sheet01_3
+      name: Animaciones_3
       rect:
         serializedVersion: 2
-        x: 278
-        y: 376
+        x: 52
+        y: 134
         width: 5
         height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3b435675dc63af940bccdcbdfbbea570
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sheet01_4
-      rect:
-        serializedVersion: 2
-        x: 295
-        y: 376
-        width: 5
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f17a4748aa5c0e342989e8c7ae2888ce
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sheet01_5
-      rect:
-        serializedVersion: 2
-        x: 312
-        y: 376
-        width: 5
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 87c6a252a4deba746abc770482ed72fe
+      spriteID: 8d2340e6c27241544a9f2bc86c109609
       vertices: []
       indices: 
       edges: []
@@ -245,7 +203,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: a5c8011e9ea03d441bf9d16c7363f898
+    spriteID: 875b0726a9100da40a2002222c5e4fd3
     vertices: []
     indices: 
     edges: []

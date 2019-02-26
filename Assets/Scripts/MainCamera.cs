@@ -28,8 +28,6 @@ public class MainCamera : MonoBehaviour{
             Mathf.Clamp(target.position.x, tLX, bRX),
             Mathf.Clamp(target.position.y, bRY, tLY),
             transform.position.z);
-        Debug.Log(transform.position);
-        Debug.Log(target.position);
     }
 
     private void Start(){
