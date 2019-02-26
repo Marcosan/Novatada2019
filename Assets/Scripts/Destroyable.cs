@@ -89,13 +89,15 @@ public class Destroyable : MonoBehaviour {
          {
              if (hit.collider.tag == player.tag)
              {
-                 changer.changeActionBtn(true); // Hace que el boton se habilite
-                 changer.setTag("Destroy"); // Hace que aparezca la imagen de acuerdo al tipo de interaccion
+                changer.StartAction();
              }
          }
          else
          {
-             changer.changeActionBtn(false); // Deshabilita el boton
+            if (changer.GetBusyBtn() == false)
+            {
+                changer.DisableButton();
+            }
          }
 
     }

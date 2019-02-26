@@ -27,16 +27,16 @@ public class DialogueTrigger : MonoBehaviour {
         }
 
         if (col.tag == "Interact") {
-            // Para que el boton de interaccion aparezca
             interCollider.enabled = true;
         }
-        changer.changeActionBtn(true);
-        changer.setTag("Dialog");
+        changer.StartDialog();
     }
 
     private void OnTriggerExit2D(Collider2D collision) {
         if (collision.tag == "Interact") {
             interCollider.enabled = false;
+            changer.DisableButton();
+            changer.SetBusyBtn(false);
         }
     }
 }

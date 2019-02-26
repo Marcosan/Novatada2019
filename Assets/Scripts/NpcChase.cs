@@ -85,8 +85,6 @@ public class NpcChase : MonoBehaviour {
                 anim.Play("NpcWalk", -1, 0);  // Congela la animación de andar, velocidad de animacion 0
             } else {
                 anim.SetBool("walking", true);
-                // Para que el boton de interaccion desaparezca
-                changer.changeActionBtn(false);
                 //MoveTowards: mover hacia un punto
                 transform.position = Vector3.MoveTowards(transform.position, destiny.transform.position, speed * Time.deltaTime);
             }

@@ -14,6 +14,7 @@ public class changer : MonoBehaviour
     public Sprite btnPassive;
     
     private static bool btnChange = false;
+    private static bool busybtn = false;
     private static string tag = null;
 
     private void Start()
@@ -46,8 +47,32 @@ public class changer : MonoBehaviour
         btnChange = boolean;
     }
 
+    public static void SetBusyBtn(bool boolean)
+    {
+        busybtn = boolean;
+    }
+
     public static void setTag(string Tag) {
         tag = Tag;
+    }
+
+    public static bool GetBusyBtn() {
+        return busybtn;
+    }
+
+    public static void StartDialog() {
+        changeActionBtn(true);
+        setTag("Dialog");
+        SetBusyBtn(true);
+    }
+
+    public static void StartAction() {
+        changeActionBtn(true); // Hace que el boton se habilite
+        setTag("Destroy"); // Hace que aparezca la imagen de acuerdo al tipo de interaccion
+    }
+
+    public static void DisableButton() {
+        changeActionBtn(false); // Deshabilita el boton
     }
 
 }
