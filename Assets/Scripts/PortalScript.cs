@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PortalScript : MonoBehaviour
-{
+public class PortalScript : MonoBehaviour {
 
 
 
