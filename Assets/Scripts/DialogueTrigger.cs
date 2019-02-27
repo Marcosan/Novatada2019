@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class DialogueTrigger : MonoBehaviour {
     //Clase para llamar a DialogueManager, que ya tiene vinculado el respectivo texto del nombre y oraciones del dialogo
@@ -36,7 +34,6 @@ public class DialogueTrigger : MonoBehaviour {
         if (collision.tag == "Interact") {
             interCollider.enabled = false;
             changer.DisableButton();
-            changer.SetBusyBtn(false);
         }
     }
 }

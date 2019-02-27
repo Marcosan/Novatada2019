@@ -33,14 +33,16 @@ public class Destroyable : MonoBehaviour {
     IEnumerator OnTriggerEnter2D (Collider2D col) {
 
         // Si es un ataque
-        if (col.tag == "Action") {
+        if (col.tag == "Action")
+        {
 
             // Reproducimos la animación de destrucción y esperamos
             anim.Play(destroyState);
             yield return new WaitForSeconds(timeForDisable);
 
             // Pasados los segundos de espera desactivamos los colliders 2D
-            foreach(Collider2D c in GetComponents<Collider2D>()){
+            foreach (Collider2D c in GetComponents<Collider2D>())
+            {
                 c.enabled = false;
             }
 
@@ -55,16 +57,20 @@ public class Destroyable : MonoBehaviour {
         Gizmos.DrawWireSphere(transform.position, visionRadius);
     }
 
+    private void OnDestroy()
+    {
+        changer.DisableButton();
+    }
+
     void Update () {
         
         // "Destruir" el objeto al finalizar la animación de destrucción
         // El estado debe tener el atributo 'loop' a false para no repetirse
         AnimatorStateInfo stateInfo = anim.GetCurrentAnimatorStateInfo(0);
-
+        
         //stateInfo.normalizedTime >= 1 porque significa que termino la animacion, de [0,1]
         if (stateInfo.IsName(destroyState) && stateInfo.normalizedTime >= 1) {
             Destroy(gameObject);
-            changer.changeActionBtn(false);
             // En el futuro podríamos almacenar la instancia y su transform
             // para crearlos de nuevo después de un tiempo
         }
@@ -87,19 +93,17 @@ public class Destroyable : MonoBehaviour {
          // Si el Raycast encuentra al jugador habilitamos el boton
          if (hit.collider != null)
          {
-             if (hit.collider.tag == player.tag)
-             {
+             if (hit.collider.tag == player.tag) {
                 changer.StartAction();
              }
          }
          else
          {
-            if (changer.GetBusyBtn() == false)
-            {
+            if (!changer.GetBusyBtn()) {
                 changer.DisableButton();
             }
          }
 
     }
-
+    
 }

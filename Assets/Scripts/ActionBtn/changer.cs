@@ -37,6 +37,10 @@ public class changer : MonoBehaviour
             else if (tag.Equals("Destroy"))
                 ActionButton.image.overrideSprite = btnAttack;
         }
+        else if (!btnChange && !busybtn)
+        {
+            ActionButton.image.overrideSprite = btnPassive;
+        }
         else {
             ActionButton.image.overrideSprite = btnPassive;
         }
@@ -60,19 +64,26 @@ public class changer : MonoBehaviour
         return busybtn;
     }
 
+    public static bool GetChangeBtn() {
+        return btnChange;
+    }
+
     public static void StartDialog() {
-        changeActionBtn(true);
-        setTag("Dialog");
-        SetBusyBtn(true);
+        btnChange = true;
+        busybtn = true;
+        tag = "Dialog";
     }
 
     public static void StartAction() {
-        changeActionBtn(true); // Hace que el boton se habilite
-        setTag("Destroy"); // Hace que aparezca la imagen de acuerdo al tipo de interaccion
+        btnChange = true; // Hace que el boton se habilite
+        tag = "Destroy"; // Hace que aparezca la imagen de acuerdo al tipo de interaccion
     }
 
     public static void DisableButton() {
-        changeActionBtn(false); // Deshabilita el boton
+        btnChange = false; // Deshabilita el boton
+        if (busybtn) {
+            busybtn = false;
+        }
     }
 
 }
