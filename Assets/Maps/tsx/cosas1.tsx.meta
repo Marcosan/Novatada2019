@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: a53262f337796be48bd39c34700e8673
+ScriptedImporter:
+  fileIDToRecycleName:
+    11400000: _TilesetScriptObject
+    11400002: _superAsset
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: cc34d0f3dc257a442819830b408c5322, type: 3}
+  errors:
+  - 'Missing texture asset: ../GAME/Novatada2019/Assets/Assets/sprites/0eaf4df14e2765d586d592166298cb1d.png'
+  warnings: []
+  missingSortingLayers: []
+  missingLayers: []
+  pixelsPerUnit: 16
+  edgesPerEllipse: 32
+  numberOfObjectsImported: 2
+  useSpriteAtlas: 1
+  atlasWidth: 2048
+  atlasHeight: 2048
