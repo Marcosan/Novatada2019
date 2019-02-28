@@ -36,38 +36,15 @@ public class changer : MonoBehaviour
                 ActionButton.image.overrideSprite = btnInteract;
             else if (tag.Equals("Destroy"))
                 ActionButton.image.overrideSprite = btnAttack;
-        }
-        else if (!btnChange && !busybtn)
-        {
-            ActionButton.image.overrideSprite = btnPassive;
-        }
-        else {
+        } else {
             ActionButton.image.overrideSprite = btnPassive;
         }
     }
-
-    public static void changeActionBtn(bool boolean)
-    {
-        btnChange = boolean;
-    }
-
-    public static void SetBusyBtn(bool boolean)
-    {
-        busybtn = boolean;
-    }
-
-    public static void setTag(string Tag) {
-        tag = Tag;
-    }
-
+    
     public static bool GetBusyBtn() {
         return busybtn;
     }
-
-    public static bool GetChangeBtn() {
-        return btnChange;
-    }
-
+    
     public static void StartDialog() {
         btnChange = true;
         busybtn = true;
