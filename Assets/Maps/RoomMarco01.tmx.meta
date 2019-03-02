@@ -15,7 +15,6 @@ ScriptedImporter:
     100020: _MapPrfab/RoomMarco01/Decorations
     100022: _MapPrfab/RoomMarco01/Floor01
     100024: _MapPrfab/RoomMarco01/Floor02
-    100026: _MapPrfab/RoomMarco01/Floor03
     100028: _MapPrfab/RoomMarco01/Wall01
     400000: _MapPrfab/RoomMarco01/Transform
     400002: _MapPrfab/RoomMarco01/Ceilings01/Transform
@@ -30,7 +29,6 @@ ScriptedImporter:
     400020: _MapPrfab/RoomMarco01/Decorations/Transform
     400022: _MapPrfab/RoomMarco01/Floor01/Transform
     400024: _MapPrfab/RoomMarco01/Floor02/Transform
-    400026: _MapPrfab/RoomMarco01/Floor03/Transform
     400028: _MapPrfab/RoomMarco01/Wall01/Transform
     2800000: Atlas_Sheet01_1
     5000000: _MapPrfab/RoomMarco01/Collisions/Collision_Default/Rigidbody2D
@@ -64,9 +62,6 @@ ScriptedImporter:
     11400040: _MapPrfab/RoomMarco01/Floor02/MonoBehaviour-SuperTiled2Unity.SuperTileLayer
     11400042: _MapPrfab/RoomMarco01/Floor02/MonoBehaviour-SuperTiled2Unity.SuperCustomProperties
     11400044: _MapPrfab/RoomMarco01/Floor02/MonoBehaviour-SuperTiled2Unity.TilemapData
-    11400046: _MapPrfab/RoomMarco01/Floor03/MonoBehaviour-SuperTiled2Unity.SuperTileLayer
-    11400048: _MapPrfab/RoomMarco01/Floor03/MonoBehaviour-SuperTiled2Unity.SuperCustomProperties
-    11400050: _MapPrfab/RoomMarco01/Floor03/MonoBehaviour-SuperTiled2Unity.TilemapData
     11400052: _MapPrfab/RoomMarco01/Wall01/MonoBehaviour-SuperTiled2Unity.SuperTileLayer
     11400054: _MapPrfab/RoomMarco01/Wall01/MonoBehaviour-SuperTiled2Unity.SuperCustomProperties
     11400056: _MapPrfab/RoomMarco01/Wall01/MonoBehaviour-SuperTiled2Unity.TilemapData
@@ -3613,14 +3608,12 @@ ScriptedImporter:
     3664157343022684180: _MapPrfab/RoomMarco01/Decorations/TilemapRenderer
     3664157343022684182: _MapPrfab/RoomMarco01/Floor01/TilemapRenderer
     3664157343022684184: _MapPrfab/RoomMarco01/Floor02/TilemapRenderer
-    3664157343022684186: _MapPrfab/RoomMarco01/Floor03/TilemapRenderer
     3664157343022684188: _MapPrfab/RoomMarco01/Wall01/TilemapRenderer
     8195094279510102542: _MapPrfab/RoomMarco01/Ceilings01/Tilemap
     8195094279510102544: _MapPrfab/RoomMarco01/Collisions/Tilemap
     8195094279510102546: _MapPrfab/RoomMarco01/Decorations/Tilemap
     8195094279510102548: _MapPrfab/RoomMarco01/Floor01/Tilemap
     8195094279510102550: _MapPrfab/RoomMarco01/Floor02/Tilemap
-    8195094279510102552: _MapPrfab/RoomMarco01/Floor03/Tilemap
     8195094279510102554: _MapPrfab/RoomMarco01/Wall01/Tilemap
   externalObjects: {}
   userData: 
@@ -3640,4 +3633,4 @@ ScriptedImporter:
   isIsometric: 0
   customImporterClassName: 
   internalTilesets:
-  - {fileID: 11400060, guid: 0e9fd44ecbaef7a409e993088082f3d8, type: 3}
+  - {instanceID: 0}
