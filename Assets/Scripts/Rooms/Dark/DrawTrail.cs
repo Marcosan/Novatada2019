@@ -5,17 +5,19 @@ using UnityEngine;
 public class DrawTrail : MonoBehaviour {
 
     private bool countOver = false;
-    // Start is called before the first frame update
+    private bool isActive = false;
+
     void Start(){
         GetComponent<SpriteRenderer>().enabled = false;
     }
 
-    // Update is called once per frame
     void Update() {
         if (!SingletonVars.Instance.GetIsCounting()) {
+            //counterOver hace que se ejecute una sola vez despues que el conteo termine, desactiva todo
             if (countOver) {
                 countOver = false;
                 GetComponent<SpriteRenderer>().enabled = false;
+                isActive = false;
             }
         } else{
             countOver = true;
@@ -26,6 +28,7 @@ public class DrawTrail : MonoBehaviour {
         if (collision.gameObject.tag == "Player"){
             //countOver = true;
             GetComponent<SpriteRenderer>().enabled = true;
+            isActive = true;
             //trail.transform.position = Vector3.MoveTowards(trail.transform.position, target.position, 20 * Time.deltaTime);
         }
     }
@@ -34,8 +37,13 @@ public class DrawTrail : MonoBehaviour {
         if (!SingletonVars.Instance.GetIsCounting()) {
             if (collision.gameObject.tag == "Player"){
                 GetComponent<SpriteRenderer>().enabled = false;
+                isActive = false;
             }
         }
+    }
+
+    public bool IsActive() {
+        return this.isActive;
     }
     
 }
