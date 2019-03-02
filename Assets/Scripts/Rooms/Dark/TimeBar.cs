@@ -11,9 +11,11 @@ public class TimeBar : MonoBehaviour{
     private float currentTime;
     private float speedTime;
     private bool isCountTime;
+    private Animator anim;
 
     private void Start(){
         bar = GameObject.Find("Area/TimeBarUI/Bar").transform;
+        anim = GameObject.Find("Area/TimeBarUI").GetComponent<Animator>();
         speedTime = .1f; //para editar el tiempo
 
         fullTime = 1f; // tiempo al 100%
@@ -27,6 +29,9 @@ public class TimeBar : MonoBehaviour{
             if (currentTime <= 0){
                 CancelInvoke("TimeDown");
                 isCountTime = false;
+                SingletonVars.Instance.SetIsCounting(false);
+                GetComponent<BoxCollider2D>().enabled = true;
+                anim.SetBool("IsOpen", false);
             }
         }
     }
@@ -44,6 +49,9 @@ public class TimeBar : MonoBehaviour{
             currentTime = fullTime;
             InvokeRepeating("TimeDown", 0f, speedTime);
             isCountTime = true;
+            SingletonVars.Instance.SetIsCounting(true);
+            GetComponent<BoxCollider2D>().enabled = false;
+            anim.SetBool("IsOpen", true);
         }
     }
 
