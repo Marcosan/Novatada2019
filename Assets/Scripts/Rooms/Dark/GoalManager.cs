@@ -8,8 +8,8 @@ public class GoalManager : MonoBehaviour {
     private List<Transform> childrenCurrent;
     private bool fillChild = true;
     private int totalChild;
-    private int countChild;
     private Animator anim;
+    private bool LetterClear = false;
 
     void Start(){
         anim = GameObject.Find("Area/TimeBarUI").GetComponent<Animator>();
@@ -24,25 +24,26 @@ public class GoalManager : MonoBehaviour {
 
 
     void Update(){
-        if (SingletonVars.Instance.GetIsCounting()) {
-            if (fillChild) {
-                foreach (Transform child in transform){
-                    childrenCurrent.Add(child);
+        if (!LetterClear) { 
+            if (SingletonVars.Instance.GetIsCounting()) {
+                if (fillChild) {
+                    foreach (Transform child in transform){
+                        childrenCurrent.Add(child);
+                    }
+                    fillChild = false;
                 }
-                fillChild = false;
-            }
-            foreach(Transform child in childrenCurrent.ToArray()) {
-                if (child.GetComponent<DrawTrail>().IsActive()){
-                    childrenCurrent.Remove(child);
-                    countChild--;
+                foreach(Transform child in childrenCurrent.ToArray()) {
+                    if (child.GetComponent<DrawTrail>().IsActive()){
+                        childrenCurrent.Remove(child);
+                        //countChild--;
+                    }
                 }
+                if (childrenCurrent.Count == 0){
+                    YouWinLetter();
+                }
+            } else {
+                fillChild = true;
             }
-            if(countChild <= 0) {
-                YouWinLetter();
-            }
-        } else {
-            fillChild = true;
-            countChild = totalChild;
         }
     }
 
@@ -55,17 +56,19 @@ public class GoalManager : MonoBehaviour {
     }*/
 
     private void YouWinLetter() {
-        print("ganaste");
+        print("Puzzle Letra Superado");
         SingletonVars.Instance.SetIsCounting(false);
         anim.SetBool("IsOpen", false);
 
         foreach (Transform child in transform){
-            //GameObject duplicate = Instantiate(child.gameObject);
-            //Destroy will destroy in the next frame
-            //GameObject.Destroy(child.gameObject);
             Destroy(child.GetComponent<DrawTrail>());
-            //duplicate.transform.SetParent(this.transform);
+            child.GetComponent<SpriteRenderer>().color = new Color32(73,164,58,255);
         }
-        Destroy(GetComponent<GoalManager>());
+        //Destroy(GetComponent<GoalManager>());
+        LetterClear = true;
+    }
+
+    public bool CheckLetterClear() {
+        return this.LetterClear;
     }
 }

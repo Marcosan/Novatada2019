@@ -4,6 +4,8 @@ TextureImporter:
   fileIDToRecycleName:
     21300000: Jarron
     21300002: RuinsTown01_0
+    21300004: RuinsTown01_1
+    21300006: RuinsTown01_2
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -147,13 +149,53 @@ TextureImporter:
         width: 28
         height: 25
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: 2201b9d4926f19345ba9dec1dce8fd4f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RuinsTown01_1
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 35
+        width: 29
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abfb4451c439e24439c815a60105b04e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RuinsTown01_2
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 69
+        width: 32
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70387985d39004144972fa9b8720a4e1
       vertices: []
       indices: 
       edges: []

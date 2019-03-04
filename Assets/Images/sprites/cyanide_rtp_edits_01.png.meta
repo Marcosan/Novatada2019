@@ -1,9 +1,8 @@
 fileFormatVersion: 2
-guid: d3371f90322141a4a87ab9828c5f0132
+guid: 23d9108cc038f1a47837361ad9b911d5
 TextureImporter:
   fileIDToRecycleName:
-    21300000: outside_b_0
-    21300002: outside_b_1
+    21300000: cyanide_rtp_edits_01_0
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -119,33 +118,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: outside_b_0
+      name: cyanide_rtp_edits_01_0
       rect:
         serializedVersion: 2
-        x: 6
-        y: 242
-        width: 40
-        height: 45
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b855c559b06ddc94fb7893a168745a70
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: outside_b_1
-      rect:
-        serializedVersion: 2
-        x: 336
-        y: 288
-        width: 48
-        height: 48
+        x: 145
+        y: 385
+        width: 46
+        height: 62
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,7 +132,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e377561b2c09f914ca2afcf03e85aef2
+      spriteID: 647f1fca6fd86a54dbb4b297cb5c831c
       vertices: []
       indices: 
       edges: []
@@ -161,7 +140,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: ea06b0a742377624c9ab7cddb2687922
+    spriteID: 7e6808bfb4b3f414b92fb14627c767f6
     vertices: []
     indices: 
     edges: []
