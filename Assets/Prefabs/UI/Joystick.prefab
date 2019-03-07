@@ -211,8 +211,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ActionButton: {fileID: 3386387167041269047}
-  btnInteract: {fileID: 21300000, guid: 4f3f67e9aedbb7a47be7bf72341250e1, type: 3}
-  btnAttack: {fileID: 21300000, guid: 4ca4640571ede364fa44cf67edb59f2c, type: 3}
+  btnInteract: {fileID: 21300000, guid: da38be5bfd187cd45b990c1203e9bb74, type: 3}
+  btnAttack: {fileID: 21300000, guid: 5bd7c7f6e5baea0449f5a7d46fe1c8d4, type: 3}
   btnPassive: {fileID: 21300000, guid: bdf9f597d0cfb704eb5b6495f7f68257, type: 3}
 --- !u!114 &3386387167041269032
 MonoBehaviour:

@@ -2,14 +2,25 @@
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 
-public class SaveSystem 
+public class SaveSystem
 {
+    // Diferentes Paths para tantear 
+    /* Por defecto inicia desde la raiz del proyecto */
+    //private static string path = "./Assets/SaveData/player.sav";
+    /* PersistentData es mas recomendado para "Windows Store Apps" o "iOS player", por defecto inicia desde una subcarpeta ubicada en AppData/LocalRow/DefaultCompany/ */
+    //private static string path = Application.persistentDataPath + "/player.sav";
+    /* Por defecto inicia desde Assets */
+    private static string Path = Application.dataPath + "/Scripts/SaveManagement/SaveGame/player.sav";
 
-    public static void savePlayer(Player pyr) {
+    public static void savePlayer(Player pyr)
+    {
+
+        //Output the Game data path to the console
+        Debug.Log("Path : " + Path);
 
         BinaryFormatter formatter = new BinaryFormatter();
-        string path = Application.persistentDataPath + "/player.fun";
-        FileStream stream = new FileStream(path, FileMode.Create);
+
+        FileStream stream = new FileStream(Path, FileMode.Create);
 
         PlayerData data = new PlayerData(pyr);
 
@@ -18,20 +29,21 @@ public class SaveSystem
 
     }
 
-    public static PlayerData LoadPlayer() {
-        string path = Application.persistentDataPath + "/player.fun";
-        if (File.Exists(path))
+    public static PlayerData LoadPlayer()
+    {
+        if (File.Exists(Path))
         {
             BinaryFormatter formatter = new BinaryFormatter();
-            FileStream stream = new FileStream(path, FileMode.Open);
+            FileStream stream = new FileStream(Path, FileMode.Open);
 
             PlayerData data = formatter.Deserialize(stream) as PlayerData;
             stream.Close();
 
             return data;
         }
-        else {
-            Debug.LogError("No se encontro el archivo de guardado en " + path);
+        else
+        {
+            Debug.LogError("No se encontro el archivo de guardado en " + Path);
             return null;
         }
     }
