@@ -56,6 +56,12 @@ TagManager:
   - name: Ceilings
     uniqueID: 1439248121
     locked: 0
+  - name: Trail
+    uniqueID: 3721363069
+    locked: 0
+  - name: DarkZone
+    uniqueID: 336573811
+    locked: 0
   - name: Alert
     uniqueID: 3123397421
     locked: 0

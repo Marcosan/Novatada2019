@@ -3,6 +3,7 @@ guid: d3371f90322141a4a87ab9828c5f0132
 TextureImporter:
   fileIDToRecycleName:
     21300000: outside_b_0
+    21300002: outside_b_1
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -126,13 +127,33 @@ TextureImporter:
         width: 40
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: b855c559b06ddc94fb7893a168745a70
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: outside_b_1
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 288
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e377561b2c09f914ca2afcf03e85aef2
       vertices: []
       indices: 
       edges: []

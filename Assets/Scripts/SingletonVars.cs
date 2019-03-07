@@ -8,6 +8,8 @@ public class SingletonVars : Singleton<SingletonVars>{
 
     public string nameCurrentMap;
 
+    public bool isCounting = false;
+
     public string SetNameCurrentMap(string nameMap) {
         string[] split = Regex.Split(nameMap, @"(?<!^)(?=[A-Z])");
         string newName = "";
@@ -17,5 +19,10 @@ public class SingletonVars : Singleton<SingletonVars>{
         return newName;
     }
 
-
+    public void SetIsCounting(bool isCounting) {
+        this.isCounting = isCounting;
+    }
+    public bool GetIsCounting() {
+        return this.isCounting;
+    }
 }
