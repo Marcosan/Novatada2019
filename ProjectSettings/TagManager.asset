@@ -65,3 +65,6 @@ TagManager:
   - name: TouchPad
     uniqueID: 3316650357
     locked: 0
+  - name: Attack
+    uniqueID: 1090287573
+    locked: 0
