@@ -5,20 +5,6 @@ ScriptedImporter:
     100000: _MapPrfab/RoomMarco03
     100002: _MapPrfab/RoomMarco03/Ceilings01
     100004: _MapPrfab/RoomMarco03/Collisions
-    100006: _MapPrfab/RoomMarco03/Collisions/Collision_Default
-    100008: _MapPrfab/RoomMarco03/Collisions/Collision_Default/Polygon
-    100010: _MapPrfab/RoomMarco03/Collisions/Collision_Default/Polygon (1)
-    100012: _MapPrfab/RoomMarco03/Collisions/Collision_Default/Polygon (2)
-    100014: _MapPrfab/RoomMarco03/Collisions/Collision_Default/Polygon (3)
-    100016: _MapPrfab/RoomMarco03/Collisions/Collision_Default/Polygon (4)
-    100018: _MapPrfab/RoomMarco03/Collisions/Collision_Default/Polygon (5)
-    100020: _MapPrfab/RoomMarco03/Collisions/Collision_Default/Polygon (6)
-    100022: _MapPrfab/RoomMarco03/Collisions/Collision_Default/Polygon (7)
-    100024: _MapPrfab/RoomMarco03/Collisions/Collision_Default/Polygon (8)
-    100026: _MapPrfab/RoomMarco03/Collisions/Collision_Default/Polygon (9)
-    100028: _MapPrfab/RoomMarco03/Collisions/Collision_Default/Polygon (10)
-    100030: _MapPrfab/RoomMarco03/Collisions/Collision_Default/Polygon (11)
-    100032: _MapPrfab/RoomMarco03/Collisions/Collision_Default/Polygon (12)
     100034: _MapPrfab/RoomMarco03/Decorations
     100036: _MapPrfab/RoomMarco03/Floor01
     100038: _MapPrfab/RoomMarco03/Floor02
@@ -26,40 +12,11 @@ ScriptedImporter:
     400000: _MapPrfab/RoomMarco03/Transform
     400002: _MapPrfab/RoomMarco03/Ceilings01/Transform
     400004: _MapPrfab/RoomMarco03/Collisions/Transform
-    400006: _MapPrfab/RoomMarco03/Collisions/Collision_Default/Transform
-    400008: _MapPrfab/RoomMarco03/Collisions/Collision_Default/Polygon/Transform
-    400010: _MapPrfab/RoomMarco03/Collisions/Collision_Default/Polygon (1)/Transform
-    400012: _MapPrfab/RoomMarco03/Collisions/Collision_Default/Polygon (2)/Transform
-    400014: _MapPrfab/RoomMarco03/Collisions/Collision_Default/Polygon (3)/Transform
-    400016: _MapPrfab/RoomMarco03/Collisions/Collision_Default/Polygon (4)/Transform
-    400018: _MapPrfab/RoomMarco03/Collisions/Collision_Default/Polygon (5)/Transform
-    400020: _MapPrfab/RoomMarco03/Collisions/Collision_Default/Polygon (6)/Transform
-    400022: _MapPrfab/RoomMarco03/Collisions/Collision_Default/Polygon (7)/Transform
-    400024: _MapPrfab/RoomMarco03/Collisions/Collision_Default/Polygon (8)/Transform
-    400026: _MapPrfab/RoomMarco03/Collisions/Collision_Default/Polygon (9)/Transform
-    400028: _MapPrfab/RoomMarco03/Collisions/Collision_Default/Polygon (10)/Transform
-    400030: _MapPrfab/RoomMarco03/Collisions/Collision_Default/Polygon (11)/Transform
-    400032: _MapPrfab/RoomMarco03/Collisions/Collision_Default/Polygon (12)/Transform
     400034: _MapPrfab/RoomMarco03/Decorations/Transform
     400036: _MapPrfab/RoomMarco03/Floor01/Transform
     400038: _MapPrfab/RoomMarco03/Floor02/Transform
     400042: _MapPrfab/RoomMarco03/Wall01/Transform
     2800000: Atlas_Sheet01_1
-    5000000: _MapPrfab/RoomMarco03/Collisions/Collision_Default/Rigidbody2D
-    6000000: _MapPrfab/RoomMarco03/Collisions/Collision_Default/Polygon/PolygonCollider2D
-    6000002: _MapPrfab/RoomMarco03/Collisions/Collision_Default/Polygon (1)/PolygonCollider2D
-    6000004: _MapPrfab/RoomMarco03/Collisions/Collision_Default/Polygon (2)/PolygonCollider2D
-    6000006: _MapPrfab/RoomMarco03/Collisions/Collision_Default/Polygon (3)/PolygonCollider2D
-    6000008: _MapPrfab/RoomMarco03/Collisions/Collision_Default/Polygon (4)/PolygonCollider2D
-    6000010: _MapPrfab/RoomMarco03/Collisions/Collision_Default/Polygon (5)/PolygonCollider2D
-    6000012: _MapPrfab/RoomMarco03/Collisions/Collision_Default/Polygon (6)/PolygonCollider2D
-    6000014: _MapPrfab/RoomMarco03/Collisions/Collision_Default/Polygon (7)/PolygonCollider2D
-    6000016: _MapPrfab/RoomMarco03/Collisions/Collision_Default/Polygon (8)/PolygonCollider2D
-    6000018: _MapPrfab/RoomMarco03/Collisions/Collision_Default/Polygon (9)/PolygonCollider2D
-    6000020: _MapPrfab/RoomMarco03/Collisions/Collision_Default/Polygon (10)/PolygonCollider2D
-    6000022: _MapPrfab/RoomMarco03/Collisions/Collision_Default/Polygon (11)/PolygonCollider2D
-    6000024: _MapPrfab/RoomMarco03/Collisions/Collision_Default/Polygon (12)/PolygonCollider2D
-    6600000: _MapPrfab/RoomMarco03/Collisions/Collision_Default/CompositeCollider2D
     11400000: _MapPrfab/RoomMarco03/MonoBehaviour-SuperTiled2Unity.SuperMap
     11400002: _MapPrfab/RoomMarco03/MonoBehaviour-SuperTiled2Unity.SuperCustomProperties
     11400004: _MapPrfab/RoomMarco03/Ceilings01/MonoBehaviour-SuperTiled2Unity.SuperTileLayer
@@ -68,19 +25,6 @@ ScriptedImporter:
     11400010: _MapPrfab/RoomMarco03/Collisions/MonoBehaviour-SuperTiled2Unity.SuperTileLayer
     11400012: _MapPrfab/RoomMarco03/Collisions/MonoBehaviour-SuperTiled2Unity.SuperCustomProperties
     11400014: _MapPrfab/RoomMarco03/Collisions/MonoBehaviour-SuperTiled2Unity.TilemapData
-    11400016: _MapPrfab/RoomMarco03/Collisions/Collision_Default/Polygon/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
-    11400018: _MapPrfab/RoomMarco03/Collisions/Collision_Default/Polygon (1)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
-    11400020: _MapPrfab/RoomMarco03/Collisions/Collision_Default/Polygon (2)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
-    11400022: _MapPrfab/RoomMarco03/Collisions/Collision_Default/Polygon (3)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
-    11400024: _MapPrfab/RoomMarco03/Collisions/Collision_Default/Polygon (4)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
-    11400026: _MapPrfab/RoomMarco03/Collisions/Collision_Default/Polygon (5)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
-    11400028: _MapPrfab/RoomMarco03/Collisions/Collision_Default/Polygon (6)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
-    11400030: _MapPrfab/RoomMarco03/Collisions/Collision_Default/Polygon (7)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
-    11400032: _MapPrfab/RoomMarco03/Collisions/Collision_Default/Polygon (8)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
-    11400034: _MapPrfab/RoomMarco03/Collisions/Collision_Default/Polygon (9)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
-    11400036: _MapPrfab/RoomMarco03/Collisions/Collision_Default/Polygon (10)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
-    11400038: _MapPrfab/RoomMarco03/Collisions/Collision_Default/Polygon (11)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
-    11400040: _MapPrfab/RoomMarco03/Collisions/Collision_Default/Polygon (12)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
     11400042: _MapPrfab/RoomMarco03/Decorations/MonoBehaviour-SuperTiled2Unity.SuperTileLayer
     11400044: _MapPrfab/RoomMarco03/Decorations/MonoBehaviour-SuperTiled2Unity.SuperCustomProperties
     11400046: _MapPrfab/RoomMarco03/Decorations/MonoBehaviour-SuperTiled2Unity.TilemapData
@@ -3648,7 +3592,10 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 1fa25d03934ea624a82bf2fcee6f0873, type: 3}
-  errors: []
+  errors:
+  - Errors detected in tileset 'tsx/red.tsx'. Check the tileset inspector for more
+    details. Your map may be broken until these are fixed.
+  - Could not find tile 4410. Make sure the tilesets were successfully imported.
   warnings:
   - Tileset 'Sheet01' is an embedded tileset. Exported tilesets are preferred.
   missingSortingLayers: []
