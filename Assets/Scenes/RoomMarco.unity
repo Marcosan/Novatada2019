@@ -9216,7 +9216,7 @@ PrefabInstance:
     - target: {fileID: 4829464133706247043, guid: 9ddcfd07b4c37214baa5c4ec7a2e861e,
         type: 3}
       propertyPath: m_Name
-      value: AudioCanvas
+      value: AudioManager
       objectReference: {fileID: 0}
     - target: {fileID: 4829464133706247045, guid: 9ddcfd07b4c37214baa5c4ec7a2e861e,
         type: 3}

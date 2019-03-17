@@ -3,10 +3,32 @@ using UnityEngine.SceneManagement;
 
 public class SoundManager : MonoBehaviour
 {
+    /** ATENCION!
+     * Para que la implementacion se de correctamente en cada escena hay que agregar en la raiz al GameObject AudioCanvas que se encuentra en Prefabs.
+     * *
+     * Este script se encarga de asignarle audios de musica de fondo, audios para efectos (como interacciones).
+     * *
+     * Hay dos Audio Source para trabajos especificos ya que es mejor no tocar al que se encarga del audio de fondo para ponerle efectos y viceversa.
+     * *
+     * Percatarse de utilizar siempre PlayOneShot() en los efectos para que no se sobreponga la reproduccion del audio de fondo, en el caso
+     * de hacerlo se notara que el audio de efecto sera el unico en reproduccion y estara en loop.
+     * *
+     * En AudioCanvas se encuentra el complemento Audio Source vacio, no es necesario rellenarlo ya que el script se encarga de configurarlo. Como ponerlo 
+     * en loop, la intensidad del volumen, activarlo, etc.
+     * *
+     * Si se lo llena igualmente se van a sobreescribir los valores por los indicados en este script al iniciar.
+     * *
+     * En caso de no haber asignado una musica de fondo en especifico para una escena hay una implementacion de un audio por defecto, la misma escena puede
+     * tener su propio audio agregando una condicion en SetBackground(). Pero Antes debe asegurarse de cambiar la longitud del Array desde el Prefabs de
+     * AudioManager y arrastrar el audio deseado, a la escena en el caso de haberla creado debe ir al editor de unity y en File>Build Settings agregar la
+     * escena nueva a la lista de escenas existentes. Desde el mismo lugar se indica a la derecha el numero de indice al que pertenecera en el array Escenas.
+     **/
+
+
     public static AudioSource BackgroundMusic;      // Audio Source para referenciar a la musica de fondo.
     public static AudioSource efxSound;             // Audio Source para referenciar el sonido de fondo.
 
-    private static SoundManager instance = null;    // Allows other scripts to call functions from SoundManager.     
+    public static SoundManager instance = null;    // Allows other scripts to call functions from SoundManager.     
     
     public AudioClip InteractSound;                 // Audio para interaccion
     public AudioClip ActionSound;                   // Audio para Accion
@@ -17,11 +39,12 @@ public class SoundManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        CargarEscenas();                            // Carga el nombre de todas las escenas existentes, el mismo orden esta en File > Build Settings (Se ingresa desde el editor de unity)
-
         BackgroundMusic = GetComponent<AudioSource>();
         efxSound = GetComponent<AudioSource>();
 
+        // Carga el nombre de todas las escenas existentes, el mismo orden esta en File > Build Settings (Se ingresa desde el editor de unity).
+        CargarEscenas();                            
+        
         BackgroundMusic.volume = 0.70F;             // Volumen de 0.0 a 1.0 para la musica de fondo
         BackgroundMusic.loop = true;                // Para que se repita el audio
         BackgroundMusic.enabled = true;             // Para que se active de ser necesario
@@ -68,8 +91,8 @@ public class SoundManager : MonoBehaviour
         // Reemplaza y reproduce el sonido de fondo.
         efxSound.Play(); **/
 
-        // Reproducir una vez.
-        efxSound.PlayOneShot(clip);
+    // Reproducir una vez.
+    efxSound.PlayOneShot(clip);
 
         // Opcional para cambiar la intensidad con la que suena
         //efxSound.PlayOneShot(clip, 0.7F);
