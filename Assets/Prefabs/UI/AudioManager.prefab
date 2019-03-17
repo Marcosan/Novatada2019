@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4829464133706247041}
   - component: {fileID: 3733154924226214953}
   m_Layer: 5
-  m_Name: AudioCanvas
+  m_Name: AudioManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -112,14 +112,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea4e287de55fd824db423bc2014cc927, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lowPitchRange: 0.95
-  highPitchRange: 1.05
   InteractSound: {fileID: 8300000, guid: 1a7e389b13d1c4f4ab73557aa1a9ee01, type: 3}
   ActionSound: {fileID: 8300000, guid: 8b0c6b56655071a41aaece16b875ba61, type: 3}
   musicList:
   - {fileID: 8300000, guid: 26779680bd547f3449e8a1d30de70cf2, type: 3}
   - {fileID: 8300000, guid: 7d5ea09363c60c540bf7584c7c62a07e, type: 3}
   - {fileID: 8300000, guid: 8b3eb4ee7156b98499b90cc7dea60dc9, type: 3}
+  Escenas: []
 --- !u!82 &3733154924226214953
 AudioSource:
   m_ObjectHideFlags: 0
