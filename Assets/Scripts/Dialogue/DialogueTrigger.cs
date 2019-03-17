@@ -9,7 +9,6 @@ public class DialogueTrigger : MonoBehaviour {
     private void Start() {
         interCollider = transform.GetChild(0).GetComponent<SpriteRenderer>();
         interCollider.enabled = false;
-
     }
 
     void Update() {
@@ -22,6 +21,7 @@ public class DialogueTrigger : MonoBehaviour {
         if (col.tag == "Action") {
             //print("Boton de accion a " + col.gameObject.name);
             FindObjectOfType<DialogueManager>().StartDialogue(dialogue, npcPosition);
+            SoundManager.SetClip("I");
         }
 
         if (col.tag == "Interact") {
