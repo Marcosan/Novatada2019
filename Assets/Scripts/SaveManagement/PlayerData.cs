@@ -1,12 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [System.Serializable]
 public class PlayerData
 {
     float[] lastMov;
     float[] posicion;
+    string LastScene;
 
     public PlayerData(Player player) {
 
@@ -18,6 +18,8 @@ public class PlayerData
         lastMov = new float[2];
         lastMov[0] = player.getLastMov().x;
         lastMov[1] = player.getLastMov().y;
+
+        LastScene = player.GetLastScene();
 
     }
 
@@ -38,5 +40,9 @@ public class PlayerData
     public Vector2 GetMovement() {
         return new Vector2(lastMov[0],lastMov[1]);
     }
-   
+
+    public string GetLastScene() {
+        return LastScene;
+    }
+
 }

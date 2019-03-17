@@ -1,9 +1,8 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour{
     Vector2 mov;
@@ -11,6 +10,8 @@ public class Player : MonoBehaviour{
     Rigidbody2D rb2d;
     public float speed = 4f;
     Animator anim;
+
+    string ActiveScene;
 
     public GameObject initialMap;
 
@@ -141,6 +142,10 @@ public class Player : MonoBehaviour{
         this.mov = m;
     }
 
+    public string GetLastScene() {
+        return this.ActiveScene;
+    }
+
     public void setIsActionButton(bool action) {
         this.isActionButton = action;
     }
@@ -169,6 +174,7 @@ public class Player : MonoBehaviour{
     }
 
     public void SavePlayer() {
+        ActiveScene = SceneManager.GetActiveScene().name;
         SaveSystem.savePlayer(this);
     }
 
@@ -178,6 +184,8 @@ public class Player : MonoBehaviour{
         setPosition(data.GetX(), data.GetY(), data.GetZ());
 
         setPlayerDirection(data.GetMovement());
-        
+
+        SceneManager.LoadScene(data.GetLastScene());
+
     }
 }
