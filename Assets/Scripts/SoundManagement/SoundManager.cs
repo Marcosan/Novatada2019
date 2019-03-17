@@ -1,27 +1,49 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SoundManager : MonoBehaviour
 {
     public static AudioSource BackgroundMusic;      //Drag a reference to the audio source which will play the music.
     public static AudioSource efxSound;             //Drag a reference to the audio source which will play the sound effects.
+
     public static SoundManager instance = null;     //Allows other scripts to call functions from SoundManager.             
     public float lowPitchRange = .95f;              //The lowest a sound effect will be randomly pitched.
     public float highPitchRange = 1.05f;            //The highest a sound effect will be randomly pitched.
-
+    
     public AudioClip InteractSound;
     public AudioClip ActionSound;
+    
+    public AudioClip[] musicList;
+    public string[] Escenas;
 
     // Start is called before the first frame update
     void Start()
     {
+        cargarEscenas();                            // Carga el nombre de todas las escenas existentes, el mismo orden esta en File > Build Settings (Se ingresa desde el editor de unity)
+
         BackgroundMusic = GetComponent<AudioSource>();
         efxSound = GetComponent<AudioSource>();
-        BackgroundMusic.Play();
+
+        BackgroundMusic.volume = 0.70F;             // Volumen de 0.0 a 1.0 para la musica de fondo
+        BackgroundMusic.loop = true;                // Para que se repita el audio
+        BackgroundMusic.enabled = true;             // Para que se active de ser necesario
+        SetBackground();                            // Para asignarle un audio dependiendo de la escena en la que se encuentra
+        BackgroundMusic.mute = true;                // Para que no se note el pequeño margen de error cuando se ajusta el audio
     }
 
     private void Update()
     {
-
+        if (!BackgroundMusic.isPlaying)
+        {
+            new WaitForSecondsRealtime(3.0F);
+            SetBackground();
+            if (BackgroundMusic.clip != null)
+            {
+                BackgroundMusic.Play();
+            }
+        }
+        else {
+        }
     }
 
     void Awake()
@@ -37,6 +59,7 @@ public class SoundManager : MonoBehaviour
 
         // Set SoundManager to DontDestroyOnLoad so that it won't be destroyed when reloading our scene.
         DontDestroyOnLoad(gameObject);
+        
     }
 
     //Used to play single sound clips.
@@ -84,6 +107,38 @@ public class SoundManager : MonoBehaviour
         }
         else if (str.Equals("A")) {
             PlaySingle(SoundManager.instance.ActionSound);
+        }
+    }
+
+    public void SetBackground() {
+        if (SceneManager.GetActiveScene().name == Escenas[0])
+        {
+            BackgroundMusic.clip = musicList[0];
+        }
+        else if (SceneManager.GetActiveScene().name == Escenas[2])
+        {
+            BackgroundMusic.clip = musicList[1];
+        }
+        else {
+            BackgroundMusic.clip = musicList[2];
+        }
+    }
+
+    public static void ChangeMusic()
+    {
+        if (BackgroundMusic.clip != null || BackgroundMusic.isPlaying ) { 
+            BackgroundMusic.Stop();
+            BackgroundMusic.clip = null;
+            BackgroundMusic.mute = false;
+        }
+    }
+
+    public void cargarEscenas() {
+        int sceneCount = UnityEngine.SceneManagement.SceneManager.sceneCountInBuildSettings;
+        Escenas = new string[sceneCount];
+        for (int i = 0; i < sceneCount; i++)
+        {
+            Escenas[i] = System.IO.Path.GetFileNameWithoutExtension(UnityEngine.SceneManagement.SceneUtility.GetScenePathByBuildIndex(i));
         }
     }
 

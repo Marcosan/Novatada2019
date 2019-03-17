@@ -7523,6 +7523,16 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4829464133706247042, guid: 9ddcfd07b4c37214baa5c4ec7a2e861e,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4829464133706247042, guid: 9ddcfd07b4c37214baa5c4ec7a2e861e,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ddcfd07b4c37214baa5c4ec7a2e861e, type: 3}
 --- !u!1001 &7109734856141279108

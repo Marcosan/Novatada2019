@@ -38,6 +38,8 @@ public class Player : MonoBehaviour{
     // Start is called before the first frame update
     void Start(){
 
+        print("La escena actual es: " + SceneManager.GetActiveScene().name.ToString());
+        SoundManager.ChangeMusic();
         data = SaveSystem.LoadPlayer();
 
         anim = GetComponent<Animator>();
@@ -206,6 +208,8 @@ public class Player : MonoBehaviour{
         //SceneManager.LoadScene(data.GetLastScene());
         
         SaveSystem.wasLoaded = true;
+        SoundManager.BackgroundMusic.mute = true;
+        
     }
     
 }

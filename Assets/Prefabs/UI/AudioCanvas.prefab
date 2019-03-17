@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 4829464133706247047}
   - component: {fileID: 4829464133706247040}
   - component: {fileID: 4829464133706247041}
-  - component: {fileID: 4829464133706247042}
+  - component: {fileID: 3733154924226214953}
   m_Layer: 5
-  m_Name: GameCanvas
+  m_Name: AudioCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -116,21 +116,25 @@ MonoBehaviour:
   highPitchRange: 1.05
   InteractSound: {fileID: 8300000, guid: 1a7e389b13d1c4f4ab73557aa1a9ee01, type: 3}
   ActionSound: {fileID: 8300000, guid: 8b0c6b56655071a41aaece16b875ba61, type: 3}
---- !u!82 &4829464133706247042
+  musicList:
+  - {fileID: 8300000, guid: 26779680bd547f3449e8a1d30de70cf2, type: 3}
+  - {fileID: 8300000, guid: 7d5ea09363c60c540bf7584c7c62a07e, type: 3}
+  - {fileID: 8300000, guid: 8b3eb4ee7156b98499b90cc7dea60dc9, type: 3}
+--- !u!82 &3733154924226214953
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4829464133706247043}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 26779680bd547f3449e8a1d30de70cf2, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.73
+  m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
