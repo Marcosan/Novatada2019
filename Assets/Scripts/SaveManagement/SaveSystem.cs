@@ -12,6 +12,9 @@ public class SaveSystem
     /* Por defecto inicia desde Assets */
     private static string Path = Application.dataPath + "/Scripts/SaveManagement/SaveGame/player.sav";
 
+    // Para cambiar la posicion si es necesario
+    public static bool wasLoaded = false;
+
     public static void savePlayer(Player pyr)
     {
 

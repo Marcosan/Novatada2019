@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.SceneManagement;
 
 [System.Serializable]
 public class PlayerData
@@ -10,6 +9,8 @@ public class PlayerData
 
     public PlayerData(Player player) {
 
+        LastScene = player.GetLastScene();
+
         posicion = new float[3];
         posicion[0] = player.transform.position.x;
         posicion[1] = player.transform.position.y;
@@ -18,8 +19,6 @@ public class PlayerData
         lastMov = new float[2];
         lastMov[0] = player.getLastMov().x;
         lastMov[1] = player.getLastMov().y;
-
-        LastScene = player.GetLastScene();
 
     }
 

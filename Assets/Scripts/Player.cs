@@ -11,6 +11,8 @@ public class Player : MonoBehaviour{
     public float speed = 4f;
     Animator anim;
 
+    private static PlayerData data;
+
     string ActiveScene;
 
     public GameObject initialMap;
@@ -35,6 +37,9 @@ public class Player : MonoBehaviour{
 
     // Start is called before the first frame update
     void Start(){
+
+        data = SaveSystem.LoadPlayer();
+
         anim = GetComponent<Animator>();
         rb2d = GetComponent<Rigidbody2D>();
 
@@ -52,6 +57,14 @@ public class Player : MonoBehaviour{
         //tittleMiniMap.text = SingletonVars.Instance.SetNameCurrentMap(initialMap.name);
         //MainCamera es el script, se llama a la funcion SetBound creada allí, se pasa el mapa inicial
         Camera.main.GetComponent<MainCamera>().SetBound(initialMap);
+
+        if (SaveSystem.wasLoaded) {
+
+            setPosition(data.GetX(), data.GetY(), data.GetZ());
+            setPlayerDirection(data.GetMovement());
+
+            SaveSystem.wasLoaded = false;
+        }
         
     }
 
@@ -69,8 +82,9 @@ public class Player : MonoBehaviour{
         Animations(mov);
 
         Interact();
+        
     }
-
+    
     private void FixedUpdate(){
         MoveCharacter();
     }
@@ -179,13 +193,19 @@ public class Player : MonoBehaviour{
     }
 
     public void LoadPlayer() {
-        PlayerData data = SaveSystem.LoadPlayer();
 
-        setPosition(data.GetX(), data.GetY(), data.GetZ());
+        // Para cargar correctamente las escenas tienen que estar registradas en File>Build Settings
 
-        setPlayerDirection(data.GetMovement());
+        // Nunca usar, hace que se mezclen escenas y los elementos no se eliminan y se crean unos sobre  otros
+        //SceneManager.LoadScene(data.GetLastScene(),LoadSceneMode.Additive);
 
-        SceneManager.LoadScene(data.GetLastScene());
+        // Forma correcta asegurandose de eliminar escenas viejas con sus objetos anteriores
+        SceneManager.LoadScene(data.GetLastScene(), LoadSceneMode.Single);
 
+        // No estoy seguro si elimina las escenas anteriores y solo hace el cambio
+        //SceneManager.LoadScene(data.GetLastScene());
+        
+        SaveSystem.wasLoaded = true;
     }
+    
 }
