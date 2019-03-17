@@ -5,10 +5,13 @@ using System.Runtime.Serialization.Formatters.Binary;
 public class SaveSystem
 {
     // Diferentes Paths para tantear 
+
     /* Por defecto inicia desde la raiz del proyecto */
     //private static string path = "./Assets/SaveData/player.sav";
+
     /* PersistentData es mas recomendado para "Windows Store Apps" o "iOS player", por defecto inicia desde una subcarpeta ubicada en AppData/LocalRow/DefaultCompany/ */
     //private static string path = Application.persistentDataPath + "/player.sav";
+
     /* Por defecto inicia desde Assets */
     private static string Path = Application.dataPath + "/Scripts/SaveManagement/SaveGame/player.sav";
 

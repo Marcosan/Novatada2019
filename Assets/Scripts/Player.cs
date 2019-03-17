@@ -28,7 +28,7 @@ public class Player : MonoBehaviour{
 
     Text tittleMiniMap;
 
-    //Joistick
+    // Joistick
     public Joystick joystick;
     
     private void Awake(){
@@ -38,8 +38,11 @@ public class Player : MonoBehaviour{
     // Start is called before the first frame update
     void Start(){
 
+        // Implementacion para el audio en el cambio de escena
         print("La escena actual es: " + SceneManager.GetActiveScene().name.ToString());
         SoundManager.ChangeMusic();
+
+        // Carga los datos guardados la ultima vez
         data = SaveSystem.LoadPlayer();
 
         anim = GetComponent<Animator>();
@@ -96,7 +99,8 @@ public class Player : MonoBehaviour{
             (joystick.Vertical > .2f || joystick.Vertical < -.2f))
         {
             mov = new Vector2(joystick.Horizontal, joystick.Vertical);
-            lastMov = new Vector2(joystick.Horizontal, joystick.Vertical);
+            // Almaneca ultimo movimiento
+            lastMov = new Vector2(joystick.Horizontal, joystick.Vertical); 
         }
         else
             mov = Vector2.zero;
@@ -158,18 +162,23 @@ public class Player : MonoBehaviour{
         this.mov = m;
     }
 
+    // Obtener la ultima escena en la que estuvo el player
     public string GetLastScene() {
         return this.ActiveScene;
     }
 
+    // Cambiar el valor booleano al boton
+    // Ir a Assets/Scripts/ActionBtn/Changer.cs para ver implementacion.
     public void setIsActionButton(bool action) {
         this.isActionButton = action;
     }
 
+    // Mover al jugador
     void MoveCharacter(){
         rb2d.MovePosition(rb2d.position + getMov() * speed * Time.deltaTime);
     }
 
+    // Asignar al player la posicion indicada
     public void setPosition(float posX, float posY, float posZ) {
 
         Vector3 positionPlayer;
@@ -180,6 +189,7 @@ public class Player : MonoBehaviour{
         this.transform.position = positionPlayer;
     }
 
+    // Asignar al player una orientacion (Hacia donde esta mirando)
     public void setPlayerDirection(Vector2 dir) {
         if (dir != Vector2.zero)
         {
@@ -189,14 +199,19 @@ public class Player : MonoBehaviour{
 
     }
 
+    // Para guardar la partida
     public void SavePlayer() {
+        // Asigna a una variable la escena antes de guardar.
         ActiveScene = SceneManager.GetActiveScene().name;
+
+        // Guarda al player con los parametros actuales.
         SaveSystem.savePlayer(this);
     }
 
     public void LoadPlayer() {
 
         // Para cargar correctamente las escenas tienen que estar registradas en File>Build Settings
+        // desde el editor de unity.
 
         // Nunca usar, hace que se mezclen escenas y los elementos no se eliminan y se crean unos sobre  otros
         //SceneManager.LoadScene(data.GetLastScene(),LoadSceneMode.Additive);
@@ -207,7 +222,10 @@ public class Player : MonoBehaviour{
         // No estoy seguro si elimina las escenas anteriores y solo hace el cambio
         //SceneManager.LoadScene(data.GetLastScene());
         
+        // Para indicar que se acaba de cargar una escena
         SaveSystem.wasLoaded = true;
+
+        // Para evitar que se noten los cambios de audio bruscamente
         SoundManager.BackgroundMusic.mute = true;
         
     }

@@ -3,23 +3,21 @@ using UnityEngine.SceneManagement;
 
 public class SoundManager : MonoBehaviour
 {
-    public static AudioSource BackgroundMusic;      //Drag a reference to the audio source which will play the music.
-    public static AudioSource efxSound;             //Drag a reference to the audio source which will play the sound effects.
+    public static AudioSource BackgroundMusic;      // Audio Source para referenciar a la musica de fondo.
+    public static AudioSource efxSound;             // Audio Source para referenciar el sonido de fondo.
 
-    public static SoundManager instance = null;     //Allows other scripts to call functions from SoundManager.             
-    public float lowPitchRange = .95f;              //The lowest a sound effect will be randomly pitched.
-    public float highPitchRange = 1.05f;            //The highest a sound effect will be randomly pitched.
+    private static SoundManager instance = null;    // Allows other scripts to call functions from SoundManager.     
     
-    public AudioClip InteractSound;
-    public AudioClip ActionSound;
+    public AudioClip InteractSound;                 // Audio para interaccion
+    public AudioClip ActionSound;                   // Audio para Accion
     
-    public AudioClip[] musicList;
-    public string[] Escenas;
+    public AudioClip[] musicList;                   // Array de AudioClips para agregar musica de fondo, se llaman desde AudioCanvas
+    public string[] Escenas;                        // Array que almacena los nombres de todas las escenas existentes
 
     // Start is called before the first frame update
     void Start()
     {
-        cargarEscenas();                            // Carga el nombre de todas las escenas existentes, el mismo orden esta en File > Build Settings (Se ingresa desde el editor de unity)
+        CargarEscenas();                            // Carga el nombre de todas las escenas existentes, el mismo orden esta en File > Build Settings (Se ingresa desde el editor de unity)
 
         BackgroundMusic = GetComponent<AudioSource>();
         efxSound = GetComponent<AudioSource>();
@@ -33,9 +31,9 @@ public class SoundManager : MonoBehaviour
 
     private void Update()
     {
+        // Si la musica no se esta reproduciendo desde aqui se verifica, asigna un audio, y reproduce nuevamente
         if (!BackgroundMusic.isPlaying)
         {
-            new WaitForSecondsRealtime(3.0F);
             SetBackground();
             if (BackgroundMusic.clip != null)
             {
@@ -59,58 +57,41 @@ public class SoundManager : MonoBehaviour
 
         // Set SoundManager to DontDestroyOnLoad so that it won't be destroyed when reloading our scene.
         DontDestroyOnLoad(gameObject);
-        
     }
 
     //Used to play single sound clips.
     public static void PlaySingle(AudioClip clip)
     {
-        /** //Set the clip of our efxSource audio source to the clip passed in as a parameter.
+        /** // Asignas un clip al Audio Source de efectos.
         efxSound.clip = clip;
 
-        //Reemplaza y reproduce el sonido de fondo.
+        // Reemplaza y reproduce el sonido de fondo.
         efxSound.Play(); **/
 
-        //Reproducir una vez.
+        // Reproducir una vez.
         efxSound.PlayOneShot(clip);
 
         // Opcional para cambiar la intensidad con la que suena
         //efxSound.PlayOneShot(clip, 0.7F);
 
     }
-
-    /**
-    //RandomizeSfx chooses randomly between various audio clips and slightly changes their pitch.
-    public void RandomizeSfx(params AudioClip[] clips)
-    {
-        //Generate a random number between 0 and the length of our array of clips passed in.
-        int randomIndex = Random.Range(0, clips.Length);
-
-        //Choose a random pitch to play back our clip at between our high and low pitch ranges.
-        float randomPitch = Random.Range(lowPitchRange, highPitchRange);
-
-        //Set the pitch of the audio source to the randomly chosen pitch.
-        efxSound.pitch = randomPitch;
-
-        //Set the clip to the clip at our randomly chosen index.
-        efxSound.clip = clips[randomIndex];
-
-        //Play the clip.
-        efxSound.Play();
-    } **/
-
-    // Aqui agregar diferentes sonidos
+    
+    // Asignar un audio para los efectos dependiendo de la accion
     public static void SetClip(string str) {
+        // "I" para Interactuar
         if (str.Equals("I"))
         {
             PlaySingle(SoundManager.instance.InteractSound);
         }
+        // "A" para Accion
         else if (str.Equals("A")) {
             PlaySingle(SoundManager.instance.ActionSound);
         }
     }
 
+    // Asignar un audio de fondo dependiendo del escenario.
     public void SetBackground() {
+        // Orden de las escenas en el array se ven desde File>Build Settings
         if (SceneManager.GetActiveScene().name == Escenas[0])
         {
             BackgroundMusic.clip = musicList[0];
@@ -124,6 +105,10 @@ public class SoundManager : MonoBehaviour
         }
     }
 
+    // Para cuando se cambie de escena: se para la musica de fondo, asigna nulo al clip de fondo,
+    // y se quita el modo de mute al fondo.
+    // Automaticamente el update() reconocera que no hay musica reproduciendose y se encargara de
+    // asignarle un audio y de reproducirlo.
     public static void ChangeMusic()
     {
         if (BackgroundMusic.clip != null || BackgroundMusic.isPlaying ) { 
@@ -133,7 +118,9 @@ public class SoundManager : MonoBehaviour
         }
     }
 
-    public void cargarEscenas() {
+    // Para que se cargue una lista con todas las escenas que se encuentran agregadas en Build Settings
+    // Deben agregarse ahi siempre que se crean nuevas escenas, ahi esta el orden de como se cargaran.
+    public void CargarEscenas() {
         int sceneCount = UnityEngine.SceneManagement.SceneManager.sceneCountInBuildSettings;
         Escenas = new string[sceneCount];
         for (int i = 0; i < sceneCount; i++)

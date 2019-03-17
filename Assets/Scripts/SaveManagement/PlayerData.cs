@@ -3,41 +3,44 @@
 [System.Serializable]
 public class PlayerData
 {
-    float[] lastMov;
-    float[] posicion;
+    float[] LastMov;
+    float[] Posicion;
     string LastScene;
 
     public PlayerData(Player player) {
 
+        // Guarda la ultima escena en la que estaba al momento de guardar
         LastScene = player.GetLastScene();
 
-        posicion = new float[3];
-        posicion[0] = player.transform.position.x;
-        posicion[1] = player.transform.position.y;
-        posicion[2] = player.transform.position.z;
+        // Guarda la uktima posicion en la que se encontraba
+        Posicion = new float[3];
+        Posicion[0] = player.transform.position.x;
+        Posicion[1] = player.transform.position.y;
+        Posicion[2] = player.transform.position.z;
 
-        lastMov = new float[2];
-        lastMov[0] = player.getLastMov().x;
-        lastMov[1] = player.getLastMov().y;
+        // Guarda el ultimo vector de direccion del personaje (Hacia donde estaba mirando)
+        LastMov = new float[2];
+        LastMov[0] = player.getLastMov().x;
+        LastMov[1] = player.getLastMov().y;
 
     }
 
     public float GetX() {
-        return posicion[0];
+        return Posicion[0];
     }
 
     public float GetY()
     {
-        return posicion[1];
+        return Posicion[1];
     }
 
     public float GetZ()
     {
-        return posicion[2];
+        return Posicion[2];
     }
 
     public Vector2 GetMovement() {
-        return new Vector2(lastMov[0],lastMov[1]);
+        return new Vector2(LastMov[0],LastMov[1]);
     }
 
     public string GetLastScene() {
