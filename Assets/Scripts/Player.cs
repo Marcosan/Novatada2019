@@ -11,7 +11,8 @@ public class Player : MonoBehaviour{
     public float speed = 4f;
     Animator anim;
 
-    private static PlayerData data;
+    private static PlayerData PlData;
+    private static GlobalDataGame GmData;
 
     string ActiveScene;
 
@@ -43,8 +44,9 @@ public class Player : MonoBehaviour{
         SoundManager.ChangeMusic();
 
         // Carga los datos guardados la ultima vez
-        data = SaveSystem.LoadPlayer();
-
+        PlData = SaveSystem.LoadPlayer();
+        GmData = SaveSystem.LoadGameData();
+        
         anim = GetComponent<Animator>();
         rb2d = GetComponent<Rigidbody2D>();
 
@@ -63,14 +65,16 @@ public class Player : MonoBehaviour{
         //MainCamera es el script, se llama a la funcion SetBound creada allí, se pasa el mapa inicial
         Camera.main.GetComponent<MainCamera>().SetBound(initialMap);
 
-        if (SaveSystem.wasLoaded) {
+        // Para que la posicion inicial este como se guardo la ultima vez
+        if (SaveSystem.wasLoaded)
+        {
 
-            setPosition(data.GetX(), data.GetY(), data.GetZ());
-            setPlayerDirection(data.GetMovement());
+            setPosition(PlData.GetX(), PlData.GetY(), PlData.GetZ());
+            setPlayerDirection(PlData.GetMovement());
 
             SaveSystem.wasLoaded = false;
         }
-        
+
     }
 
     // Update is called once per frame
@@ -205,7 +209,7 @@ public class Player : MonoBehaviour{
         ActiveScene = SceneManager.GetActiveScene().name;
 
         // Guarda al player con los parametros actuales.
-        SaveSystem.savePlayer(this);
+        SaveSystem.SavePlayer(this);
     }
 
     public void LoadPlayer() {
@@ -216,8 +220,8 @@ public class Player : MonoBehaviour{
         // Nunca usar, hace que se mezclen escenas y los elementos no se eliminan y se crean unos sobre  otros
         //SceneManager.LoadScene(data.GetLastScene(),LoadSceneMode.Additive);
 
-        // Forma correcta asegurandose de eliminar escenas viejas con sus objetos anteriores
-        SceneManager.LoadScene(data.GetLastScene(), LoadSceneMode.Single);
+        // Forma correcta de cargar una escena asegurandose de eliminar escenas viejas con sus objetos anteriores
+        SceneManager.LoadScene(GmData.GetLastScene(), LoadSceneMode.Single);
 
         // No estoy seguro si elimina las escenas anteriores y solo hace el cambio
         //SceneManager.LoadScene(data.GetLastScene());
