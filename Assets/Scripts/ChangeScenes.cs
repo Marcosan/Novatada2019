@@ -16,7 +16,7 @@ public class ChangeScenes : MonoBehaviour{
     // Transición de 1 segundo
     float fadeTime = 1f;
 
-    public string nameScene = "";
+    public string nameScene;
 
     GameObject area;
 
