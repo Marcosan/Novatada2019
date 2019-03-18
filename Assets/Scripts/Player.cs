@@ -209,13 +209,18 @@ public class Player : MonoBehaviour{
 
         SaveSystem.SaveGame(this);
 
+        SaveLastScene();
+
         // Guarda al player con los parametros actuales.
         SaveSystem.SavePlayer(this);
     }
 
     public void LoadPlayer()
     {
-        GetTheData();
+        /* Por si en algun momento se lo vuelve a utilizar */
+        //GetTheData();
+
+        LoadLastScene();
 
         // Para cargar correctamente las escenas tienen que estar registradas en File>Build Settings
         // desde el editor de unity.
@@ -244,9 +249,27 @@ public class Player : MonoBehaviour{
     // >:v Solo hazlo no preguntes
     private static void GetTheData()
     {
+        /* Obsoleto, pero se lo dejara como plantilla 
+         * Esta Obsoleto nomas el valor que se guarda y carga en GlobalDataGame, sigue en uso para ser utilizado guardando otros 
+         * tipos de datos que se requieran
+         */
         // Carga los datos guardados la ultima vez
-        GmData = SaveSystem.LoadGameData();
+        //GmData = SaveSystem.LoadGameData();
+        //SaveSystem.LastScene = GmData.GetLastScene();
+    }
 
-        SaveSystem.LastScene = GmData.GetLastScene();
+    /* Se puede usar una clase llamada PlayerPrefs que guarda en un fichero a parte ciertos datos deseados, pero la desventaja es
+     * que solo se aplica con tipos de datos simples como strings, enteros o flotantes.
+     * De aqui se puede ver como en python, como si fueran diccionarios. El primer argumento es un key y el segundo un value
+     * Por lo menos en los Sets
+     * En los Gets el primer argumento sigue siendo un key, pero el segundo (Es opcional) sirve para poner un valor por defecto
+     * en caso de no existir uno guardado previamente
+     */
+    void SaveLastScene() {
+        PlayerPrefs.SetString("lastScene", SceneManager.GetActiveScene().name);
+    }
+
+    void LoadLastScene() {
+        SaveSystem.LastScene = PlayerPrefs.GetString("lastScene", SceneManager.GetActiveScene().name);
     }
 }
