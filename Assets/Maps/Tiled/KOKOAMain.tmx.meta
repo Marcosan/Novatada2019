@@ -15,7 +15,6 @@ ScriptedImporter:
     100020: _MapPrfab/KOKOAMain/Wall03
     100022: _MapPrfab/KOKOAMain/Piso04
     100024: _MapPrfab/KOKOAMain/Adornos02
-    100026: _MapPrfab/KOKOAMain/Puente01
     100028: _MapPrfab/KOKOAMain/Escalera01
     100030: _MapPrfab/KOKOAMain/Escalera02
     400000: _MapPrfab/KOKOAMain/Transform
@@ -31,7 +30,6 @@ ScriptedImporter:
     400020: _MapPrfab/KOKOAMain/Wall03/Transform
     400022: _MapPrfab/KOKOAMain/Piso04/Transform
     400024: _MapPrfab/KOKOAMain/Adornos02/Transform
-    400026: _MapPrfab/KOKOAMain/Puente01/Transform
     400028: _MapPrfab/KOKOAMain/Escalera01/Transform
     400030: _MapPrfab/KOKOAMain/Escalera02/Transform
     11400000: _MapPrfab/KOKOAMain/MonoBehaviour-SuperTiled2Unity.SuperMap
@@ -73,9 +71,6 @@ ScriptedImporter:
     11400072: _MapPrfab/KOKOAMain/Adornos02/MonoBehaviour-SuperTiled2Unity.SuperTileLayer
     11400074: _MapPrfab/KOKOAMain/Adornos02/MonoBehaviour-SuperTiled2Unity.SuperCustomProperties
     11400076: _MapPrfab/KOKOAMain/Adornos02/MonoBehaviour-SuperTiled2Unity.TilemapData
-    11400078: _MapPrfab/KOKOAMain/Puente01/MonoBehaviour-SuperTiled2Unity.SuperTileLayer
-    11400080: _MapPrfab/KOKOAMain/Puente01/MonoBehaviour-SuperTiled2Unity.SuperCustomProperties
-    11400082: _MapPrfab/KOKOAMain/Puente01/MonoBehaviour-SuperTiled2Unity.TilemapData
     11400084: _MapPrfab/KOKOAMain/Escalera01/MonoBehaviour-SuperTiled2Unity.SuperTileLayer
     11400086: _MapPrfab/KOKOAMain/Escalera01/MonoBehaviour-SuperTiled2Unity.SuperCustomProperties
     11400088: _MapPrfab/KOKOAMain/Escalera01/MonoBehaviour-SuperTiled2Unity.TilemapData
@@ -96,7 +91,6 @@ ScriptedImporter:
     3664157343022684194: _MapPrfab/KOKOAMain/Wall03/TilemapRenderer
     3664157343022684196: _MapPrfab/KOKOAMain/Piso04/TilemapRenderer
     3664157343022684198: _MapPrfab/KOKOAMain/Adornos02/TilemapRenderer
-    3664157343022684200: _MapPrfab/KOKOAMain/Puente01/TilemapRenderer
     3664157343022684202: _MapPrfab/KOKOAMain/Escalera01/TilemapRenderer
     3664157343022684204: _MapPrfab/KOKOAMain/Escalera02/TilemapRenderer
     8195094279510102542: _MapPrfab/KOKOAMain/Muebles01/Tilemap
@@ -111,7 +105,6 @@ ScriptedImporter:
     8195094279510102560: _MapPrfab/KOKOAMain/Wall03/Tilemap
     8195094279510102562: _MapPrfab/KOKOAMain/Piso04/Tilemap
     8195094279510102564: _MapPrfab/KOKOAMain/Adornos02/Tilemap
-    8195094279510102566: _MapPrfab/KOKOAMain/Puente01/Tilemap
     8195094279510102568: _MapPrfab/KOKOAMain/Escalera01/Tilemap
     8195094279510102570: _MapPrfab/KOKOAMain/Escalera02/Tilemap
   externalObjects: {}
