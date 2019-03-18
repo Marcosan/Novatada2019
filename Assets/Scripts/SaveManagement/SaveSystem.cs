@@ -20,9 +20,9 @@ public class SaveSystem
     /* Nombres de los archivos */
     private static string playerDataFile = "player.sav";
     private static string gameDataFile = "game.sav";
-    
-    /* Utilizo este espacio para poder guardar temporalmente estados en el sistema de juego, para que sean permanentes deben serializarse */
 
+    /* Utilizo este espacio para poder guardar temporalmente estados en el sistema de juego, para que sean permanentes deben serializarse */
+    public static string LastScene;
     // Para cambiar la posicion si es necesario
     public static bool wasLoaded = false;
 

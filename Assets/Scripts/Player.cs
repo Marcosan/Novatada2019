@@ -38,14 +38,6 @@ public class Player : MonoBehaviour{
 
     // Start is called before the first frame update
     void Start(){
-
-        // Implementacion para el audio en el cambio de escena
-        print("La escena actual es: " + SceneManager.GetActiveScene().name.ToString());
-        SoundManager.ChangeMusic();
-
-        // Carga los datos guardados la ultima vez
-        PlData = SaveSystem.LoadPlayer();
-        GmData = SaveSystem.LoadGameData();
         
         anim = GetComponent<Animator>();
         rb2d = GetComponent<Rigidbody2D>();
@@ -68,12 +60,19 @@ public class Player : MonoBehaviour{
         // Para que la posicion inicial este como se guardo la ultima vez
         if (SaveSystem.wasLoaded)
         {
+            // Carga los datos guardados la ultima vez
+            PlData = SaveSystem.LoadPlayer();
 
             setPosition(PlData.GetX(), PlData.GetY(), PlData.GetZ());
             setPlayerDirection(PlData.GetMovement());
 
             SaveSystem.wasLoaded = false;
         }
+
+        // Implementacion para el audio en el cambio de escena
+        print("La escena actual es: " + SceneManager.GetActiveScene().name.ToString());
+        SoundManager.ChangeMusic();
+
 
     }
 
@@ -208,30 +207,46 @@ public class Player : MonoBehaviour{
         // Asigna a una variable la escena antes de guardar.
         ActiveScene = SceneManager.GetActiveScene().name;
 
+        SaveSystem.SaveGame(this);
+
         // Guarda al player con los parametros actuales.
         SaveSystem.SavePlayer(this);
     }
 
-    public void LoadPlayer() {
+    public void LoadPlayer()
+    {
+        GetTheData();
 
         // Para cargar correctamente las escenas tienen que estar registradas en File>Build Settings
         // desde el editor de unity.
 
         // Nunca usar, hace que se mezclen escenas y los elementos no se eliminan y se crean unos sobre  otros
-        //SceneManager.LoadScene(data.GetLastScene(),LoadSceneMode.Additive);
+        //SceneManager.LoadScene(SaveSystem.LastScene,LoadSceneMode.Additive);
 
         // Forma correcta de cargar una escena asegurandose de eliminar escenas viejas con sus objetos anteriores
-        SceneManager.LoadScene(GmData.GetLastScene(), LoadSceneMode.Single);
+        SceneManager.LoadScene(SaveSystem.LastScene, LoadSceneMode.Single);
 
         // No estoy seguro si elimina las escenas anteriores y solo hace el cambio
-        //SceneManager.LoadScene(data.GetLastScene());
-        
+        //SceneManager.LoadScene(SaveSystem.LastScene);
+
         // Para indicar que se acaba de cargar una escena
         SaveSystem.wasLoaded = true;
 
         // Para evitar que se noten los cambios de audio bruscamente
         SoundManager.BackgroundMusic.mute = true;
-        
+
     }
-    
+
+    // No preguntes por que esta esto aqui, el editor me lo dio como solucion y no se por que no coge sin ponerlo en metodo
+    // Trata de mandar todos los datos que estaban guardados en el GlobalDataGame en una variable de datos temporales en
+    // Save System para evitar que se eliminen o sobreescriban datos que no quieres
+    // Por ejemplo, que ya hayas utilizado una variable antes y al guardar como no lo cambiaste se haga nulo
+    // >:v Solo hazlo no preguntes
+    private static void GetTheData()
+    {
+        // Carga los datos guardados la ultima vez
+        GmData = SaveSystem.LoadGameData();
+
+        SaveSystem.LastScene = GmData.GetLastScene();
+    }
 }
