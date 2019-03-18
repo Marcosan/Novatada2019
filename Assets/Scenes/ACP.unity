@@ -1821,6 +1821,11 @@ PrefabInstance:
       propertyPath: targetMap
       value: 
       objectReference: {fileID: 1106781588}
+    - target: {fileID: 5239762470163647734, guid: a77981d0621152f4a87a906057bd3b58,
+        type: 3}
+      propertyPath: dir
+      value: 85
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a77981d0621152f4a87a906057bd3b58, type: 3}
 --- !u!4 &587845133 stripped
@@ -2298,6 +2303,11 @@ PrefabInstance:
       propertyPath: targetMap
       value: 
       objectReference: {fileID: 127266642}
+    - target: {fileID: 5239762470163647734, guid: a77981d0621152f4a87a906057bd3b58,
+        type: 3}
+      propertyPath: dir
+      value: 85
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a77981d0621152f4a87a906057bd3b58, type: 3}
 --- !u!1 &875676847
@@ -13964,6 +13974,11 @@ PrefabInstance:
       propertyPath: targetMap
       value: 
       objectReference: {fileID: 127266642}
+    - target: {fileID: 5239762470163647734, guid: a77981d0621152f4a87a906057bd3b58,
+        type: 3}
+      propertyPath: dir
+      value: 85
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a77981d0621152f4a87a906057bd3b58, type: 3}
 --- !u!4 &1595029838 stripped
