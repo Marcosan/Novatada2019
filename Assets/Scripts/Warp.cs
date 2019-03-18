@@ -11,8 +11,7 @@ public class Warp : MonoBehaviour{
     //Para almacenar el mapa de destino
     //Tener en cuenta que se seleccionan los GameObjects (instancias de los mapas), no los mapas en si
     public GameObject targetMap;
-
-
+    
     // Para controlar si empieza o no la transición
     bool start = false;
     // Para controlar si la transición es de entrada o salida
@@ -42,6 +41,9 @@ public class Warp : MonoBehaviour{
     IEnumerator OnTriggerEnter2D(Collider2D col){
 
         if (col.tag == "Player"){
+
+            SoundManager.SetClip("W");
+
             col.GetComponent<Animator>().enabled = false;
             col.GetComponent<Player>().enabled = false;
 
@@ -62,6 +64,11 @@ public class Warp : MonoBehaviour{
             //tittleMiniMap.text = SingletonVars.Instance.SetNameCurrentMap(targetMap.name);
             // Actualizamos la cámara
             Camera.main.GetComponent<MainCamera>().SetBound(targetMap);
+
+            if ( targetMap.name.Equals("ACP01") || targetMap.name.Equals("ACPMain") ) {
+                col.GetComponent<Animator>().SetFloat("moveY", +1);
+            }
+
         }
 
     }

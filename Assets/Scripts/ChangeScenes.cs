@@ -16,7 +16,7 @@ public class ChangeScenes : MonoBehaviour{
     // Transición de 1 segundo
     float fadeTime = 1f;
 
-    public string nameScene = "";
+    public string nameScene;
 
     GameObject area;
 
@@ -31,6 +31,9 @@ public class ChangeScenes : MonoBehaviour{
 
     IEnumerator OnTriggerEnter2D(Collider2D col){
         if (col.tag == "Player"){
+
+            SoundManager.SetClip("W");
+
             col.GetComponent<Animator>().enabled = false;
             col.GetComponent<Player>().enabled = false;
 

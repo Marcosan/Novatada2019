@@ -12,7 +12,7 @@ public class Player : MonoBehaviour{
     Animator anim;
 
     private static PlayerData PlData;
-    private static GlobalDataGame GmData;
+    //private static GlobalDataGame GmData;
 
     string ActiveScene;
 
@@ -38,14 +38,6 @@ public class Player : MonoBehaviour{
 
     // Start is called before the first frame update
     void Start(){
-
-        // Implementacion para el audio en el cambio de escena
-        print("La escena actual es: " + SceneManager.GetActiveScene().name.ToString());
-        SoundManager.ChangeMusic();
-
-        // Carga los datos guardados la ultima vez
-        PlData = SaveSystem.LoadPlayer();
-        GmData = SaveSystem.LoadGameData();
         
         anim = GetComponent<Animator>();
         rb2d = GetComponent<Rigidbody2D>();
@@ -68,12 +60,19 @@ public class Player : MonoBehaviour{
         // Para que la posicion inicial este como se guardo la ultima vez
         if (SaveSystem.wasLoaded)
         {
+            // Carga los datos guardados la ultima vez
+            PlData = SaveSystem.LoadPlayer();
 
             setPosition(PlData.GetX(), PlData.GetY(), PlData.GetZ());
             setPlayerDirection(PlData.GetMovement());
 
             SaveSystem.wasLoaded = false;
         }
+
+        // Implementacion para el audio en el cambio de escena
+        print("La escena actual es: " + SceneManager.GetActiveScene().name.ToString());
+        SoundManager.ChangeMusic();
+
 
     }
 
@@ -208,30 +207,75 @@ public class Player : MonoBehaviour{
         // Asigna a una variable la escena antes de guardar.
         ActiveScene = SceneManager.GetActiveScene().name;
 
+        //SaveSystem.SaveGame(this);
+
+        SaveLastScene();
+
         // Guarda al player con los parametros actuales.
         SaveSystem.SavePlayer(this);
     }
 
-    public void LoadPlayer() {
+    public void LoadPlayer()
+    {
+        /* Por si en algun momento se lo vuelve a utilizar */
+        //GetTheData();
+
+        LoadLastScene();
 
         // Para cargar correctamente las escenas tienen que estar registradas en File>Build Settings
         // desde el editor de unity.
 
         // Nunca usar, hace que se mezclen escenas y los elementos no se eliminan y se crean unos sobre  otros
-        //SceneManager.LoadScene(data.GetLastScene(),LoadSceneMode.Additive);
+        //SceneManager.LoadScene(SaveSystem.LastScene,LoadSceneMode.Additive);
 
         // Forma correcta de cargar una escena asegurandose de eliminar escenas viejas con sus objetos anteriores
-        SceneManager.LoadScene(GmData.GetLastScene(), LoadSceneMode.Single);
+        SceneManager.LoadScene(SaveSystem.LastScene, LoadSceneMode.Single);
 
         // No estoy seguro si elimina las escenas anteriores y solo hace el cambio
-        //SceneManager.LoadScene(data.GetLastScene());
-        
+        //SceneManager.LoadScene(SaveSystem.LastScene);
+
         // Para indicar que se acaba de cargar una escena
         SaveSystem.wasLoaded = true;
 
         // Para evitar que se noten los cambios de audio bruscamente
         SoundManager.BackgroundMusic.mute = true;
-        
+
     }
-    
+
+    // No preguntes por que esta esto aqui, el editor me lo dio como solucion y no se por que no coge sin ponerlo en metodo
+    // Trata de mandar todos los datos que estaban guardados en el GlobalDataGame en una variable de datos temporales en
+    // Save System para evitar que se eliminen o sobreescriban datos que no quieres
+    // Por ejemplo, que ya hayas utilizado una variable antes y al guardar como no lo cambiaste se haga nulo
+    // >:v Solo hazlo no preguntes
+    private static void GetTheData()
+    {
+        /* Obsoleto, pero se lo dejara como plantilla 
+         * Esta Obsoleto nomas el valor que se guarda y carga en GlobalDataGame, se lo dejara como plantilla al igual que el PlayerData
+         * (Que si esta en uso) para futuros usos. No esta de mas utilizar una serializacion, todo dependera siempre de los tipos de
+         * datos que se requieran guardar. Ahora se empleara el uso de PlayerPrefs en caso de que los valores que se desean guardar
+         * y cargar sean de datos como cadenas, enteros o flotantes
+         */
+        // Carga los datos guardados la ultima vez
+        //GmData = SaveSystem.LoadGameData();
+        //SaveSystem.LastScene = GmData.GetLastScene();
+    }
+
+    /* Se puede usar una clase llamada PlayerPrefs que guarda en un fichero a parte ciertos datos deseados, pero la desventaja es
+     * que solo se aplica con tipos de datos simples como strings, enteros o flotantes.
+     * De aqui se puede ver como en python, como si fueran diccionarios. El primer argumento es un key y el segundo un value
+     * Por lo menos en los Sets
+     * En los Gets el primer argumento sigue siendo un key, pero el segundo (Es opcional) sirve para poner un valor por defecto
+     * en caso de no existir uno guardado previamente
+     * Este tipo de guardado preferiblemente se deberia de utilizar para configuraciones, avances en los niveles, marcadores de puntos,
+     * o en este caso se guarda y carga una cadena que seria el nombre que tiene la ultima escena en la que estaba el jugador. Como no 
+     * guardare un objeto me conviene utilizarlo para mas facilidad.
+     * Al contrario de la serializacion que sirve para guardar objetos masivos
+     */
+    void SaveLastScene() {
+        PlayerPrefs.SetString("lastScene", SceneManager.GetActiveScene().name);
+    }
+
+    void LoadLastScene() {
+        SaveSystem.LastScene = PlayerPrefs.GetString("lastScene", SceneManager.GetActiveScene().name);
+    }
 }

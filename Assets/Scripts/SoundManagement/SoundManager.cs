@@ -32,6 +32,7 @@ public class SoundManager : MonoBehaviour
     
     public AudioClip InteractSound;                 // Audio para interaccion
     public AudioClip ActionSound;                   // Audio para Accion
+    public AudioClip WarpSound;                     // Audio para el Warp
     
     public AudioClip[] musicList;                   // Array de AudioClips para agregar musica de fondo, se llaman desde AudioCanvas
     public string[] Escenas;                        // Array que almacena los nombres de todas las escenas existentes
@@ -109,6 +110,10 @@ public class SoundManager : MonoBehaviour
         // "A" para Accion
         else if (str.Equals("A")) {
             PlaySingle(SoundManager.instance.ActionSound);
+        }
+        else if (str.Equals("W"))
+        {
+            PlaySingle(SoundManager.instance.WarpSound);
         }
     }
 

@@ -114,6 +114,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InteractSound: {fileID: 8300000, guid: 1a7e389b13d1c4f4ab73557aa1a9ee01, type: 3}
   ActionSound: {fileID: 8300000, guid: 8b0c6b56655071a41aaece16b875ba61, type: 3}
+  WarpSound: {fileID: 8300000, guid: 630f6290ef9e06142895043a4d55a47d, type: 3}
   musicList:
   - {fileID: 8300000, guid: 26779680bd547f3449e8a1d30de70cf2, type: 3}
   - {fileID: 8300000, guid: 7d5ea09363c60c540bf7584c7c62a07e, type: 3}
