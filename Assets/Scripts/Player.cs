@@ -12,7 +12,7 @@ public class Player : MonoBehaviour{
     Animator anim;
 
     private static PlayerData PlData;
-    private static GlobalDataGame GmData;
+    //private static GlobalDataGame GmData;
 
     string ActiveScene;
 
@@ -207,7 +207,7 @@ public class Player : MonoBehaviour{
         // Asigna a una variable la escena antes de guardar.
         ActiveScene = SceneManager.GetActiveScene().name;
 
-        SaveSystem.SaveGame(this);
+        //SaveSystem.SaveGame(this);
 
         SaveLastScene();
 
@@ -250,8 +250,9 @@ public class Player : MonoBehaviour{
     private static void GetTheData()
     {
         /* Obsoleto, pero se lo dejara como plantilla 
-         * Esta Obsoleto nomas el valor que se guarda y carga en GlobalDataGame, sigue en uso para ser utilizado guardando otros 
-         * tipos de datos que se requieran. Ahora se empleara el uso de PlayerPrefs en caso de que los valores que se desean guardar
+         * Esta Obsoleto nomas el valor que se guarda y carga en GlobalDataGame, se lo dejara como plantilla al igual que el PlayerData
+         * (Que si esta en uso) para futuros usos. No esta de mas utilizar una serializacion, todo dependera siempre de los tipos de
+         * datos que se requieran guardar. Ahora se empleara el uso de PlayerPrefs en caso de que los valores que se desean guardar
          * y cargar sean de datos como cadenas, enteros o flotantes
          */
         // Carga los datos guardados la ultima vez
@@ -265,6 +266,10 @@ public class Player : MonoBehaviour{
      * Por lo menos en los Sets
      * En los Gets el primer argumento sigue siendo un key, pero el segundo (Es opcional) sirve para poner un valor por defecto
      * en caso de no existir uno guardado previamente
+     * Este tipo de guardado preferiblemente se deberia de utilizar para configuraciones, avances en los niveles, marcadores de puntos,
+     * o en este caso se guarda y carga una cadena que seria el nombre que tiene la ultima escena en la que estaba el jugador. Como no 
+     * guardare un objeto me conviene utilizarlo para mas facilidad.
+     * Al contrario de la serializacion que sirve para guardar objetos masivos
      */
     void SaveLastScene() {
         PlayerPrefs.SetString("lastScene", SceneManager.GetActiveScene().name);

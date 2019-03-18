@@ -36,18 +36,35 @@ public class SaveSystem
 
         //Output the Game data path to the console
         Debug.Log("Path de los datos guardados del jugador: " + Path);
-
-        BinaryFormatter formatter = new BinaryFormatter();
-
+        
         FileStream stream = new FileStream(Path, FileMode.Create);
-
-        PlayerData data = new PlayerData(pyr);
-
-        formatter.Serialize(stream, data);
+        
+        (new BinaryFormatter()).Serialize(stream, new PlayerData(pyr));
         stream.Close();
 
     }
+    
+    public static PlayerData LoadPlayer()
+    {
+        string Path = MainPath + playerDataFile;
+        if (File.Exists(Path))
+        {
+            FileStream stream = new FileStream(Path, FileMode.Open);
 
+            PlayerData data = (new BinaryFormatter()).Deserialize(stream) as PlayerData;
+
+            stream.Close();
+
+            return data;
+        }
+        else
+        {
+            Debug.LogError("No se encontro el archivo de guardado en " + Path);
+            return null;
+        }
+    }
+
+    /* Obsoleto por el momento 
     // Agregar los parametros tanto en este metodo como en el objeto data que esta mas abajo
     // Los mismos deben estar en el constructor de GlobalDataGame
     public static void SaveGame(Player pyr)
@@ -66,26 +83,6 @@ public class SaveSystem
         formatter.Serialize(stream, data);
         stream.Close();
 
-    }
-
-    public static PlayerData LoadPlayer()
-    {
-        string Path = MainPath + playerDataFile;
-        if (File.Exists(Path))
-        {
-            BinaryFormatter formatter = new BinaryFormatter();
-            FileStream stream = new FileStream(Path, FileMode.Open);
-
-            PlayerData data = formatter.Deserialize(stream) as PlayerData;
-            stream.Close();
-
-            return data;
-        }
-        else
-        {
-            Debug.LogError("No se encontro el archivo de guardado en " + Path);
-            return null;
-        }
     }
 
     public static GlobalDataGame LoadGameData()
@@ -107,5 +104,6 @@ public class SaveSystem
             return null;
         }
     }
+    */
     
 }
