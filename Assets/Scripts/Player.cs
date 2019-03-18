@@ -1,9 +1,8 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour{
     Vector2 mov;
@@ -11,6 +10,11 @@ public class Player : MonoBehaviour{
     Rigidbody2D rb2d;
     public float speed = 4f;
     Animator anim;
+
+    private static PlayerData PlData;
+    private static GlobalDataGame GmData;
+
+    string ActiveScene;
 
     public GameObject initialMap;
 
@@ -25,7 +29,7 @@ public class Player : MonoBehaviour{
 
     Text tittleMiniMap;
 
-    //Joistick
+    // Joistick
     public Joystick joystick;
     
     private void Awake(){
@@ -34,6 +38,15 @@ public class Player : MonoBehaviour{
 
     // Start is called before the first frame update
     void Start(){
+
+        // Implementacion para el audio en el cambio de escena
+        print("La escena actual es: " + SceneManager.GetActiveScene().name.ToString());
+        SoundManager.ChangeMusic();
+
+        // Carga los datos guardados la ultima vez
+        PlData = SaveSystem.LoadPlayer();
+        GmData = SaveSystem.LoadGameData();
+        
         anim = GetComponent<Animator>();
         rb2d = GetComponent<Rigidbody2D>();
 
@@ -51,7 +64,17 @@ public class Player : MonoBehaviour{
         //tittleMiniMap.text = SingletonVars.Instance.SetNameCurrentMap(initialMap.name);
         //MainCamera es el script, se llama a la funcion SetBound creada allí, se pasa el mapa inicial
         Camera.main.GetComponent<MainCamera>().SetBound(initialMap);
-        
+
+        // Para que la posicion inicial este como se guardo la ultima vez
+        if (SaveSystem.wasLoaded)
+        {
+
+            setPosition(PlData.GetX(), PlData.GetY(), PlData.GetZ());
+            setPlayerDirection(PlData.GetMovement());
+
+            SaveSystem.wasLoaded = false;
+        }
+
     }
 
     // Update is called once per frame
@@ -68,8 +91,9 @@ public class Player : MonoBehaviour{
         Animations(mov);
 
         Interact();
+        
     }
-
+    
     private void FixedUpdate(){
         MoveCharacter();
     }
@@ -79,7 +103,8 @@ public class Player : MonoBehaviour{
             (joystick.Vertical > .2f || joystick.Vertical < -.2f))
         {
             mov = new Vector2(joystick.Horizontal, joystick.Vertical);
-            lastMov = new Vector2(joystick.Horizontal, joystick.Vertical);
+            // Almaneca ultimo movimiento
+            lastMov = new Vector2(joystick.Horizontal, joystick.Vertical); 
         }
         else
             mov = Vector2.zero;
@@ -141,14 +166,23 @@ public class Player : MonoBehaviour{
         this.mov = m;
     }
 
+    // Obtener la ultima escena en la que estuvo el player
+    public string GetLastScene() {
+        return this.ActiveScene;
+    }
+
+    // Cambiar el valor booleano al boton
+    // Ir a Assets/Scripts/ActionBtn/Changer.cs para ver implementacion.
     public void setIsActionButton(bool action) {
         this.isActionButton = action;
     }
 
+    // Mover al jugador
     void MoveCharacter(){
         rb2d.MovePosition(rb2d.position + getMov() * speed * Time.deltaTime);
     }
 
+    // Asignar al player la posicion indicada
     public void setPosition(float posX, float posY, float posZ) {
 
         Vector3 positionPlayer;
@@ -159,6 +193,7 @@ public class Player : MonoBehaviour{
         this.transform.position = positionPlayer;
     }
 
+    // Asignar al player una orientacion (Hacia donde esta mirando)
     public void setPlayerDirection(Vector2 dir) {
         if (dir != Vector2.zero)
         {
@@ -168,16 +203,35 @@ public class Player : MonoBehaviour{
 
     }
 
+    // Para guardar la partida
     public void SavePlayer() {
-        SaveSystem.savePlayer(this);
+        // Asigna a una variable la escena antes de guardar.
+        ActiveScene = SceneManager.GetActiveScene().name;
+
+        // Guarda al player con los parametros actuales.
+        SaveSystem.SavePlayer(this);
     }
 
     public void LoadPlayer() {
-        PlayerData data = SaveSystem.LoadPlayer();
 
-        setPosition(data.GetX(), data.GetY(), data.GetZ());
+        // Para cargar correctamente las escenas tienen que estar registradas en File>Build Settings
+        // desde el editor de unity.
 
-        setPlayerDirection(data.GetMovement());
+        // Nunca usar, hace que se mezclen escenas y los elementos no se eliminan y se crean unos sobre  otros
+        //SceneManager.LoadScene(data.GetLastScene(),LoadSceneMode.Additive);
+
+        // Forma correcta de cargar una escena asegurandose de eliminar escenas viejas con sus objetos anteriores
+        SceneManager.LoadScene(GmData.GetLastScene(), LoadSceneMode.Single);
+
+        // No estoy seguro si elimina las escenas anteriores y solo hace el cambio
+        //SceneManager.LoadScene(data.GetLastScene());
+        
+        // Para indicar que se acaba de cargar una escena
+        SaveSystem.wasLoaded = true;
+
+        // Para evitar que se noten los cambios de audio bruscamente
+        SoundManager.BackgroundMusic.mute = true;
         
     }
+    
 }

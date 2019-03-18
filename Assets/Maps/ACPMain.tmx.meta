@@ -3,54 +3,11 @@ guid: 17362f897ddee8b4f9385d9a23d68188
 ScriptedImporter:
   fileIDToRecycleName:
     100050: _MapPrfab/ACPMain
-    100052: _MapPrfab/ACPMain/Capa de Patrones 1
-    100054: _MapPrfab/ACPMain/Capa de patrones 2
-    100056: _MapPrfab/ACPMain/collider
-    100094: _MapPrfab/ACPMain/wall1
-    100096: _MapPrfab/ACPMain/wall2
-    100098: _MapPrfab/ACPMain/Wall3
     400050: _MapPrfab/ACPMain/Transform
-    400052: _MapPrfab/ACPMain/Capa de Patrones 1/Transform
-    400054: _MapPrfab/ACPMain/Capa de patrones 2/Transform
-    400056: _MapPrfab/ACPMain/collider/Transform
-    400094: _MapPrfab/ACPMain/wall1/Transform
-    400096: _MapPrfab/ACPMain/wall2/Transform
-    400098: _MapPrfab/ACPMain/Wall3/Transform
     11400002: _superAsset
     11400076: _MapPrfab/ACPMain/MonoBehaviour-SuperTiled2Unity.SuperMap
-    11400078: _MapPrfab/ACPMain/MonoBehaviour-SuperTiled2Unity.SuperCustomProperties
-    11400080: _MapPrfab/ACPMain/Capa de Patrones 1/MonoBehaviour-SuperTiled2Unity.SuperTileLayer
-    11400082: _MapPrfab/ACPMain/Capa de Patrones 1/MonoBehaviour-SuperTiled2Unity.SuperCustomProperties
-    11400084: _MapPrfab/ACPMain/Capa de Patrones 1/MonoBehaviour-SuperTiled2Unity.TilemapData
-    11400086: _MapPrfab/ACPMain/Capa de patrones 2/MonoBehaviour-SuperTiled2Unity.SuperTileLayer
-    11400088: _MapPrfab/ACPMain/Capa de patrones 2/MonoBehaviour-SuperTiled2Unity.SuperCustomProperties
-    11400090: _MapPrfab/ACPMain/Capa de patrones 2/MonoBehaviour-SuperTiled2Unity.TilemapData
-    11400092: _MapPrfab/ACPMain/collider/MonoBehaviour-SuperTiled2Unity.SuperTileLayer
-    11400094: _MapPrfab/ACPMain/collider/MonoBehaviour-SuperTiled2Unity.SuperCustomProperties
-    11400096: _MapPrfab/ACPMain/collider/MonoBehaviour-SuperTiled2Unity.TilemapData
-    11400132: _MapPrfab/ACPMain/wall1/MonoBehaviour-SuperTiled2Unity.SuperTileLayer
-    11400134: _MapPrfab/ACPMain/wall1/MonoBehaviour-SuperTiled2Unity.SuperCustomProperties
-    11400136: _MapPrfab/ACPMain/wall1/MonoBehaviour-SuperTiled2Unity.TilemapData
-    11400138: _MapPrfab/ACPMain/wall2/MonoBehaviour-SuperTiled2Unity.SuperTileLayer
-    11400140: _MapPrfab/ACPMain/wall2/MonoBehaviour-SuperTiled2Unity.SuperCustomProperties
-    11400142: _MapPrfab/ACPMain/wall2/MonoBehaviour-SuperTiled2Unity.TilemapData
-    11400144: _MapPrfab/ACPMain/Wall3/MonoBehaviour-SuperTiled2Unity.SuperTileLayer
-    11400146: _MapPrfab/ACPMain/Wall3/MonoBehaviour-SuperTiled2Unity.SuperCustomProperties
-    11400148: _MapPrfab/ACPMain/Wall3/MonoBehaviour-SuperTiled2Unity.TilemapData
     100100000: _MapPrfab
     2569400265252428798: _MapPrfab/ACPMain/Grid
-    3664157343022684188: _MapPrfab/ACPMain/Capa de Patrones 1/TilemapRenderer
-    3664157343022684190: _MapPrfab/ACPMain/Capa de patrones 2/TilemapRenderer
-    3664157343022684192: _MapPrfab/ACPMain/collider/TilemapRenderer
-    3664157343022684194: _MapPrfab/ACPMain/wall1/TilemapRenderer
-    3664157343022684196: _MapPrfab/ACPMain/wall2/TilemapRenderer
-    3664157343022684198: _MapPrfab/ACPMain/Wall3/TilemapRenderer
-    8195094279510102554: _MapPrfab/ACPMain/Capa de Patrones 1/Tilemap
-    8195094279510102556: _MapPrfab/ACPMain/Capa de patrones 2/Tilemap
-    8195094279510102558: _MapPrfab/ACPMain/collider/Tilemap
-    8195094279510102560: _MapPrfab/ACPMain/wall1/Tilemap
-    8195094279510102562: _MapPrfab/ACPMain/wall2/Tilemap
-    8195094279510102564: _MapPrfab/ACPMain/Wall3/Tilemap
   externalObjects: {}
   userData: 
   assetBundleName: 
@@ -59,7 +16,7 @@ ScriptedImporter:
   errors:
   - Errors detected in tileset 'tsx/red.tsx'. Check the tileset inspector for more
     details. Your map may be broken until these are fixed.
-  - Could not find tile 11139. Make sure the tilesets were successfully imported.
+  - 'Missing tileset asset: Instrumentos musicales.tsx'
   warnings: []
   missingSortingLayers: []
   missingLayers: []

@@ -35,6 +35,7 @@ public class Destroyable : MonoBehaviour {
         // Si es un ataque
         if (col.tag == "Action")
         {
+            SoundManager.SetClip("A");
 
             // Reproducimos la animación de destrucción y esperamos
             anim.Play(destroyState);
