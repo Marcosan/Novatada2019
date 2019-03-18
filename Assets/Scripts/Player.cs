@@ -251,7 +251,8 @@ public class Player : MonoBehaviour{
     {
         /* Obsoleto, pero se lo dejara como plantilla 
          * Esta Obsoleto nomas el valor que se guarda y carga en GlobalDataGame, sigue en uso para ser utilizado guardando otros 
-         * tipos de datos que se requieran
+         * tipos de datos que se requieran. Ahora se empleara el uso de PlayerPrefs en caso de que los valores que se desean guardar
+         * y cargar sean de datos como cadenas, enteros o flotantes
          */
         // Carga los datos guardados la ultima vez
         //GmData = SaveSystem.LoadGameData();
