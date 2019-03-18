@@ -44,7 +44,7 @@ public class SoundManager : MonoBehaviour
         efxSound = GetComponent<AudioSource>();
 
         // Carga el nombre de todas las escenas existentes, el mismo orden esta en File > Build Settings (Se ingresa desde el editor de unity).
-        CargarEscenas();                            
+        CargarEscenas();
         
         BackgroundMusic.volume = 0.70F;             // Volumen de 0.0 a 1.0 para la musica de fondo
         BackgroundMusic.loop = true;                // Para que se repita el audio
@@ -92,11 +92,12 @@ public class SoundManager : MonoBehaviour
         // Reemplaza y reproduce el sonido de fondo.
         efxSound.Play(); **/
 
-    // Reproducir una vez.
-    efxSound.PlayOneShot(clip);
+        // Reproducir una vez.
+        //efxSound.PlayOneShot(clip);
 
-        // Opcional para cambiar la intensidad con la que suena
-        //efxSound.PlayOneShot(clip, 0.7F);
+        // Reproducir una vez con un volumen determinado de 0.0 a 1.0
+        efxSound.PlayOneShot(clip, 0.0F);
+        efxSound.PlayOneShot(clip, 0.65F);
 
     }
     

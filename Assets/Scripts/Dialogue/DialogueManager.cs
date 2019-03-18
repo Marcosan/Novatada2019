@@ -56,6 +56,8 @@ public class DialogueManager : MonoBehaviour{
             return;
         }
 
+        SoundManager.SetClip("I");
+
         string sentence = sentences.Dequeue();
 
         StopAllCoroutines();
