@@ -41,6 +41,9 @@ public class Warp : MonoBehaviour{
     IEnumerator OnTriggerEnter2D(Collider2D col){
 
         if (col.tag == "Player"){
+
+            SoundManager.SetClip("W");
+
             col.GetComponent<Animator>().enabled = false;
             col.GetComponent<Player>().enabled = false;
 
@@ -61,6 +64,11 @@ public class Warp : MonoBehaviour{
             //tittleMiniMap.text = SingletonVars.Instance.SetNameCurrentMap(targetMap.name);
             // Actualizamos la cámara
             Camera.main.GetComponent<MainCamera>().SetBound(targetMap);
+
+            if ( targetMap.name.Equals("ACP01") || targetMap.name.Equals("ACPMain") ) {
+                col.GetComponent<Animator>().SetFloat("moveY", +1);
+            }
+
         }
 
     }

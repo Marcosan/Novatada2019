@@ -6507,6 +6507,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4829464133706247041, guid: 9ddcfd07b4c37214baa5c4ec7a2e861e,
+        type: 3}
+      propertyPath: WarpSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 630f6290ef9e06142895043a4d55a47d, type: 3}
     - target: {fileID: 4829464133706247042, guid: 9ddcfd07b4c37214baa5c4ec7a2e861e,
         type: 3}
       propertyPath: m_Enabled
