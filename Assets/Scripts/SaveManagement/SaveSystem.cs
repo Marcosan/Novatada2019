@@ -15,11 +15,11 @@ public class SaveSystem
     //private static string MainPath = Application.persistentDataPath + "/";
 
     /* Por defecto inicia desde Assets */
-    private static string MainPath = Application.dataPath + "/Scripts/SaveManagement/SaveGame/";
+    public static string MainPath = Application.dataPath + "/Scripts/SaveManagement/SaveGame/";
 
     /* Nombres de los archivos */
     private static string playerDataFile = "player.sav";
-    private static string gameDataFile = "game.sav";
+    //private static string gameDataFile = "game.sav";
 
     /* Espacio de las cosas que se guardaran en GlobalDataGame */
 

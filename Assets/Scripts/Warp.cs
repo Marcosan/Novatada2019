@@ -11,6 +11,14 @@ public class Warp : MonoBehaviour{
     //Para almacenar el mapa de destino
     //Tener en cuenta que se seleccionan los GameObjects (instancias de los mapas), no los mapas en si
     public GameObject targetMap;
+
+    /* Direccion hacia donde debe ver el jugador al pasar un Warp
+    * 'U' UP
+    * 'D' DOWN
+    * 'L' LEFT
+    * 'R' RIGHT
+    */
+    public char dir;
     
     // Para controlar si empieza o no la transición
     bool start = false;
@@ -43,10 +51,10 @@ public class Warp : MonoBehaviour{
         if (col.tag == "Player"){
 
             SoundManager.SetClip("W");
-
+            
             col.GetComponent<Animator>().enabled = false;
             col.GetComponent<Player>().enabled = false;
-
+            
             FadeIn();
 
             yield return new WaitForSeconds(fadeTime);
@@ -65,9 +73,8 @@ public class Warp : MonoBehaviour{
             // Actualizamos la cámara
             Camera.main.GetComponent<MainCamera>().SetBound(targetMap);
 
-            if ( targetMap.name.Equals("ACP01") || targetMap.name.Equals("ACPMain") ) {
-                col.GetComponent<Animator>().SetFloat("moveY", +1);
-            }
+            // Esto hara que apunte hacia una direccion luego de pasar a travez de un warp 
+            setDirection(col.GetComponent<Animator>(), dir);
 
         }
 
@@ -116,6 +123,29 @@ public class Warp : MonoBehaviour{
     // Método para activar la transición de salida
     void FadeOut(){
         isFadeIn = false;
+    }
+
+    void setDirection(Animator anim, char dir ) {
+        // Este es por defecto
+        if (dir.Equals(null)) {
+            dir = 'U';
+        }
+        if ( dir.Equals('U') )
+        {
+            anim.SetFloat("moveY", +1);
+        }
+        else if ( dir.Equals('D') )
+        {
+            anim.SetFloat("moveY", -1);
+        }
+        else if ( dir.Equals('L') )
+        {
+            anim.SetFloat("moveX", -1);
+        }
+        else if ( dir.Equals('R') )
+        {
+            anim.SetFloat("moveX", +1);
+        }
     }
 
 }

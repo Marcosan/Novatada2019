@@ -34,6 +34,12 @@ public class Player : MonoBehaviour{
     
     private void Awake(){
         Assert.IsNotNull(initialMap);
+
+        /* Para evitar mas carga desde el inicio puse esta instancia en Awake ya que de preferencia es
+         * mejor dejar cargando los archivos mas pesados de a poco en vez de golpe como seria en start.
+         */
+        // Carga los datos guardados la ultima vez
+        PlData = SaveSystem.LoadPlayer();
     }
 
     // Start is called before the first frame update
@@ -60,9 +66,7 @@ public class Player : MonoBehaviour{
         // Para que la posicion inicial este como se guardo la ultima vez
         if (SaveSystem.wasLoaded)
         {
-            // Carga los datos guardados la ultima vez
-            PlData = SaveSystem.LoadPlayer();
-
+            
             setPosition(PlData.GetX(), PlData.GetY(), PlData.GetZ());
             setPlayerDirection(PlData.GetMovement());
 
@@ -72,8 +76,7 @@ public class Player : MonoBehaviour{
         // Implementacion para el audio en el cambio de escena
         print("La escena actual es: " + SceneManager.GetActiveScene().name.ToString());
         SoundManager.ChangeMusic();
-
-
+        
     }
 
     // Update is called once per frame
@@ -273,6 +276,7 @@ public class Player : MonoBehaviour{
      */
     void SaveLastScene() {
         PlayerPrefs.SetString("lastScene", SceneManager.GetActiveScene().name);
+        PlayerPrefs.Save();
     }
 
     void LoadLastScene() {

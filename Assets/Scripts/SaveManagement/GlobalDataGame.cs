@@ -4,6 +4,7 @@
 [System.Serializable]
 public class GlobalDataGame 
 {
+
     // Datos relacionados a la escena
     string LastScene;
 
