@@ -42,9 +42,6 @@ public class SoundManager : MonoBehaviour
     {
         BackgroundMusic = GetComponent<AudioSource>();
         efxSound = GetComponent<AudioSource>();
-
-        // Carga el nombre de todas las escenas existentes, el mismo orden esta en File > Build Settings (Se ingresa desde el editor de unity).
-        CargarEscenas();
         
         BackgroundMusic.volume = 0.70F;             // Volumen de 0.0 a 1.0 para la musica de fondo
         BackgroundMusic.loop = true;                // Para que se repita el audio
@@ -81,6 +78,10 @@ public class SoundManager : MonoBehaviour
 
         // Set SoundManager to DontDestroyOnLoad so that it won't be destroyed when reloading our scene.
         DontDestroyOnLoad(gameObject);
+
+        // Carga el nombre de todas las escenas existentes, el mismo orden esta en File > Build Settings (Se ingresa desde el editor de unity).
+        CargarEscenas();
+
     }
 
     //Used to play single sound clips.
