@@ -323,6 +323,7 @@ public class Player : MonoBehaviour{
     }
 
     void LoadLastScene() {
-        SaveSystem.LastScene = PlayerPrefs.GetString("lastScene", SceneManager.GetActiveScene().name);
+        //SaveSystem.LastScene = PlayerPrefs.GetString("lastScene", SceneManager.GetActiveScene().name);
+        SaveSystem.LastScene = JsonManager.gsettings.lastScene;
     }
 }
