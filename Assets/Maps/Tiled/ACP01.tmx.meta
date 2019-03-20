@@ -213,6 +213,8 @@ ScriptedImporter:
     100416: _MapPrfab/ACP01/Collider/Collision_Default/Polygon (203)
     100418: _MapPrfab/ACP01/Collider/Collision_Default/Polygon (204)
     100420: _MapPrfab/ACP01/Collider/Collision_Default/Polygon (205)
+    100422: _MapPrfab/ACP01/Ceiling
+    100424: _MapPrfab/ACP01/Ceiling01
     400000: _MapPrfab/ACP01/Transform
     400002: _MapPrfab/ACP01/Collider/Transform
     400004: _MapPrfab/ACP01/Floor01/Transform
@@ -424,6 +426,8 @@ ScriptedImporter:
     400416: _MapPrfab/ACP01/Collider/Collision_Default/Polygon (203)/Transform
     400418: _MapPrfab/ACP01/Collider/Collision_Default/Polygon (204)/Transform
     400420: _MapPrfab/ACP01/Collider/Collision_Default/Polygon (205)/Transform
+    400422: _MapPrfab/ACP01/Ceiling/Transform
+    400424: _MapPrfab/ACP01/Ceiling01/Transform
     5000000: _MapPrfab/ACP01/Collider/Collision_Default/Rigidbody2D
     6000000: _MapPrfab/ACP01/Collider/Collision_Default/Polygon/PolygonCollider2D
     6000002: _MapPrfab/ACP01/Collider/Collision_Default/Polygon (1)/PolygonCollider2D
@@ -850,14 +854,24 @@ ScriptedImporter:
     11400430: _MapPrfab/ACP01/Collider/Collision_Default/Polygon (203)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
     11400432: _MapPrfab/ACP01/Collider/Collision_Default/Polygon (204)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
     11400434: _MapPrfab/ACP01/Collider/Collision_Default/Polygon (205)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
+    11400436: _MapPrfab/ACP01/Ceiling/MonoBehaviour-SuperTiled2Unity.SuperTileLayer
+    11400438: _MapPrfab/ACP01/Ceiling/MonoBehaviour-SuperTiled2Unity.SuperCustomProperties
+    11400440: _MapPrfab/ACP01/Ceiling/MonoBehaviour-SuperTiled2Unity.TilemapData
+    11400442: _MapPrfab/ACP01/Ceiling01/MonoBehaviour-SuperTiled2Unity.SuperTileLayer
+    11400444: _MapPrfab/ACP01/Ceiling01/MonoBehaviour-SuperTiled2Unity.SuperCustomProperties
+    11400446: _MapPrfab/ACP01/Ceiling01/MonoBehaviour-SuperTiled2Unity.TilemapData
     100100000: _MapPrfab
     2569400265252428796: _MapPrfab/ACP01/Grid
     3664157343022684176: _MapPrfab/ACP01/Collider/TilemapRenderer
     3664157343022684178: _MapPrfab/ACP01/Floor01/TilemapRenderer
     3664157343022684180: _MapPrfab/ACP01/Wall01/TilemapRenderer
+    3664157343022684182: _MapPrfab/ACP01/Ceiling/TilemapRenderer
+    3664157343022684184: _MapPrfab/ACP01/Ceiling01/TilemapRenderer
     8195094279510102542: _MapPrfab/ACP01/Collider/Tilemap
     8195094279510102544: _MapPrfab/ACP01/Floor01/Tilemap
     8195094279510102546: _MapPrfab/ACP01/Wall01/Tilemap
+    8195094279510102548: _MapPrfab/ACP01/Ceiling/Tilemap
+    8195094279510102550: _MapPrfab/ACP01/Ceiling01/Tilemap
   externalObjects: {}
   userData: 
   assetBundleName: 
