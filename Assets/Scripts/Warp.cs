@@ -33,6 +33,9 @@ public class Warp : MonoBehaviour{
 
     GameObject area;
 
+    // Para poder usarlo externamente
+    public static Warp instance = null;
+
     private void Awake(){
         //Para asegurar que el target se ha establecido o lanza un except
         Assert.IsNotNull(target);
@@ -44,6 +47,9 @@ public class Warp : MonoBehaviour{
 
         //Se busca el area con el texto (UI)
         area = GameObject.FindGameObjectWithTag("Area");
+
+        instance = this;
+
     }
 
     IEnumerator OnTriggerEnter2D(Collider2D col){
@@ -75,6 +81,8 @@ public class Warp : MonoBehaviour{
 
             // Esto hara que apunte hacia una direccion luego de pasar a travez de un warp 
             setDirection(col.GetComponent<Animator>(), dir);
+            
+            JsonManager.setLastMap(targetMap.name);
 
         }
 
@@ -147,5 +155,4 @@ public class Warp : MonoBehaviour{
             anim.SetFloat("moveX", +1);
         }
     }
-
 }
