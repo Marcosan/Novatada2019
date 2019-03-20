@@ -90,8 +90,6 @@ public class Player : MonoBehaviour{
                 Camera.main.GetComponent<MainCamera>().SetBound(initialMap);
             }
             
-            
-
             // Para colocar al player en la ultima posicion guardada
             setPosition(PlData.GetX(), PlData.GetY(), PlData.GetZ());
             setPlayerDirection(PlData.GetMovement());
@@ -246,7 +244,7 @@ public class Player : MonoBehaviour{
     public void SavePlayer() {
         // Asigna a una variable la escena antes de guardar.
         ActiveScene = SceneManager.GetActiveScene().name;
-
+        
         //SaveSystem.SaveGame(this);
 
         SaveLastScene();
