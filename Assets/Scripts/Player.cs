@@ -60,28 +60,46 @@ public class Player : MonoBehaviour{
         if (SaveSystem.wasLoaded)
         {
             /* Para cambiar de mapa a la posicion del jugador a la ultima guardada
-             * Siempre que se carga la escena se destruyen los objetos que estaban anteriormente y se carga
-             * como se configuro por defecto (A menos que se haga que se carguen desde un archivo JSON o etc,
-             * pero eso hay que personalizar cada detalle que se quiera conservar de cada escenario o mapa y 
-             * y como cargarlo). Para evitar este problema, esta funcion GameObject.Fint(string name) busca un
-             * GameObject de la escena que tenga le nombre que se le mande. En este caso esta cargando el ultimo 
-             * nombre guardado en Ajustes.json, el cual se actualiza cada que se cambia de mapa y se guarda al 
-             * darle al boton de guardado. Por lo que no importa cuantas veces se destruya ya que siempre buscara
-             * al que tenga ese nombre.
-             */
-            GameObject newTarget = GameObject.Find(JsonManager.gsettings.lastMapName);
+            * Siempre que se carga la escena se destruyen los objetos que estaban anteriormente y se carga
+            * como se configuro por defecto (A menos que se haga que se carguen desde un archivo JSON o etc,
+            * pero eso hay que personalizar cada detalle que se quiera conservar de cada escenario o mapa y 
+            * y como cargarlo). Para evitar este problema, esta funcion GameObject.Fint(string name) busca un
+            * GameObject de la escena que tenga le nombre que se le mande. En este caso esta cargando el ultimo 
+            * nombre guardado en Ajustes.json, el cual se actualiza cada que se cambia de mapa y se guarda al 
+            * darle al boton de guardado. Por lo que no importa cuantas veces se destruya ya que siempre buscara
+            * al que tenga ese nombre.
+            */
+
+            GameObject newTarget;
+
+            if (GameObject.Find(JsonManager.gsettings.lastMapName))
+            {
+                newTarget = GameObject.Find(JsonManager.gsettings.lastMapName);
+                //Para cambiar el titulo del minimapa
+                SingletonVars.Instance.nameCurrentMap = newTarget.name;
+
+                // Actualizamos la cámara con el mapa de la ultima vez antes de guardar
+                Camera.main.GetComponent<MainCamera>().SetBound(newTarget);
+            }
+            else
+            {
+                //Para cambiar el titulo del minimapa
+                SingletonVars.Instance.nameCurrentMap = initialMap.name;
+
+                // Actualizamos la cámara con el mapa de la ultima vez antes de guardar
+                Camera.main.GetComponent<MainCamera>().SetBound(initialMap);
+            }
+            
+            
 
             // Para colocar al player en la ultima posicion guardada
             setPosition(PlData.GetX(), PlData.GetY(), PlData.GetZ());
             setPlayerDirection(PlData.GetMovement());
-            
-            //Para cambiar el titulo del minimapa
-            SingletonVars.Instance.nameCurrentMap = newTarget.name;
-
-            // Actualizamos la cámara con el mapa de la ultima vez antes de guardar
-            Camera.main.GetComponent<MainCamera>().SetBound(newTarget);
 
             SaveSystem.wasLoaded = false;
+
+            JsonManager.setLastInitialMap(initialMap.name);
+
         }
         else {
             //Para cambiar el titulo del minimapa
@@ -297,8 +315,11 @@ public class Player : MonoBehaviour{
      * Al contrario de la serializacion que sirve para guardar objetos masivos
      */
     void SaveLastScene() {
+        // Para guardar en PlayerPrefs
         PlayerPrefs.SetString("lastScene", SceneManager.GetActiveScene().name);
         PlayerPrefs.Save();
+        // Para guardar en JSON
+        JsonManager.SetLastScene(SceneManager.GetActiveScene().name);
     }
 
     void LoadLastScene() {

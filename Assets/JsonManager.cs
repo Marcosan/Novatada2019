@@ -77,6 +77,14 @@ public class JsonManager : MonoBehaviour
         print("El mapa actual es: " + str);
     }
 
+    public static void setLastInitialMap(string str) {
+        gsettings.lastInitialMap = str;
+    }
+
+    public static void SetLastScene(string strScene) {
+        gsettings.lastScene = strScene;
+    }
+
 }
 
 [System.Serializable]
@@ -85,6 +93,8 @@ public class GlobalSettings
     // Aqui van los datos declarados exactamente igual a como estan sus keys en el archivo json
     public string namePlayer;
     public string lastMapName;
+    public string lastInitialMap;
+    public string lastScene;
 
     public override string ToString()
     {
