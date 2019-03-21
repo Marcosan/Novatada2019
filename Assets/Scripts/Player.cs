@@ -31,6 +31,11 @@ public class Player : MonoBehaviour{
 
     // Joistick
     public Joystick joystick;
+
+    /* Desde el player se carga la partida y los otros componentes necesarios, asi que por eso esta como objeto en el menu principal
+     * de juego, para que no salgan errores por la falta de joystick y etc pondremos un booleano
+     */
+     public bool isMainMenu = false;
     
     private void Awake(){
         Assert.IsNotNull(initialMap);
@@ -116,18 +121,25 @@ public class Player : MonoBehaviour{
 
     // Update is called once per frame
     void Update(){
-        if (isActionButton){
-            interacting = true;
-        } else{
-            interacting = false;
-            actionCollider.enabled = false;
+
+        if (!isMainMenu)
+        {
+            if (isActionButton)
+            {
+                interacting = true;
+            }
+            else
+            {
+                interacting = false;
+                actionCollider.enabled = false;
+            }
+            //Movements();
+            MoveMentsJoyStick();
+
+            Animations(mov);
+
+            Interact();
         }
-        //Movements();
-        MoveMentsJoyStick();
-
-        Animations(mov);
-
-        Interact();
         
     }
     
@@ -324,4 +336,9 @@ public class Player : MonoBehaviour{
         //SaveSystem.LastScene = PlayerPrefs.GetString("lastScene", SceneManager.GetActiveScene().name);
         SaveSystem.LastScene = JsonManager.gsettings.lastScene;
     }
+
+    public void QuitGame() {
+        Application.Quit();
+    }
+
 }
