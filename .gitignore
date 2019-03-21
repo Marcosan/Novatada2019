@@ -87,4 +87,6 @@ Corridor/Library/metadata/
 
 
 ProjectSettings/ProjectVersion.txt
-Assets/Scripts/SaveManagement/SaveGame/player.sav
+Assets/Scripts/SaveManagement/SaveGame/*.sav
+Assets/Scripts/SaveManagement/SaveGame/*.sav.meta
+Assets/SuperTiled2Unity/Icons.meta

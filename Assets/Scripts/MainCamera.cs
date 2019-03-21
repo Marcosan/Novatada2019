@@ -76,7 +76,8 @@ public class MainCamera : MonoBehaviour{
         target.GetComponent<Animator>().enabled = true;
         target.GetComponent<Player>().enabled = true;
 
-        StartCoroutine(area.GetComponent<Area>().ShowArea("Temporal"));
+        if(area != null)
+            StartCoroutine(area.GetComponent<Area>().ShowArea("Temporal"));
     }
 
     // Dibujaremos un cuadrado con opacidad encima de la pantalla simulando una transición
