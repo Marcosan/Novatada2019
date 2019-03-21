@@ -122,16 +122,23 @@ public class SoundManager : MonoBehaviour
     // Asignar un audio de fondo dependiendo del escenario.
     public void SetBackground() {
         // Orden de las escenas en el array se ven desde File>Build Settings
-        if (SceneManager.GetActiveScene().name == Escenas[0])
-        {
-            BackgroundMusic.clip = musicList[0];
-        }
-        else if (SceneManager.GetActiveScene().name == Escenas[2])
-        {
-            BackgroundMusic.clip = musicList[1];
-        }
-        else {
-            BackgroundMusic.clip = musicList[2];
+        for ( int i = 0 ; i < UnityEngine.SceneManagement.SceneManager.sceneCountInBuildSettings; i++ ) {
+            if (SceneManager.GetActiveScene().name.Equals("Scen01") || SceneManager.GetActiveScene().name.Equals("Lobby"))
+            {
+                BackgroundMusic.clip = musicList[0];
+            }
+            else if (SceneManager.GetActiveScene().name.Equals("MenuScene"))
+            {
+                BackgroundMusic.clip = musicList[3];
+            }
+            else if (SceneManager.GetActiveScene().name.Equals("RoomMarco"))
+            {
+                BackgroundMusic.clip = musicList[1];
+            }
+            else
+            {
+                BackgroundMusic.clip = musicList[2];
+            }
         }
     }
 

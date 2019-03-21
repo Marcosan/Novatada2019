@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 
 public class JsonManager : MonoBehaviour
 {
@@ -29,13 +30,19 @@ public class JsonManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
     }
 
     // Para leer el archivo mientras carga el juego
     private void Awake()
     {
         filePath = SaveSystem.MainPath + "Ajustes.json";
+
+        if (!File.Exists(filePath))
+        {
+            gsettings = new GlobalSettings("New Player", "LOBBY", "LOBBY", "Lobby",true);
+            SerializeSettings();
+        }
+
         jsonString = File.ReadAllText(filePath);
 
         // Se instancia el objeto con los datos del archivo
@@ -95,6 +102,15 @@ public class GlobalSettings
     public string lastMapName;
     public string lastInitialMap;
     public string lastScene;
+    public bool newGame;
+
+    public GlobalSettings(string name, string linitMap, string lMap, string lScene, bool nGame) {
+        namePlayer = name;
+        lastInitialMap = linitMap;
+        lastMapName = lMap;
+        lastScene = lScene;
+        newGame = nGame;
+    }
 
     public override string ToString()
     {

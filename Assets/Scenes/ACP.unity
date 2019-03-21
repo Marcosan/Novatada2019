@@ -1400,7 +1400,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 445781706}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.507, y: -14.958, z: 0}
+  m_LocalPosition: {x: -8.15, y: -13.01, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1943310592}
@@ -1492,7 +1492,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d27d47331db4164f848efd8ca7e2841, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameScene: RoomMarco
+  nameScene: Lobby
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -14108,22 +14108,22 @@ PrefabInstance:
     - target: {fileID: 391515046825215853, guid: b5e220c761457144d96df17adf76e645,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -72.8
+      value: -52.2
       objectReference: {fileID: 0}
     - target: {fileID: 391515046825215853, guid: b5e220c761457144d96df17adf76e645,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 24.8
+      value: 26.4
       objectReference: {fileID: 0}
     - target: {fileID: 391515046825215853, guid: b5e220c761457144d96df17adf76e645,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 114.99
+      value: 67.477
       objectReference: {fileID: 0}
     - target: {fileID: 391515046825215853, guid: b5e220c761457144d96df17adf76e645,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 28.97
+      value: 16.34
       objectReference: {fileID: 0}
     - target: {fileID: 391515046825215853, guid: b5e220c761457144d96df17adf76e645,
         type: 3}

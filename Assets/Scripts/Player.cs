@@ -60,9 +60,13 @@ public class Player : MonoBehaviour{
         actionCollider.radius = interCollider.radius;
 
         actionCollider.enabled = false;
-        
+
+        // Implementacion para el audio en el cambio de escena
+        print("La escena actual es: " + SceneManager.GetActiveScene().name.ToString());
+        SoundManager.ChangeMusic();
+
         // Para que la posicion inicial este como se guardo la ultima vez
-        if (SaveSystem.wasLoaded)
+        if (SaveSystem.wasLoaded && !SaveSystem.newGame)
         {
             /* Para cambiar de mapa a la posicion del jugador a la ultima guardada
             * Siempre que se carga la escena se destruyen los objetos que estaban anteriormente y se carga
@@ -94,7 +98,7 @@ public class Player : MonoBehaviour{
                 // Actualizamos la cámara con el mapa de la ultima vez antes de guardar
                 Camera.main.GetComponent<MainCamera>().SetBound(initialMap);
             }
-            
+
             // Para colocar al player en la ultima posicion guardada
             setPosition(PlData.GetX(), PlData.GetY(), PlData.GetZ());
             setPlayerDirection(PlData.GetMovement());
@@ -102,6 +106,9 @@ public class Player : MonoBehaviour{
             SaveSystem.wasLoaded = false;
 
             JsonManager.setLastInitialMap(initialMap.name);
+
+        }
+        else if (isMainMenu) {
 
         }
         else {
@@ -112,10 +119,6 @@ public class Player : MonoBehaviour{
             //MainCamera es el script, se llama a la funcion SetBound creada allí, se pasa el mapa inicial
             Camera.main.GetComponent<MainCamera>().SetBound(initialMap);
         }
-
-        // Implementacion para el audio en el cambio de escena
-        print("La escena actual es: " + SceneManager.GetActiveScene().name.ToString());
-        SoundManager.ChangeMusic();
         
     }
 
