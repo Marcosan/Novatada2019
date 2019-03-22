@@ -300,6 +300,24 @@ public class Player : MonoBehaviour{
 
     }
 
+    public void NewPlayer()
+    {
+        PlayerPrefs.DeleteAll();
+
+        JsonManager.SetInitialDataJson();
+        JsonManager.SerializeSettings();
+
+        SaveSystem.LastScene = "Lobby";
+
+        SceneManager.LoadScene(SaveSystem.LastScene, LoadSceneMode.Single);
+
+        SaveSystem.wasLoaded = true;
+
+        // Para evitar que se noten los cambios de audio bruscamente
+        SoundManager.BackgroundMusic.mute = true;
+
+    }
+
     // No preguntes por que esta esto aqui, el editor me lo dio como solucion y no se por que no coge sin ponerlo en metodo
     // Trata de mandar todos los datos que estaban guardados en el GlobalDataGame en una variable de datos temporales en
     // Save System para evitar que se eliminen o sobreescriban datos que no quieres

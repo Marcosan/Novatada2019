@@ -90,3 +90,5 @@ ProjectSettings/ProjectVersion.txt
 Assets/Scripts/SaveManagement/SaveGame/*.sav
 Assets/Scripts/SaveManagement/SaveGame/*.sav.meta
 Assets/SuperTiled2Unity/Icons.meta
+Assets/Scripts/SaveManagement/SaveGame/*.json
+Assets/Scripts/SaveManagement/SaveGame/*.json.meta

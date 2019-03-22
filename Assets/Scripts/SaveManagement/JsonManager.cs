@@ -14,6 +14,9 @@ public class JsonManager : MonoBehaviour
      * solo a valores de tipo string, int o float. Tambien soporta guardar arreglos o booleanos, etc.
      */
 
+    // Variables para el mapa de Kokoa y Fanpol
+    private static MapKokoaClass newMapDarkClear;
+
     // Para el uso con JSON
     static string filePath;
     static string jsonString;
@@ -35,11 +38,12 @@ public class JsonManager : MonoBehaviour
     // Para leer el archivo mientras carga el juego
     private void Awake()
     {
-        filePath = SaveSystem.MainPath + "Ajustes.json";
+        newMapDarkClear = new MapKokoaClass();
+        filePath = SaveSystem.MainPath + SaveSystem.NameJson;
 
         if (!File.Exists(filePath))
         {
-            gsettings = new GlobalSettings("New Player", "LOBBY", "LOBBY", "Lobby",true);
+            gsettings = new GlobalSettings("New Player", "LOBBY", "LOBBY", "Lobby", true, newMapDarkClear);
             SerializeSettings();
         }
 
@@ -70,6 +74,7 @@ public class JsonManager : MonoBehaviour
      */
     public static void SerializeSettings() {
         jsonString = JsonUtility.ToJson(gsettings);
+        print(jsonString);
         File.WriteAllText(filePath, jsonString);
     }
 
@@ -91,6 +96,47 @@ public class JsonManager : MonoBehaviour
     public static void SetLastScene(string strScene) {
         gsettings.lastScene = strScene;
     }
+    
+    // Sets para el mapa de Kokoa
+    public static void setMapDarkK(bool clear) {
+        gsettings.mapsDarkClear.mapaK = clear;
+        checkMapaDarkIsClear();
+    }
+    
+    public static void setMapDarkO(bool clear) {
+        gsettings.mapsDarkClear.mapaO = clear;
+    }
+    
+    public static void setMapDarkA(bool clear) {
+        gsettings.mapsDarkClear.mapaA = clear;
+    }
+
+    private static void checkMapaDarkIsClear() {
+        if (isKokoaLevelClear()) {
+            gsettings.mapsDarkClear.MapaKokoaCompleto = true;
+        }
+    }
+
+    private static bool isKokoaLevelClear(){
+        if (!gsettings.mapsDarkClear.mapaK)
+            return false;
+        else if (!gsettings.mapsDarkClear.mapaO)
+            return false;
+        else if (!gsettings.mapsDarkClear.mapaA)
+            return false;
+
+        return true;
+    }
+
+    public static void SetInitialDataJson() {
+        newMapDarkClear = new MapKokoaClass();
+        gsettings.namePlayer = "New Player";
+        gsettings.lastInitialMap = "LOBBY";
+        gsettings.lastMapName = "LOBBY";
+        gsettings.lastScene = "Lobby";
+        gsettings.newGame = true;
+        gsettings.mapsDarkClear = newMapDarkClear;
+    }
 
 }
 
@@ -103,18 +149,44 @@ public class GlobalSettings
     public string lastInitialMap;
     public string lastScene;
     public bool newGame;
+    public MapKokoaClass mapsDarkClear;
 
-    public GlobalSettings(string name, string linitMap, string lMap, string lScene, bool nGame) {
+    public GlobalSettings(string name, string linitMap, string lMap, string lScene, bool nGame, //Datos Generales
+                            MapKokoaClass mDarkClear) //Datos de Room de Marco
+    {
         namePlayer = name;
         lastInitialMap = linitMap;
         lastMapName = lMap;
         lastScene = lScene;
         newGame = nGame;
+        mapsDarkClear = mDarkClear;
     }
 
     public override string ToString()
     {
         return string.Format(" \"namePlayer\" : {0} , \"lastMapTag\" : {1} ", namePlayer,lastMapName);
+    }
+
+}
+
+[System.Serializable]
+public class MapKokoaClass
+{
+    // Aqui van los datos declarados exactamente igual a como estan sus keys en el archivo json
+    public bool mapaK;
+    public bool mapaO;
+    public bool mapaA;
+    public bool MapaKokoaCompleto;
+
+    public MapKokoaClass(){
+        mapaK = false;
+        mapaO = false;
+        mapaA = false;
+        MapaKokoaCompleto = false;
+    }
+
+    public override string ToString(){
+        return string.Format(" \"namePlayer\" : {0} , \"lastMapTag\" : {1} ", mapaK, MapaKokoaCompleto);
     }
 
 }
