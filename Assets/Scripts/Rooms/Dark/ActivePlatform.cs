@@ -14,6 +14,7 @@ public class ActivePlatform : MonoBehaviour {
         foreach (Transform child in walls.transform) {
             child.GetComponent<SpriteRenderer>().enabled = false;
         }
+        //print(JsonManager.gsettings);
     }
 
     private void OnTriggerEnter2D(Collider2D collision){
