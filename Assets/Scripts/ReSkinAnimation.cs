@@ -9,7 +9,7 @@ public class ReSkinAnimation : MonoBehaviour
 
     void LateUpdate() {
         var subSprites = Resources.LoadAll<Sprite>("Personajes/" + spriteSheetName);
-       
+        Debug.Log(subSprites.Length);
 
         foreach (var renderer in GetComponentsInChildren<SpriteRenderer>()) {
             string spriteName = renderer.sprite.name;
