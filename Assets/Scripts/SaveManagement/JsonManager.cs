@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
@@ -44,7 +44,13 @@ public class JsonManager : MonoBehaviour
         if (!File.Exists(filePath))
         {
             gsettings = new GlobalSettings("New Player", "LOBBY", "LOBBY", "Lobby", true, newMapDarkClear);
-            SerializeSettings();
+            using (FileStream fs = new FileStream(filePath, FileMode.Create))
+            {
+                using (StreamWriter writer = new StreamWriter(fs))
+                {
+                    writer.Write("{" + gsettings.ToString() + "}");
+                }
+            }
         }
 
         jsonString = File.ReadAllText(filePath);
@@ -136,6 +142,9 @@ public class JsonManager : MonoBehaviour
         gsettings.lastScene = "Lobby";
         gsettings.newGame = true;
         gsettings.mapsDarkClear = newMapDarkClear;
+
+        SaveSystem.newGame = true;
+
     }
 
 }
@@ -164,7 +173,7 @@ public class GlobalSettings
 
     public override string ToString()
     {
-        return string.Format(" \"namePlayer\" : {0} , \"lastMapTag\" : {1} ", namePlayer,lastMapName);
+        return string.Format(" \"namePlayer\" : {0} , \"lastMapName\" : {1} , \"lastInitialMap\" : {2} , \"lastScene\" : {3} , \"newGame\" : {4} , \"mapsDarkClear\" : {5}", namePlayer, lastMapName, lastInitialMap, lastScene, newGame, mapsDarkClear);
     }
 
 }
