@@ -12,10 +12,10 @@ public class SaveSystem
     //private static string MainPath = "./Assets/SaveData/";
 
     /* PersistentData es mas recomendado para "Windows Store Apps" o "iOS player", por defecto inicia desde una subcarpeta ubicada en AppData/LocalRow/DefaultCompany/ */
-    //public static string MainPath = Application.persistentDataPath + @"/";
+    public static string MainPath = Application.persistentDataPath + @"/";
 
     /* Por defecto inicia desde Assets */
-    public static string MainPath = Application.dataPath + "/Scripts/SaveManagement/SaveGame/";
+    //public static string MainPath = Application.dataPath + "/Scripts/SaveManagement/SaveGame/";
 
     /* Nombres de los archivos */
     private static string playerDataFile = "player.sav";
