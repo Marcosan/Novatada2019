@@ -32,7 +32,7 @@ public class SaveSystem
 
     public static bool newGame = false;
 
-    internal static string NameJson = "Ajustes.json";
+    internal static string NameJson = "Settings.json";
 
     public static void SavePlayer(Player pyr)
     {

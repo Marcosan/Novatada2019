@@ -271,6 +271,9 @@ public class Player : MonoBehaviour{
 
         // Serializa los cambios en JsonManager
         JsonManager.SerializeSettings();
+
+        // Reproducir sonido de guardado
+        SoundManager.SetClip("S");
     }
 
     public void LoadPlayer()
