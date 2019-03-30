@@ -367,4 +367,9 @@ public class Player : MonoBehaviour{
         Application.Quit();
     }
 
+    public void PlayButton() {
+        // Reproducir sonido del boton
+        SoundManager.SetClip("M");
+    }
+
 }

@@ -34,6 +34,7 @@ public class SoundManager : MonoBehaviour
     public AudioClip ActionSound;                   // Audio para Accion
     public AudioClip WarpSound;                     // Audio para el Warp
     public AudioClip SaveSound;                     // Audio para el guardado
+    public AudioClip MainButtonsSound;              // Audio para los botones del inicio
 
     public AudioClip[] musicList;                   // Array de AudioClips para agregar musica de fondo, se llaman desde AudioCanvas
     public string[] Escenas;                        // Array que almacena los nombres de todas las escenas existentes
@@ -44,7 +45,7 @@ public class SoundManager : MonoBehaviour
         BackgroundMusic = GetComponent<AudioSource>();
         efxSound = GetComponent<AudioSource>();
         
-        BackgroundMusic.volume = 0.70F;             // Volumen de 0.0 a 1.0 para la musica de fondo
+        BackgroundMusic.volume = 0.4F;             // Volumen de 0.0 a 1.0 para la musica de fondo
         BackgroundMusic.loop = true;                // Para que se repita el audio
         BackgroundMusic.enabled = true;             // Para que se active de ser necesario
         SetBackground();                            // Para asignarle un audio dependiendo de la escena en la que se encuentra
@@ -99,7 +100,7 @@ public class SoundManager : MonoBehaviour
 
         // Reproducir una vez con un volumen determinado de 0.0 a 1.0
         efxSound.PlayOneShot(clip, 0.0F);
-        efxSound.PlayOneShot(clip, 0.65F);
+        efxSound.PlayOneShot(clip, 0.45F);
 
     }
     
@@ -123,6 +124,15 @@ public class SoundManager : MonoBehaviour
         {
             PlaySingle(SoundManager.instance.SaveSound);
         }
+        // "B" para botones del menu principal
+        else if (str.Equals("M"))
+        {
+            PlaySingle(SoundManager.instance.MainButtonsSound);
+        }
+    }
+
+    public void PlayButton() {
+        PlaySingle(SoundManager.instance.MainButtonsSound);
     }
 
     // Asignar un audio de fondo dependiendo del escenario.
