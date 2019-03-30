@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
@@ -142,6 +142,9 @@ public class JsonManager : MonoBehaviour
         gsettings.lastScene = "Lobby";
         gsettings.newGame = true;
         gsettings.mapsDarkClear = newMapDarkClear;
+
+        SaveSystem.newGame = true;
+
     }
 
 }

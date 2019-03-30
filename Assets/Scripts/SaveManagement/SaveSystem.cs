@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 
@@ -31,6 +31,7 @@ public class SaveSystem
     public static bool wasLoaded = false;
 
     public static bool newGame = false;
+
     internal static string NameJson = "Ajustes.json";
 
     public static void SavePlayer(Player pyr)
