@@ -35,10 +35,10 @@ public class PortalLightScript : MonoBehaviour {
 
 
         }
-        else {
+       /* else {
 
             animacion.SetFloat("Entrada", 0);
-        }
+        }*/
 
     }   
 
@@ -65,8 +65,8 @@ public class PortalLightScript : MonoBehaviour {
 
               }
 
-              void OnTriggerExit2D(Collider2D collision)
-              {
+ void OnTriggerExit2D(Collider2D collision)
+ {
 
 
         if (collision.gameObject.tag == "Player")
@@ -78,10 +78,10 @@ public class PortalLightScript : MonoBehaviour {
             Debug.Log("Se va!!");
 
         }
-        else {
+        /*else {
 
             animacion.SetFloat("Salida", 0);
-        }
+        } */
 
 
 
