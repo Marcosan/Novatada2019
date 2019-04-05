@@ -352,7 +352,7 @@ ScriptedImporter:
   warnings: []
   missingSortingLayers: []
   missingLayers: []
-  pixelsPerUnit: 100
+  pixelsPerUnit: 32
   edgesPerEllipse: 32
   numberOfObjectsImported: 341
   useSpriteAtlas: 1
