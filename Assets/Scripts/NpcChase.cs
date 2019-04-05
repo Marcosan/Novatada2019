@@ -10,32 +10,34 @@ public class NpcChase : MonoBehaviour {
     public float speed;
 
     // Variable para guardar al jugador
-    GameObject player;
+    private GameObject player;
 
     // Variable para guardar la posición inicial
-    Vector3 initialPosition;
+    private Vector3 initialPosition;
 
     // Animador y cuerpo cinemático con la rotación en Z congelada
-    Animator anim;
-    Rigidbody2D rb2d;
+    private Animator anim;
+    private Rigidbody2D rb2d;
 
-    Vector3 target;
-    RaycastHit2D hit;
-    Vector3 forward;
-    float distance;
-    Vector3 dir;
+    private Vector3 target;
+    private RaycastHit2D hit;
+    private Vector3 forward;
+    private float distance;
+    private Vector3 dir;
 
     //Para un patron simple
     public GameObject[] pointsWalk;
-    int actualPoint = 0;
-    int nextPoint = 1;
+    private int actualPoint = 0;
+    private int nextPoint = 1;
 
     //public float npcSpeed;
-    bool isChasing = false;
+    private bool isChasing = false;
     public bool isChaser = false;
 
     private bool isGoing = true;
-    GameObject destiny;
+    private GameObject destiny;
+
+    private float speedRandom = 0;
 
     void Start () {
         anim = GetComponent<Animator>();
@@ -49,6 +51,7 @@ public class NpcChase : MonoBehaviour {
         // Guardamos nuestra posición inicial
         initialPosition = transform.position;
 
+        //InvokeRepeating("RandomVelocityChase", 2, 1);
     }
 
     void Update () {
@@ -72,19 +75,26 @@ public class NpcChase : MonoBehaviour {
         //Aquí el npc simplemente se mueve
         //anim.SetBool("walking", true);
         dir = (destiny.transform.position - transform.position).normalized;
-        
-        anim.SetFloat("moveX", dir.x);
-        anim.SetFloat("moveY", dir.y);
+        if (transform.gameObject.tag == "NPC"){
+            anim.SetFloat("moveX", dir.x);
+            anim.SetFloat("moveY", dir.y);
+        }
 
         if (isGoing){
             destiny = pointsWalk[nextPoint];
+            if(destiny.transform.GetComponent<SpeedPoint>() != null)
+                speed = destiny.transform.GetComponent<SpeedPoint>().speedPoint;
             distance = Vector3.Distance(target, transform.position);
             
             // Si es el enemigo y está en rango corto el npc se detiene
             if (target != initialPosition && distance < attackRadius){
-                anim.Play("NpcWalk", -1, 0);  // Congela la animación de andar, velocidad de animacion 0
+                if (transform.gameObject.tag == "NPC"){
+                    anim.Play("NpcWalk", -1, 0);  // Congela la animación de andar, velocidad de animacion 0
+                }
             } else {
-                anim.SetBool("walking", true);
+                if (transform.gameObject.tag == "NPC"){
+                    anim.SetBool("walking", true);
+                }
                 //MoveTowards: mover hacia un punto
                 transform.position = Vector3.MoveTowards(transform.position, destiny.transform.position, speed * Time.deltaTime);
             }
@@ -115,26 +125,33 @@ public class NpcChase : MonoBehaviour {
         // Si es el enemigo y está en rango de ataque nos paramos y le atacamos
         if (target != initialPosition && distance < attackRadius) {
             // Aquí le atacaríamos, pero por ahora simplemente cambiamos la animación
-            anim.SetFloat("moveX", dir.x);
-            anim.SetFloat("moveY", dir.y);
-            anim.Play("NpcWalk", -1, 0);  // Congela la animación de andar, velocidad de animacion 0
+            if (transform.gameObject.tag == "NPC"){
+                anim.SetFloat("moveX", dir.x);
+                anim.SetFloat("moveY", dir.y);
+                anim.Play("NpcWalk", -1, 0);  // Congela la animación de andar, velocidad de animacion 0
+            }
         }
         // En caso contrario nos movemos hacia él
         else {
             rb2d.MovePosition(transform.position + dir * speed * Time.deltaTime);
 
             // Al movernos establecemos la animación de movimiento, velocidad de animacion se vuelve a 1
-            anim.speed = 1;
-            anim.SetFloat("moveX", dir.x);
-            anim.SetFloat("moveY", dir.y);
-            anim.SetBool("walking", true);
+            //anim.speed = 1;
+            if (transform.gameObject.tag == "NPC"){
+                anim.speed = 1;
+                anim.SetFloat("moveX", dir.x);
+                anim.SetFloat("moveY", dir.y);
+                anim.SetBool("walking", true);
+            }
         }
 
         // Una última comprobación para evitar bugs forzando la posición inicial
         if (target == initialPosition && distance < 0.02f) {
             transform.position = initialPosition;
             // Y cambiamos la animación de nuevo a Idle
-            anim.SetBool("walking", false);
+            if (transform.gameObject.tag == "NPC"){
+                anim.SetBool("walking", false);
+            }
         }
 
         // Y un debug optativo con una línea hasta el target
@@ -144,7 +161,7 @@ public class NpcChase : MonoBehaviour {
     void LecturaRayCast(){
         // Por defecto nuestro target siempre será nuestra posición inicial
         target = initialPosition;
-
+        
         // Comprobamos un Raycast del enemigo hasta el jugador
         hit = Physics2D.Raycast(
             transform.position,
@@ -162,10 +179,20 @@ public class NpcChase : MonoBehaviour {
 
         // Si el Raycast encuentra al jugador lo ponemos de target
         if (hit.collider != null) {
-            if (hit.collider.tag == "Player") {
-                target = player.transform.position;
-                //Se convierte en perseguidor
-                isChasing = true;
+            if (transform.gameObject.tag == "NPC"){
+                if (hit.collider.tag == "Player"){
+                    target = player.transform.position;
+                    //Se convierte en perseguidor
+                    isChasing = true;
+                }
+            } else{
+                if (transform.gameObject.tag == "Neko"){
+                    if (hit.collider.tag == "PlayerNeko"){
+                        target = player.transform.position;
+                        //Se convierte en perseguidor
+                        isChasing = true;
+                    }
+                }
             }
         }
         else {
@@ -173,4 +200,22 @@ public class NpcChase : MonoBehaviour {
         }
     }
 
+    /*  Metodo para cambiar la velocidad del modo chase del npc
+     *  Recomendado para estilo persecucion
+    */
+    public IEnumerator RandomVelocityChase(){
+        float timeSpeed = 2;
+        while (true){
+            speed = Random.Range(1, 10);
+            Debug.Log(speed);
+            if (speed >= 5)
+                timeSpeed = .1f;
+            if (speed >= 4 && speed < 5)
+                timeSpeed = 1f;
+            if (speed < 4)
+                timeSpeed = 2f;
+
+            yield return new WaitForSeconds(timeSpeed);
+        }
+    }
 }

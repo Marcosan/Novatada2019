@@ -17,69 +17,69 @@ ScriptedImporter:
     100026: _MapPrfab/KOKOAMain/Piso04
     100028: _MapPrfab/KOKOAMain/WallEscalera
     100030: _MapPrfab/KOKOAMain/EscaleraK1
-    100146: _MapPrfab/KOKOAMain/Collider01
+    100146: _MapPrfab/KOKOAMain/Colision01
     100148: _MapPrfab/KOKOAMain/EscaleraA1
     100150: _MapPrfab/KOKOAMain/EscaleraO1
     100152: _MapPrfab/KOKOAMain/EscaleraA2
     100154: _MapPrfab/KOKOAMain/EscaleraE1
     100156: _MapPrfab/KOKOAMain/EscaleraO2
-    100158: _MapPrfab/KOKOAMain/Collider01/Collision_Default
-    100160: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon
-    100162: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (1)
-    100164: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (2)
-    100166: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (3)
-    100168: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (4)
-    100170: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (5)
-    100172: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (6)
-    100174: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (7)
-    100176: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (8)
-    100178: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (9)
-    100180: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (10)
-    100182: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (11)
-    100184: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (12)
-    100186: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (13)
-    100188: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (14)
-    100190: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (15)
-    100192: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (16)
-    100194: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (17)
-    100196: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (18)
-    100198: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (19)
-    100200: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (20)
-    100202: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (21)
-    100204: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (22)
-    100206: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (23)
-    100208: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (24)
-    100210: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (25)
-    100212: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (26)
-    100214: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (27)
-    100216: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (28)
-    100218: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (29)
-    100220: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (30)
-    100222: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (31)
-    100224: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (32)
-    100226: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (33)
-    100228: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (34)
-    100230: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (35)
-    100232: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (36)
-    100234: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (37)
-    100236: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (38)
-    100238: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (39)
-    100240: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (40)
-    100242: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (41)
-    100244: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (42)
-    100246: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (43)
-    100248: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (44)
-    100250: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (45)
-    100252: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (46)
-    100254: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (47)
-    100256: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (48)
-    100258: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (49)
-    100260: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (50)
-    100262: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (51)
-    100264: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (52)
-    100266: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (53)
-    100268: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (54)
-    100270: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (55)
+    100158: _MapPrfab/KOKOAMain/Colision01/Collision_Default
+    100160: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon
+    100162: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (1)
+    100164: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (2)
+    100166: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (3)
+    100168: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (4)
+    100170: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (5)
+    100172: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (6)
+    100174: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (7)
+    100176: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (8)
+    100178: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (9)
+    100180: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (10)
+    100182: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (11)
+    100184: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (12)
+    100186: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (13)
+    100188: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (14)
+    100190: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (15)
+    100192: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (16)
+    100194: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (17)
+    100196: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (18)
+    100198: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (19)
+    100200: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (20)
+    100202: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (21)
+    100204: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (22)
+    100206: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (23)
+    100208: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (24)
+    100210: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (25)
+    100212: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (26)
+    100214: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (27)
+    100216: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (28)
+    100218: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (29)
+    100220: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (30)
+    100222: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (31)
+    100224: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (32)
+    100226: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (33)
+    100228: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (34)
+    100230: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (35)
+    100232: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (36)
+    100234: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (37)
+    100236: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (38)
+    100238: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (39)
+    100240: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (40)
+    100242: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (41)
+    100244: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (42)
+    100246: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (43)
+    100248: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (44)
+    100250: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (45)
+    100252: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (46)
+    100254: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (47)
+    100256: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (48)
+    100258: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (49)
+    100260: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (50)
+    100262: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (51)
+    100264: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (52)
+    100266: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (53)
+    100268: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (54)
+    100270: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (55)
     400000: _MapPrfab/KOKOAMain/Transform
     400002: _MapPrfab/KOKOAMain/Muebles01/Transform
     400004: _MapPrfab/KOKOAMain/Adornos01/Transform
@@ -95,127 +95,127 @@ ScriptedImporter:
     400026: _MapPrfab/KOKOAMain/Piso04/Transform
     400028: _MapPrfab/KOKOAMain/WallEscalera/Transform
     400030: _MapPrfab/KOKOAMain/EscaleraK1/Transform
-    400146: _MapPrfab/KOKOAMain/Collider01/Transform
+    400146: _MapPrfab/KOKOAMain/Colision01/Transform
     400148: _MapPrfab/KOKOAMain/EscaleraA1/Transform
     400150: _MapPrfab/KOKOAMain/EscaleraO1/Transform
     400152: _MapPrfab/KOKOAMain/EscaleraA2/Transform
     400154: _MapPrfab/KOKOAMain/EscaleraE1/Transform
     400156: _MapPrfab/KOKOAMain/EscaleraO2/Transform
-    400158: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Transform
-    400160: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon/Transform
-    400162: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (1)/Transform
-    400164: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (2)/Transform
-    400166: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (3)/Transform
-    400168: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (4)/Transform
-    400170: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (5)/Transform
-    400172: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (6)/Transform
-    400174: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (7)/Transform
-    400176: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (8)/Transform
-    400178: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (9)/Transform
-    400180: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (10)/Transform
-    400182: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (11)/Transform
-    400184: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (12)/Transform
-    400186: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (13)/Transform
-    400188: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (14)/Transform
-    400190: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (15)/Transform
-    400192: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (16)/Transform
-    400194: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (17)/Transform
-    400196: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (18)/Transform
-    400198: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (19)/Transform
-    400200: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (20)/Transform
-    400202: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (21)/Transform
-    400204: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (22)/Transform
-    400206: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (23)/Transform
-    400208: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (24)/Transform
-    400210: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (25)/Transform
-    400212: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (26)/Transform
-    400214: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (27)/Transform
-    400216: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (28)/Transform
-    400218: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (29)/Transform
-    400220: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (30)/Transform
-    400222: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (31)/Transform
-    400224: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (32)/Transform
-    400226: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (33)/Transform
-    400228: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (34)/Transform
-    400230: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (35)/Transform
-    400232: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (36)/Transform
-    400234: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (37)/Transform
-    400236: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (38)/Transform
-    400238: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (39)/Transform
-    400240: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (40)/Transform
-    400242: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (41)/Transform
-    400244: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (42)/Transform
-    400246: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (43)/Transform
-    400248: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (44)/Transform
-    400250: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (45)/Transform
-    400252: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (46)/Transform
-    400254: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (47)/Transform
-    400256: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (48)/Transform
-    400258: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (49)/Transform
-    400260: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (50)/Transform
-    400262: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (51)/Transform
-    400264: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (52)/Transform
-    400266: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (53)/Transform
-    400268: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (54)/Transform
-    400270: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (55)/Transform
-    5000002: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Rigidbody2D
-    6000112: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon/PolygonCollider2D
-    6000114: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (1)/PolygonCollider2D
-    6000116: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (2)/PolygonCollider2D
-    6000118: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (3)/PolygonCollider2D
-    6000120: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (4)/PolygonCollider2D
-    6000122: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (5)/PolygonCollider2D
-    6000124: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (6)/PolygonCollider2D
-    6000126: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (7)/PolygonCollider2D
-    6000128: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (8)/PolygonCollider2D
-    6000130: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (9)/PolygonCollider2D
-    6000132: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (10)/PolygonCollider2D
-    6000134: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (11)/PolygonCollider2D
-    6000136: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (12)/PolygonCollider2D
-    6000138: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (13)/PolygonCollider2D
-    6000140: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (14)/PolygonCollider2D
-    6000142: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (15)/PolygonCollider2D
-    6000144: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (16)/PolygonCollider2D
-    6000146: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (17)/PolygonCollider2D
-    6000148: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (18)/PolygonCollider2D
-    6000150: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (19)/PolygonCollider2D
-    6000152: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (20)/PolygonCollider2D
-    6000154: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (21)/PolygonCollider2D
-    6000156: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (22)/PolygonCollider2D
-    6000158: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (23)/PolygonCollider2D
-    6000160: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (24)/PolygonCollider2D
-    6000162: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (25)/PolygonCollider2D
-    6000164: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (26)/PolygonCollider2D
-    6000166: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (27)/PolygonCollider2D
-    6000168: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (28)/PolygonCollider2D
-    6000170: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (29)/PolygonCollider2D
-    6000172: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (30)/PolygonCollider2D
-    6000174: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (31)/PolygonCollider2D
-    6000176: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (32)/PolygonCollider2D
-    6000178: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (33)/PolygonCollider2D
-    6000180: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (34)/PolygonCollider2D
-    6000182: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (35)/PolygonCollider2D
-    6000184: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (36)/PolygonCollider2D
-    6000186: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (37)/PolygonCollider2D
-    6000188: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (38)/PolygonCollider2D
-    6000190: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (39)/PolygonCollider2D
-    6000192: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (40)/PolygonCollider2D
-    6000194: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (41)/PolygonCollider2D
-    6000196: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (42)/PolygonCollider2D
-    6000198: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (43)/PolygonCollider2D
-    6000200: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (44)/PolygonCollider2D
-    6000202: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (45)/PolygonCollider2D
-    6000204: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (46)/PolygonCollider2D
-    6000206: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (47)/PolygonCollider2D
-    6000208: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (48)/PolygonCollider2D
-    6000210: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (49)/PolygonCollider2D
-    6000212: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (50)/PolygonCollider2D
-    6000214: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (51)/PolygonCollider2D
-    6000216: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (52)/PolygonCollider2D
-    6000218: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (53)/PolygonCollider2D
-    6000220: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (54)/PolygonCollider2D
-    6000222: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (55)/PolygonCollider2D
-    6600002: _MapPrfab/KOKOAMain/Collider01/Collision_Default/CompositeCollider2D
+    400158: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Transform
+    400160: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon/Transform
+    400162: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (1)/Transform
+    400164: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (2)/Transform
+    400166: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (3)/Transform
+    400168: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (4)/Transform
+    400170: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (5)/Transform
+    400172: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (6)/Transform
+    400174: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (7)/Transform
+    400176: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (8)/Transform
+    400178: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (9)/Transform
+    400180: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (10)/Transform
+    400182: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (11)/Transform
+    400184: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (12)/Transform
+    400186: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (13)/Transform
+    400188: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (14)/Transform
+    400190: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (15)/Transform
+    400192: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (16)/Transform
+    400194: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (17)/Transform
+    400196: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (18)/Transform
+    400198: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (19)/Transform
+    400200: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (20)/Transform
+    400202: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (21)/Transform
+    400204: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (22)/Transform
+    400206: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (23)/Transform
+    400208: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (24)/Transform
+    400210: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (25)/Transform
+    400212: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (26)/Transform
+    400214: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (27)/Transform
+    400216: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (28)/Transform
+    400218: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (29)/Transform
+    400220: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (30)/Transform
+    400222: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (31)/Transform
+    400224: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (32)/Transform
+    400226: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (33)/Transform
+    400228: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (34)/Transform
+    400230: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (35)/Transform
+    400232: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (36)/Transform
+    400234: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (37)/Transform
+    400236: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (38)/Transform
+    400238: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (39)/Transform
+    400240: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (40)/Transform
+    400242: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (41)/Transform
+    400244: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (42)/Transform
+    400246: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (43)/Transform
+    400248: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (44)/Transform
+    400250: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (45)/Transform
+    400252: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (46)/Transform
+    400254: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (47)/Transform
+    400256: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (48)/Transform
+    400258: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (49)/Transform
+    400260: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (50)/Transform
+    400262: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (51)/Transform
+    400264: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (52)/Transform
+    400266: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (53)/Transform
+    400268: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (54)/Transform
+    400270: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (55)/Transform
+    5000002: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Rigidbody2D
+    6000112: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon/PolygonCollider2D
+    6000114: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (1)/PolygonCollider2D
+    6000116: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (2)/PolygonCollider2D
+    6000118: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (3)/PolygonCollider2D
+    6000120: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (4)/PolygonCollider2D
+    6000122: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (5)/PolygonCollider2D
+    6000124: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (6)/PolygonCollider2D
+    6000126: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (7)/PolygonCollider2D
+    6000128: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (8)/PolygonCollider2D
+    6000130: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (9)/PolygonCollider2D
+    6000132: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (10)/PolygonCollider2D
+    6000134: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (11)/PolygonCollider2D
+    6000136: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (12)/PolygonCollider2D
+    6000138: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (13)/PolygonCollider2D
+    6000140: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (14)/PolygonCollider2D
+    6000142: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (15)/PolygonCollider2D
+    6000144: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (16)/PolygonCollider2D
+    6000146: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (17)/PolygonCollider2D
+    6000148: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (18)/PolygonCollider2D
+    6000150: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (19)/PolygonCollider2D
+    6000152: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (20)/PolygonCollider2D
+    6000154: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (21)/PolygonCollider2D
+    6000156: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (22)/PolygonCollider2D
+    6000158: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (23)/PolygonCollider2D
+    6000160: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (24)/PolygonCollider2D
+    6000162: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (25)/PolygonCollider2D
+    6000164: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (26)/PolygonCollider2D
+    6000166: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (27)/PolygonCollider2D
+    6000168: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (28)/PolygonCollider2D
+    6000170: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (29)/PolygonCollider2D
+    6000172: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (30)/PolygonCollider2D
+    6000174: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (31)/PolygonCollider2D
+    6000176: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (32)/PolygonCollider2D
+    6000178: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (33)/PolygonCollider2D
+    6000180: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (34)/PolygonCollider2D
+    6000182: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (35)/PolygonCollider2D
+    6000184: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (36)/PolygonCollider2D
+    6000186: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (37)/PolygonCollider2D
+    6000188: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (38)/PolygonCollider2D
+    6000190: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (39)/PolygonCollider2D
+    6000192: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (40)/PolygonCollider2D
+    6000194: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (41)/PolygonCollider2D
+    6000196: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (42)/PolygonCollider2D
+    6000198: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (43)/PolygonCollider2D
+    6000200: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (44)/PolygonCollider2D
+    6000202: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (45)/PolygonCollider2D
+    6000204: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (46)/PolygonCollider2D
+    6000206: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (47)/PolygonCollider2D
+    6000208: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (48)/PolygonCollider2D
+    6000210: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (49)/PolygonCollider2D
+    6000212: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (50)/PolygonCollider2D
+    6000214: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (51)/PolygonCollider2D
+    6000216: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (52)/PolygonCollider2D
+    6000218: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (53)/PolygonCollider2D
+    6000220: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (54)/PolygonCollider2D
+    6000222: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (55)/PolygonCollider2D
+    6600002: _MapPrfab/KOKOAMain/Colision01/Collision_Default/CompositeCollider2D
     11400000: _MapPrfab/KOKOAMain/MonoBehaviour-SuperTiled2Unity.SuperMap
     11400002: _MapPrfab/KOKOAMain/MonoBehaviour-SuperTiled2Unity.SuperCustomProperties
     11400004: _MapPrfab/KOKOAMain/Muebles01/MonoBehaviour-SuperTiled2Unity.SuperTileLayer
@@ -261,7 +261,7 @@ ScriptedImporter:
     11400090: _MapPrfab/KOKOAMain/EscaleraK1/MonoBehaviour-SuperTiled2Unity.SuperTileLayer
     11400092: _MapPrfab/KOKOAMain/EscaleraK1/MonoBehaviour-SuperTiled2Unity.SuperCustomProperties
     11400094: _MapPrfab/KOKOAMain/EscaleraK1/MonoBehaviour-SuperTiled2Unity.TilemapData
-    11400208: _MapPrfab/KOKOAMain/Collider01/MonoBehaviour-SuperTiled2Unity.SuperTileLayer
+    11400208: _MapPrfab/KOKOAMain/Colision01/MonoBehaviour-SuperTiled2Unity.SuperTileLayer
     11400210: _MapPrfab/KOKOAMain/EscaleraA1/MonoBehaviour-SuperTiled2Unity.SuperTileLayer
     11400212: _MapPrfab/KOKOAMain/EscaleraA1/MonoBehaviour-SuperTiled2Unity.SuperCustomProperties
     11400214: _MapPrfab/KOKOAMain/EscaleraA1/MonoBehaviour-SuperTiled2Unity.TilemapData
@@ -277,64 +277,64 @@ ScriptedImporter:
     11400234: _MapPrfab/KOKOAMain/EscaleraO2/MonoBehaviour-SuperTiled2Unity.SuperTileLayer
     11400236: _MapPrfab/KOKOAMain/EscaleraO2/MonoBehaviour-SuperTiled2Unity.SuperCustomProperties
     11400238: _MapPrfab/KOKOAMain/EscaleraO2/MonoBehaviour-SuperTiled2Unity.TilemapData
-    11400240: _MapPrfab/KOKOAMain/Collider01/MonoBehaviour-SuperTiled2Unity.SuperCustomProperties
-    11400242: _MapPrfab/KOKOAMain/Collider01/MonoBehaviour-SuperTiled2Unity.TilemapData
-    11400244: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
-    11400246: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (1)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
-    11400248: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (2)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
-    11400250: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (3)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
-    11400252: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (4)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
-    11400254: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (5)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
-    11400256: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (6)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
-    11400258: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (7)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
-    11400260: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (8)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
-    11400262: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (9)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
-    11400264: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (10)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
-    11400266: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (11)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
-    11400268: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (12)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
-    11400270: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (13)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
-    11400272: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (14)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
-    11400274: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (15)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
-    11400276: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (16)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
-    11400278: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (17)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
-    11400280: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (18)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
-    11400282: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (19)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
-    11400284: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (20)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
-    11400286: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (21)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
-    11400288: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (22)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
-    11400290: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (23)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
-    11400292: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (24)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
-    11400294: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (25)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
-    11400296: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (26)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
-    11400298: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (27)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
-    11400300: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (28)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
-    11400302: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (29)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
-    11400304: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (30)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
-    11400306: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (31)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
-    11400308: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (32)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
-    11400310: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (33)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
-    11400312: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (34)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
-    11400314: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (35)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
-    11400316: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (36)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
-    11400318: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (37)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
-    11400320: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (38)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
-    11400322: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (39)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
-    11400324: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (40)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
-    11400326: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (41)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
-    11400328: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (42)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
-    11400330: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (43)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
-    11400332: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (44)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
-    11400334: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (45)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
-    11400336: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (46)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
-    11400338: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (47)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
-    11400340: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (48)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
-    11400342: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (49)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
-    11400344: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (50)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
-    11400346: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (51)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
-    11400348: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (52)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
-    11400350: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (53)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
-    11400352: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (54)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
-    11400354: _MapPrfab/KOKOAMain/Collider01/Collision_Default/Polygon (55)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
+    11400240: _MapPrfab/KOKOAMain/Colision01/MonoBehaviour-SuperTiled2Unity.SuperCustomProperties
+    11400242: _MapPrfab/KOKOAMain/Colision01/MonoBehaviour-SuperTiled2Unity.TilemapData
+    11400244: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
+    11400246: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (1)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
+    11400248: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (2)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
+    11400250: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (3)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
+    11400252: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (4)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
+    11400254: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (5)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
+    11400256: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (6)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
+    11400258: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (7)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
+    11400260: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (8)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
+    11400262: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (9)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
+    11400264: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (10)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
+    11400266: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (11)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
+    11400268: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (12)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
+    11400270: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (13)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
+    11400272: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (14)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
+    11400274: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (15)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
+    11400276: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (16)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
+    11400278: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (17)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
+    11400280: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (18)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
+    11400282: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (19)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
+    11400284: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (20)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
+    11400286: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (21)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
+    11400288: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (22)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
+    11400290: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (23)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
+    11400292: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (24)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
+    11400294: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (25)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
+    11400296: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (26)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
+    11400298: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (27)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
+    11400300: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (28)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
+    11400302: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (29)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
+    11400304: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (30)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
+    11400306: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (31)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
+    11400308: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (32)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
+    11400310: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (33)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
+    11400312: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (34)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
+    11400314: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (35)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
+    11400316: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (36)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
+    11400318: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (37)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
+    11400320: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (38)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
+    11400322: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (39)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
+    11400324: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (40)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
+    11400326: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (41)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
+    11400328: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (42)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
+    11400330: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (43)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
+    11400332: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (44)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
+    11400334: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (45)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
+    11400336: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (46)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
+    11400338: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (47)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
+    11400340: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (48)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
+    11400342: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (49)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
+    11400344: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (50)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
+    11400346: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (51)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
+    11400348: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (52)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
+    11400350: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (53)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
+    11400352: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (54)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
+    11400354: _MapPrfab/KOKOAMain/Colision01/Collision_Default/Polygon (55)/MonoBehaviour-SuperTiled2Unity.SuperColliderComponent
     100100000: _MapPrfab
     2569400265252428796: _MapPrfab/KOKOAMain/Grid
     3664157343022684176: _MapPrfab/KOKOAMain/Muebles01/TilemapRenderer
@@ -356,7 +356,7 @@ ScriptedImporter:
     3664157343022684210: _MapPrfab/KOKOAMain/EscaleraA2/TilemapRenderer
     3664157343022684212: _MapPrfab/KOKOAMain/EscaleraE1/TilemapRenderer
     3664157343022684214: _MapPrfab/KOKOAMain/EscaleraO2/TilemapRenderer
-    3664157343022684216: _MapPrfab/KOKOAMain/Collider01/TilemapRenderer
+    3664157343022684216: _MapPrfab/KOKOAMain/Colision01/TilemapRenderer
     8195094279510102542: _MapPrfab/KOKOAMain/Muebles01/Tilemap
     8195094279510102544: _MapPrfab/KOKOAMain/Adornos01/Tilemap
     8195094279510102546: _MapPrfab/KOKOAMain/Ceiling01/Tilemap
@@ -376,7 +376,7 @@ ScriptedImporter:
     8195094279510102576: _MapPrfab/KOKOAMain/EscaleraA2/Tilemap
     8195094279510102578: _MapPrfab/KOKOAMain/EscaleraE1/Tilemap
     8195094279510102580: _MapPrfab/KOKOAMain/EscaleraO2/Tilemap
-    8195094279510102582: _MapPrfab/KOKOAMain/Collider01/Tilemap
+    8195094279510102582: _MapPrfab/KOKOAMain/Colision01/Tilemap
   externalObjects: {}
   userData: 
   assetBundleName: 

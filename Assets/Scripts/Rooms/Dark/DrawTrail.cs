@@ -25,11 +25,18 @@ public class DrawTrail : MonoBehaviour {
     }
 
     private void OnTriggerEnter2D(Collider2D collision){
-        if (collision.gameObject.tag == "Player"){
-            //countOver = true;
-            GetComponent<SpriteRenderer>().enabled = true;
-            isActive = true;
-            //trail.transform.position = Vector3.MoveTowards(trail.transform.position, target.position, 20 * Time.deltaTime);
+        if (!SingletonVars.Instance.GetIsCounting()) {
+            if (collision.gameObject.tag == "Player"){
+                //countOver = true;
+                GetComponent<SpriteRenderer>().enabled = true;
+                isActive = true;
+                //trail.transform.position = Vector3.MoveTowards(trail.transform.position, target.position, 20 * Time.deltaTime);
+            }
+        } else {
+            if (collision.gameObject.tag == "Neko"){
+                GetComponent<SpriteRenderer>().enabled = true;
+                isActive = true;
+            }
         }
     }
 
