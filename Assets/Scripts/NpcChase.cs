@@ -39,8 +39,11 @@ public class NpcChase : MonoBehaviour {
 
     private float speedRandom = 0;
 
-    void Start () {
+    private void Awake(){
         anim = GetComponent<Animator>();
+    }
+
+    void Start () {
         rb2d = GetComponent<Rigidbody2D>();
 
         destiny = pointsWalk[1];
@@ -76,6 +79,10 @@ public class NpcChase : MonoBehaviour {
         //anim.SetBool("walking", true);
         dir = (destiny.transform.position - transform.position).normalized;
         if (transform.gameObject.tag == "NPC"){
+            anim.SetFloat("moveX", dir.x);
+            anim.SetFloat("moveY", dir.y);
+        }
+        if (transform.gameObject.tag == "Neko"){
             anim.SetFloat("moveX", dir.x);
             anim.SetFloat("moveY", dir.y);
         }
@@ -130,18 +137,27 @@ public class NpcChase : MonoBehaviour {
                 anim.SetFloat("moveY", dir.y);
                 anim.Play("NpcWalk", -1, 0);  // Congela la animación de andar, velocidad de animacion 0
             }
+            if (transform.gameObject.tag == "Neko"){
+                anim.SetFloat("moveX", dir.x);
+                anim.SetFloat("moveY", dir.y);
+                anim.Play("isWalking", -1, 0);  // Congela la animación de andar, velocidad de animacion 0
+            }
         }
         // En caso contrario nos movemos hacia él
         else {
             rb2d.MovePosition(transform.position + dir * speed * Time.deltaTime);
 
             // Al movernos establecemos la animación de movimiento, velocidad de animacion se vuelve a 1
-            //anim.speed = 1;
+            anim.speed = 1;
             if (transform.gameObject.tag == "NPC"){
-                anim.speed = 1;
                 anim.SetFloat("moveX", dir.x);
                 anim.SetFloat("moveY", dir.y);
                 anim.SetBool("walking", true);
+            }
+            if (transform.gameObject.tag == "Neko"){
+                anim.SetFloat("moveX", dir.x);
+                anim.SetFloat("moveY", dir.y);
+                anim.SetBool("isWalking", true);
             }
         }
 
@@ -206,14 +222,20 @@ public class NpcChase : MonoBehaviour {
     public IEnumerator RandomVelocityChase(){
         float timeSpeed = 2;
         while (true){
-            speed = Random.Range(1, 10);
+            speed = Random.Range(1, 6);
             Debug.Log(speed);
-            if (speed >= 5)
+            if (speed >= 5){
                 timeSpeed = .1f;
-            if (speed >= 4 && speed < 5)
+                anim.SetBool("isAttack", true);
+            }
+            if (speed >= 4 && speed < 5){
                 timeSpeed = 1f;
-            if (speed < 4)
+                anim.SetBool("isAttack", false);
+            }
+            if (speed < 4){
                 timeSpeed = 2f;
+                anim.SetBool("isAttack", false);
+            }
 
             yield return new WaitForSeconds(timeSpeed);
         }
