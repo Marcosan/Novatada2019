@@ -5,7 +5,7 @@ using UnityEngine;
 public class CheckPuzzle : MonoBehaviour {
 
     public AntorchaManager antorchaManager;
-    public GoalManager goalManager;
+    public LetterManager goalManager;
     private bool MapClear = false;
     public string MapName;
 

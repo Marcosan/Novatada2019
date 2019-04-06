@@ -271,6 +271,9 @@ public class Player : MonoBehaviour{
 
         // Serializa los cambios en JsonManager
         JsonManager.SerializeSettings();
+
+        // Reproducir sonido de guardado
+        SoundManager.SetClip("S");
     }
 
     public void LoadPlayer()
@@ -362,6 +365,11 @@ public class Player : MonoBehaviour{
 
     public void QuitGame() {
         Application.Quit();
+    }
+
+    public void PlayButton() {
+        // Reproducir sonido del boton
+        SoundManager.SetClip("M");
     }
 
 }

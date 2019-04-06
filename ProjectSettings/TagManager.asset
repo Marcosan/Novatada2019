@@ -10,6 +10,8 @@ TagManager:
   - Points
   - Action
   - Zoom
+  - Neko
+  - PlayerNeko
   layers:
   - Default
   - TransparentFX
@@ -26,7 +28,7 @@ TagManager:
   - 
   - Point
   - 
-  - 
+  - Player
   - 
   - JoyStick
   - 

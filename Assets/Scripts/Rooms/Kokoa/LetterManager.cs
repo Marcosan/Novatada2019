@@ -2,17 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GoalManager : MonoBehaviour {
-
+public class LetterManager : MonoBehaviour {
     private List<Transform> childrenLetter;
     private List<Transform> childrenCurrent;
     private bool fillChild = true;
     private int totalChild;
-    private Animator anim;
     private bool LetterClear = false;
 
     void Start(){
-        anim = GameObject.Find("Area/TimeBarUI").GetComponent<Animator>();
         childrenLetter = new List<Transform>();
         childrenCurrent = new List<Transform>();
         foreach (Transform child in transform){
@@ -58,7 +55,6 @@ public class GoalManager : MonoBehaviour {
     private void YouWinLetter() {
         print("Puzzle Letra Superado");
         SingletonVars.Instance.SetIsCounting(false);
-        anim.SetBool("IsOpen", false);
 
         foreach (Transform child in transform){
             Destroy(child.GetComponent<DrawTrail>());
