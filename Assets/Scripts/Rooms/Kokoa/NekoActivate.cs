@@ -5,6 +5,7 @@ using UnityEngine;
 public class NekoActivate : MonoBehaviour {
     
     public Transform Neko;
+    public Transform NekoGlitch;
     SpriteRenderer interCollider;
     //private Animator anim;
 
@@ -19,6 +20,7 @@ public class NekoActivate : MonoBehaviour {
             Neko.gameObject.SetActive(true);
             SingletonVars.Instance.SetIsCounting(true);
             StartCoroutine(Neko.GetComponent<NpcChase>().RandomVelocityChase());
+            StartCoroutine(NekoGlitch.GetComponent<GlitchManager>().RandomMaskGlitch());
         }
         if (collision.gameObject.tag == "Interact"){
             interCollider.enabled = true;

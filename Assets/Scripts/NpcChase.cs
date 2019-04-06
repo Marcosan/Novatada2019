@@ -223,7 +223,6 @@ public class NpcChase : MonoBehaviour {
         float timeSpeed = 2;
         while (true){
             speed = Random.Range(1, 6);
-            Debug.Log(speed);
             if (speed >= 5){
                 timeSpeed = .1f;
                 anim.SetBool("isAttack", true);
