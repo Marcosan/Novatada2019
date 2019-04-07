@@ -55,11 +55,11 @@ public class PortalLightScript : MonoBehaviour {
 
 
         }
-        else {
+       /* else {
 
             animacion.SetFloat("Estadia", 0);
-
-        }
+            
+        }*/
 
 
 

@@ -35,10 +35,10 @@ public class PortalScript : MonoBehaviour {
 
 
         }
-        else {
+      /*  else {
 
             animacion.SetFloat("Entrada", 0);
-        }
+        }*/
 
     }   
 
@@ -55,11 +55,11 @@ public class PortalScript : MonoBehaviour {
 
 
         }
-        else {
+      /*  else {
 
             animacion.SetFloat("Estadia", 0);
 
-        }
+        }*/
 
 
 
@@ -78,10 +78,10 @@ public class PortalScript : MonoBehaviour {
             Debug.Log("Se va!!");
 
         }
-        else {
+      /*  else {
 
             animacion.SetFloat("Salida", 0);
-        }
+        }*/
 
 
 
