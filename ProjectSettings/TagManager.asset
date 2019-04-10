@@ -76,3 +76,12 @@ TagManager:
   - name: Attack
     uniqueID: 1090287573
     locked: 0
+  - name: GameOverBackground
+    uniqueID: 2151456415
+    locked: 0
+  - name: GameOverPlayer
+    uniqueID: 628398511
+    locked: 0
+  - name: GameOverPortal
+    uniqueID: 1126243053
+    locked: 0

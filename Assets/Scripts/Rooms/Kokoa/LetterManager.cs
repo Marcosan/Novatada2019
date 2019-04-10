@@ -9,6 +9,8 @@ public class LetterManager : MonoBehaviour {
     private int totalChild;
     private bool LetterClear = false;
 
+    public Transform glitchNeko;
+
     void Start(){
         childrenLetter = new List<Transform>();
         childrenCurrent = new List<Transform>();
@@ -16,7 +18,6 @@ public class LetterManager : MonoBehaviour {
             childrenLetter.Add(child);
         }
         totalChild = childrenLetter.Count;
-        print("Total: " + totalChild);
     }
 
 
@@ -55,6 +56,10 @@ public class LetterManager : MonoBehaviour {
     private void YouWinLetter() {
         print("Puzzle Letra Superado");
         SingletonVars.Instance.SetIsCounting(false);
+        glitchNeko.gameObject.SetActive(false);
+        glitchNeko.parent.GetComponent<NpcChase>().SetChaser(false);
+        StopCoroutine(glitchNeko.parent.GetComponent<GlitchManager>().RandomMaskGlitch());
+        
 
         foreach (Transform child in transform){
             Destroy(child.GetComponent<DrawTrail>());

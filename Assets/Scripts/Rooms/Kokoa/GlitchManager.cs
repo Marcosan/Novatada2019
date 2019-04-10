@@ -12,7 +12,7 @@ public class GlitchManager : MonoBehaviour{
     private AudioSource audioData;
 
     // Start is called before the first frame update
-    void Start(){
+    void Awake(){
         audioData = GetComponent<AudioSource>();
         childrenCurrent = new List<Transform>();
         foreach (Transform child in glitchNeko) {
@@ -32,8 +32,8 @@ public class GlitchManager : MonoBehaviour{
                 mask_active = Random.Range(0, len_mask);
                 childrenCurrent[mask_active].gameObject.SetActive(true);
             }
-
-            audioData.Play(0);
+            if(audioData != null)
+                audioData.Play(0);
 
             yield return new WaitForSeconds(timeSpeed);
             //childrenCurrent[mask_active].gameObject.SetActive(false);

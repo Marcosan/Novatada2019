@@ -37,7 +37,8 @@ public class NpcChase : MonoBehaviour {
     private bool isGoing = true;
     private GameObject destiny;
 
-    private float speedRandom = 0;
+    private float timeSpeedChange = 2;
+    private bool hasNewSpeed;
 
     private void Awake(){
         anim = GetComponent<Animator>();
@@ -140,7 +141,7 @@ public class NpcChase : MonoBehaviour {
             if (transform.gameObject.tag == "Neko"){
                 anim.SetFloat("moveX", dir.x);
                 anim.SetFloat("moveY", dir.y);
-                anim.Play("isWalking", -1, 0);  // Congela la animación de andar, velocidad de animacion 0
+                //anim.Play("isWalking", -1, 0);  // Congela la animación de andar, velocidad de animacion 0
             }
         }
         // En caso contrario nos movemos hacia él
@@ -216,27 +217,39 @@ public class NpcChase : MonoBehaviour {
         }
     }
 
+    public void SetChaser(bool stateChaser) {
+        this.isChaser = stateChaser;
+    }
+
     /*  Metodo para cambiar la velocidad del modo chase del npc
      *  Recomendado para estilo persecucion
     */
     public IEnumerator RandomVelocityChase(){
-        float timeSpeed = 2;
         while (true){
-            speed = Random.Range(1, 6);
-            if (speed >= 5){
-                timeSpeed = .1f;
-                anim.SetBool("isAttack", true);
+            if (!hasNewSpeed){
+                speed = Random.Range(1, 6);
+                if (speed >= 5){
+                    timeSpeedChange = .1f;
+                    anim.SetBool("isAttack", true);
+                }
+                if (speed >= 4 && speed < 5){
+                    timeSpeedChange = 1f;
+                    anim.SetBool("isAttack", false);
+                }
+                if (speed < 4){
+                    timeSpeedChange = 2f;
+                    anim.SetBool("isAttack", false);
+                }
             }
-            if (speed >= 4 && speed < 5){
-                timeSpeed = 1f;
-                anim.SetBool("isAttack", false);
-            }
-            if (speed < 4){
-                timeSpeed = 2f;
-                anim.SetBool("isAttack", false);
-            }
-
-            yield return new WaitForSeconds(timeSpeed);
+            yield return new WaitForSeconds(timeSpeedChange);
         }
+    }
+
+    public void SetSpeedNpc(float speed, float timeSec) {
+        StopCoroutine(RandomVelocityChase());
+        this.speed = speed;
+        timeSpeedChange = timeSec;
+        hasNewSpeed = true;
+        StartCoroutine(RandomVelocityChase());
     }
 }
