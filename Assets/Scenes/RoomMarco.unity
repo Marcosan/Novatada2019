@@ -1033,7 +1033,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 173449040}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.26, y: -31.08, z: 0}
+  m_LocalPosition: {x: -22.9, y: -32.15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1754148762}
@@ -4676,7 +4676,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1024078530}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.6, y: -32.7, z: 0}
+  m_LocalPosition: {x: -19.87, y: -33.68, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1106385667}
@@ -53052,8 +53052,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1754148761}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.02, y: 0.96, z: 0}
-  m_LocalScale: {x: 5.5978265, y: 6.0322075, z: 1}
+  m_LocalPosition: {x: 0.02, y: 1.318, z: 0}
+  m_LocalScale: {x: 5.5978265, y: 8.270157, z: 1}
   m_Children: []
   m_Father: {fileID: 173449041}
   m_RootOrder: 0
@@ -56327,7 +56327,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   visionRadius: 3.34
-  attackRadius: 1.16
+  attackRadius: 0
   speed: 3.46
   pointsWalk:
   - {fileID: 278297932}
@@ -56358,7 +56358,9 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 1.9412918, y: -0.35229897}
+    - - {x: 1.9137001, y: 0.17196274}
+      - {x: 1.4667015, y: 0.84280014}
+      - {x: -1.568471, y: 0.8399124}
       - {x: -1.9331512, y: -0.39721322}
       - {x: -1.9233246, y: -0.60732675}
       - {x: -0.9246273, y: -1.4853213}
@@ -56428,7 +56430,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f77a86293515c454abbc234b697dd924, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vida: 1
+  vida: 0
   Player: {fileID: 620954796}
   MaskGameOver: {fileID: 173449041}
   Background: {fileID: 1024078531}

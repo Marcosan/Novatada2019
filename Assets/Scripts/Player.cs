@@ -10,6 +10,7 @@ public class Player : MonoBehaviour{
     Rigidbody2D rb2d;
     public float speed = 4f;
     Animator anim;
+    private bool CanMove = true;
 
     private static PlayerData PlData;
     //private static GlobalDataGame GmData;
@@ -127,7 +128,7 @@ public class Player : MonoBehaviour{
     // Update is called once per frame
     void Update(){
 
-        if (!isMainMenu)
+        if (!isMainMenu && CanMove)
         {
             if (isActionButton)
             {
@@ -370,6 +371,11 @@ public class Player : MonoBehaviour{
     public void PlayButton() {
         // Reproducir sonido del boton
         SoundManager.SetClip("M");
+    }
+
+    public void MovePlayer(bool move) {
+        mov = new Vector2(0f,0f);
+        this.CanMove = move;
     }
 
 }

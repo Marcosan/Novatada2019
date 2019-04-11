@@ -18,6 +18,10 @@ public class NekoActivate : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision){
         if (collision.gameObject.tag == "Action"){
             Neko.gameObject.SetActive(true);
+            
+            //Mando atras al neko para que no estorbe
+            Neko.GetComponent<SpriteRenderer>().sortingLayerName = "Player";
+            Neko.GetComponent<SpriteRenderer>().sortingOrder = 0;
             SingletonVars.Instance.SetIsCounting(true);
             StartCoroutine(Neko.GetComponent<NpcChase>().RandomVelocityChase());
             StartCoroutine(NekoGlitch.GetComponent<GlitchManager>().RandomMaskGlitch());

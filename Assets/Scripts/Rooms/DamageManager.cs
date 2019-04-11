@@ -5,11 +5,11 @@ using UnityEngine;
 public class DamageManager : MonoBehaviour {
 
     public int vida;
+    private int vidaMenos;
     public Transform Player;
     public Transform MaskGameOver;
     public Transform Background;
 
-    private IEnumerator nekoCoroutine;
     //public LetterManager letterManager;
     public Transform PuntoReinicio;
     public Club club;
@@ -19,28 +19,29 @@ public class DamageManager : MonoBehaviour {
     private float widthCam;
     private Vector3 scaleCam;
 
+    private Area areaScript;
+
     private void Start(){
         cam = Camera.main;
-
+        vidaMenos = vida;
+        areaScript = GameObject.Find("Area").GetComponent<Area>();
         MaskGameOver.gameObject.SetActive(false);
         Background.gameObject.SetActive(false);
-        if (club.Equals("kokoa"))
-            nekoCoroutine = GetComponent<NpcChase>().RandomVelocityChase();
-    }
-
-    private void Update(){
     }
 
     void OnCollisionEnter2D(Collision2D collision){
         if (collision.gameObject.tag == "Player"){
-            if (vida <= 0){
-                GetComponent<NpcChase>().SetSpeedNpc(0f, 10f);
+            if (vidaMenos <= 0){
+                //Mando atras al neko para que no estorbe
+                GetComponent<SpriteRenderer>().sortingLayerName = "Default";
+                GetComponent<SpriteRenderer>().sortingOrder = -10;
+                vidaMenos = vida;
                 StartCoroutine(GameOverAnimation());
             }
             else {
-                vida--;
+                vidaMenos--;
                 GetComponent<NpcChase>().SetSpeedNpc(0f, 3f);
-                Debug.Log("Quedan " + vida + " vidas");
+                Debug.Log("Quedan " + vidaMenos + " vidas");
             }
             
         }
@@ -52,8 +53,18 @@ public class DamageManager : MonoBehaviour {
     }
 
     IEnumerator GameOverAnimation(){
-        Vector2 posicionPlayer = new Vector2(Player.position.x, Player.position.y);
         Vector2 posicionCamera = new Vector2(cam.transform.position.x, cam.transform.position.y);
+        SpriteRenderer spritePlayer = Player.GetComponent<SpriteRenderer>();
+        BoxCollider2D colliderPlayer = Player.GetComponent<BoxCollider2D>();
+        Player playerScript = Player.GetComponent<Player>();
+        float hPlayer = spritePlayer.bounds.size.x;
+        Vector2 posicionPlayer;
+
+        //Configuracion del personaje
+        spritePlayer.sortingLayerName = "GameOverPlayer";
+        spritePlayer.sortingOrder = 0;
+        playerScript.MovePlayer(false);
+        colliderPlayer.enabled = false;
 
         //tamaño de camara
         // get the sprite width in world space units
@@ -73,31 +84,52 @@ public class DamageManager : MonoBehaviour {
 
         // apply scale change
         Background.localScale = newScale;
-        /*
-        heightCam = 2f * cam.orthographicSize;
-        widthCam = heightCam * cam.aspect;
-        scaleCam = new Vector3(widthCam, heightCam, 1f);
-        Background.transform.localScale = scaleCam;
-        */
         Background.gameObject.SetActive(true);
-        MaskGameOver.gameObject.SetActive(true);
-
         Background.position = posicionCamera;
-        MaskGameOver.position = posicionPlayer;
-
         Background.GetComponent<Animator>().Play("game_over_fadeout");
+        StartCoroutine(areaScript.ShowArea("¡Otra vez!",3f));
 
-        Debug.Log("newScale " + newScale);
-        Debug.Log("Background.localScale " + Background.localScale);
-        yield return new WaitForSeconds(3f);
-        Debug.Log("termina");
-        MaskGameOver.GetComponent<Rigidbody2D>().MovePosition(new Vector2(posicionPlayer.x, posicionPlayer.y - 100));
+        yield return new WaitForSeconds(2f);//------------------------------------------------------------------------------------
+        Debug.Log("Comienza el portal");
+        spritePlayer.maskInteraction = SpriteMaskInteraction.VisibleOutsideMask; //.VisibleInsideMask or .None
+        transform.position = GetComponent<NpcChase>().pointsWalk[0].transform.position;
 
-        yield return new WaitForSeconds(3f);
         Player.transform.position = new Vector3(PuntoReinicio.position.x, PuntoReinicio.position.y, transform.position.z);
+        posicionPlayer = new Vector2(Player.position.x, Player.position.y + hPlayer / 2);
         MaskGameOver.position = posicionPlayer;
-        
-        
+        posicionCamera = new Vector2(cam.transform.position.x, cam.transform.position.y);
+        Background.position = posicionCamera;
 
+        MaskGameOver.gameObject.SetActive(true);
+        MaskGameOver.position = posicionPlayer;
+        StartCoroutine(MoveToPosition(MaskGameOver, new Vector2(posicionPlayer.x, posicionPlayer.y - 1.8f), 1f));
+
+        yield return new WaitForSeconds(2f);//------------------------------------------------------------------------------------
+        Debug.Log("Reinicio");
+        Background.GetComponent<Animator>().Play("game_over_fadein");
+
+        StartCoroutine(MoveToPosition(MaskGameOver, new Vector2(posicionPlayer.x, posicionPlayer.y + 0.2f), 1f));
+
+        yield return new WaitForSeconds(2f);//------------------------------------------------------------------------------------
+        //Configuracion del personaje
+        spritePlayer.sortingLayerName = "Player";
+        playerScript.MovePlayer(true);
+        colliderPlayer.enabled = true;
+        spritePlayer.maskInteraction = SpriteMaskInteraction.None;
+
+        Background.gameObject.SetActive(false);
+        MaskGameOver.gameObject.SetActive(false);
     }
+
+    IEnumerator MoveToPosition(Transform transform, Vector2 position, float timeToMove){
+        var currentPos = transform.position;
+        var t = 0f;
+        while (t < 1){
+            t += Time.deltaTime / timeToMove;
+            transform.position = Vector2.Lerp(currentPos, position, t);
+            yield return null;
+        }
+        Debug.Log("Fin movimiento");
+    }
+
 }

@@ -241,15 +241,21 @@ public class NpcChase : MonoBehaviour {
                     anim.SetBool("isAttack", false);
                 }
             }
+            hasNewSpeed = false;
             yield return new WaitForSeconds(timeSpeedChange);
         }
     }
 
+    //Si timeSec es negativo, la velocidad se mantiene hasta que se vuelva a llamar a la funcion
     public void SetSpeedNpc(float speed, float timeSec) {
         StopCoroutine(RandomVelocityChase());
-        this.speed = speed;
         timeSpeedChange = timeSec;
-        hasNewSpeed = true;
-        StartCoroutine(RandomVelocityChase());
+
+        this.speed = speed;
+        if (timeSec >= 0){
+            hasNewSpeed = true;
+            StartCoroutine(RandomVelocityChase());
+        }
     }
+    
 }

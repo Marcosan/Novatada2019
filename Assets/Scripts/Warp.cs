@@ -71,7 +71,7 @@ public class Warp : MonoBehaviour{
             col.GetComponent<Animator>().enabled = true;
             col.GetComponent<Player>().enabled = true;
 
-            StartCoroutine(area.GetComponent<Area>().ShowArea(targetMap.name));
+            StartCoroutine(area.GetComponent<Area>().ShowArea(targetMap.name,1f));
 
             //SingletonVars.Instance.nameCurrentMap = targetMap.name;
             //tittleMiniMap = GameObject.Find("/Area/MiniMap/TitleMap/TitleText").transform.GetComponent<Text>();
