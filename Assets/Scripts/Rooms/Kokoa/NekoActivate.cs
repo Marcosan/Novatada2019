@@ -7,6 +7,7 @@ public class NekoActivate : MonoBehaviour {
     public Transform Neko;
     public Transform NekoGlitch;
     SpriteRenderer interCollider;
+
     //private Animator anim;
 
     private void Start(){
@@ -18,13 +19,18 @@ public class NekoActivate : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision){
         if (collision.gameObject.tag == "Action"){
             Neko.gameObject.SetActive(true);
-            
+            Camera.main.orthographicSize = 7;
             //Mando atras al neko para que no estorbe
             Neko.GetComponent<SpriteRenderer>().sortingLayerName = "Player";
             Neko.GetComponent<SpriteRenderer>().sortingOrder = 0;
             SingletonVars.Instance.SetIsCounting(true);
+
             StartCoroutine(Neko.GetComponent<NpcChase>().RandomVelocityChase());
-            StartCoroutine(NekoGlitch.GetComponent<GlitchManager>().RandomMaskGlitch());
+
+            NekoGlitch.GetComponent<GlitchManager>().ActiveRandomMaskGlitch(true);
+
+            Destroy(transform.GetChild(0).gameObject);
+            Destroy(GetComponent<BoxCollider2D>());
         }
         if (collision.gameObject.tag == "Interact"){
             interCollider.enabled = true;
@@ -37,5 +43,6 @@ public class NekoActivate : MonoBehaviour {
             changer.DisableButton();
         }
     }
+
 
 }

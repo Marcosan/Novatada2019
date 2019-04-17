@@ -32,8 +32,7 @@ public class GlitchManager : MonoBehaviour{
                 mask_active = Random.Range(0, len_mask);
                 childrenCurrent[mask_active].gameObject.SetActive(true);
             }
-            if(audioData != null)
-                audioData.Play(0);
+            audioData.Play(0);
 
             yield return new WaitForSeconds(timeSpeed);
             //childrenCurrent[mask_active].gameObject.SetActive(false);
@@ -42,4 +41,19 @@ public class GlitchManager : MonoBehaviour{
             }
         }
     }
+
+    public void PlayAudioNeko(bool audio) {
+        if (audio)
+            audioData.Play(0);
+        else
+            audioData.Stop();
+    }
+
+    public void ActiveRandomMaskGlitch(bool isActive) {
+        if (isActive)
+            StartCoroutine(RandomMaskGlitch());
+        else
+            StopCoroutine(RandomMaskGlitch());
+    }
+
 }

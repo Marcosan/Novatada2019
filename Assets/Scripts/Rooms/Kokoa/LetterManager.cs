@@ -10,6 +10,12 @@ public class LetterManager : MonoBehaviour {
     private bool LetterClear = false;
 
     public Transform glitchNeko;
+    public GameObject DarkZones;
+    public GameObject SMask_Player;
+    public GameObject DarkGrids;
+    public GameObject PixelCat;
+    public Transform Corchetes;
+
 
     void Start(){
         childrenLetter = new List<Transform>();
@@ -19,7 +25,6 @@ public class LetterManager : MonoBehaviour {
         }
         totalChild = childrenLetter.Count;
     }
-
 
     void Update(){
         if (!LetterClear) { 
@@ -44,26 +49,33 @@ public class LetterManager : MonoBehaviour {
             }
         }
     }
-
-    //myObject.transform.Clear(); En caso de instancia de objeto
-    /*public static Transform Clear(this Transform transform){
-        foreach (Transform child in transform){
-            GameObject.Destroy(child.gameObject);
-        }
-        return transform;
-    }*/
-
+    
     private void YouWinLetter() {
         print("Puzzle Letra Superado");
+        SingletonVars.Instance.ActiveZoom("out", "far", true);
         SingletonVars.Instance.SetIsCounting(false);
-        glitchNeko.gameObject.SetActive(false);
+        glitchNeko.GetComponent<GlitchManager>().PlayAudioNeko(false);
+        glitchNeko.GetComponent<GlitchManager>().ActiveRandomMaskGlitch(false);
+
+        glitchNeko.parent.GetComponent<NpcChase>().SetSpeedNpc(3f,-1f);
         glitchNeko.parent.GetComponent<NpcChase>().SetChaser(false);
-        StopCoroutine(glitchNeko.parent.GetComponent<GlitchManager>().RandomMaskGlitch());
-        
+
+        Destroy(glitchNeko.gameObject);
+        Destroy(glitchNeko.parent.GetComponent<DamageManager>());
+        Destroy(DarkZones);
+        Destroy(SMask_Player);
+        Destroy(DarkGrids);
 
         foreach (Transform child in transform){
             Destroy(child.GetComponent<DrawTrail>());
-            child.GetComponent<SpriteRenderer>().color = new Color32(73,164,58,255);
+            Color colorAfter = child.GetComponent<DrawTrail>().colorAfter;
+            child.GetComponent<SpriteRenderer>().color = new Color(colorAfter.r, colorAfter.g, colorAfter.b, 1f);;
+        }
+        foreach (Transform child in Corchetes){
+            child.GetComponent<SpriteRenderer>().color = Color.black;
+        }
+        foreach (Transform child in PixelCat.transform){
+            Destroy(child.gameObject);
         }
         //Destroy(GetComponent<GoalManager>());
         LetterClear = true;
@@ -72,4 +84,6 @@ public class LetterManager : MonoBehaviour {
     public bool CheckLetterClear() {
         return this.LetterClear;
     }
+
+
 }
