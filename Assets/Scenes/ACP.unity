@@ -25678,7 +25678,6 @@ PrefabInstance:
       propertyPath: m_ColliderPaths.Array.data[13].m_ColliderPaths.Array.data[0].Array.data[3].Y
       value: -140000000
       objectReference: {fileID: 0}
-<<<<<<< HEAD
     - target: {fileID: 6600002, guid: 06538c6e00ea49f47aecde70f8cf8467, type: 3}
       propertyPath: m_CompositePaths.m_Paths.Array.data[0].Array.data[2].y
       value: -4
@@ -25695,8 +25694,6 @@ PrefabInstance:
       propertyPath: m_CompositePaths.m_Paths.Array.data[1].Array.data[3].y
       value: -4
       objectReference: {fileID: 0}
-=======
->>>>>>> refs/remotes/origin/master
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 06538c6e00ea49f47aecde70f8cf8467, type: 3}
 --- !u!60 &2081725742 stripped
