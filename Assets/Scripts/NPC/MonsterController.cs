@@ -90,40 +90,6 @@ public class MonsterController : MonoBehaviour
                 animacion.SetFloat("isMoving", 1);
             }
         }
-
-        if (recargando)
-        {
-            tiempoParaRecargar -= Time.deltaTime;
-            if (tiempoParaRecargar < 0) {
-                
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-                elJugador.SetActive(true);
-            }
-
-
-
-        }
-
-
     }
-
-
-    private void OnCollisionEnter2D(Collision2D otro)
-    {
-        if (otro.gameObject.name == "Character") {
-            //Destroy(otro.gameObject);
-            
-            otro.gameObject.SetActive(false);
-            recargando = true;
-
-            elJugador = otro.gameObject;
-
-        }
-    }
-
-
-
-
-
 
 }
