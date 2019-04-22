@@ -378,4 +378,8 @@ public class Player : MonoBehaviour{
         this.CanMove = move;
     }
 
+    public void MainMenu() {
+        SceneManager.LoadScene("MenuScene", LoadSceneMode.Single);
+    }
+
 }
