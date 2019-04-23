@@ -34,10 +34,14 @@ public class Player : MonoBehaviour{
     public Joystick joystick;
 
     /* Desde el player se carga la partida y los otros componentes necesarios, asi que por eso esta como objeto en el menu principal
-     * de juego, para que no salgan errores por la falta de joystick y etc pondremos un booleano
-     */
-     public bool isMainMenu = false;
-    
+    * de juego, para que no salgan errores por la falta de joystick y etc pondremos un booleano
+    */
+    public bool isMainMenu = false;
+
+    private bool isMovingAlone = false;
+    private float speedTmp = 4f;
+    private Vector3 destinyAlone;
+
     private void Awake(){
         Assert.IsNotNull(initialMap);
 
@@ -146,7 +150,18 @@ public class Player : MonoBehaviour{
 
             Interact();
         }
-        
+        if (isMovingAlone) {
+            if (transform.position == destinyAlone){
+                Debug.Log("Llegp al punto");
+                MovePlayer(true);
+                isMovingAlone = false;
+                GetComponent<Rigidbody2D>().isKinematic = true;
+                //GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+            }
+            else
+                transform.position = Vector3.MoveTowards(transform.position, destinyAlone, speedTmp * Time.deltaTime);
+            
+        }
     }
     
     private void FixedUpdate(){
@@ -382,4 +397,12 @@ public class Player : MonoBehaviour{
         SceneManager.LoadScene("MenuScene", LoadSceneMode.Single);
     }
 
+    public void MoveAlone(Vector3 destiny, float speed) {
+        GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
+        GetComponent<Rigidbody2D>().isKinematic = false;
+        MovePlayer(false);
+        destinyAlone = destiny;
+        speedTmp = speed;
+        isMovingAlone = true;
+    }
 }
