@@ -153,10 +153,10 @@ public class Player : MonoBehaviour{
         if (isMovingAlone) {
             if (transform.position == destinyAlone){
                 Debug.Log("Llegp al punto");
+                GetComponent<BoxCollider2D>().enabled = true;
+                GetComponent<SpriteRenderer>().enabled = true;
                 MovePlayer(true);
                 isMovingAlone = false;
-                GetComponent<Rigidbody2D>().isKinematic = true;
-                //GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
             }
             else
                 transform.position = Vector3.MoveTowards(transform.position, destinyAlone, speedTmp * Time.deltaTime);
@@ -398,8 +398,8 @@ public class Player : MonoBehaviour{
     }
 
     public void MoveAlone(Vector3 destiny, float speed) {
-        GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
-        GetComponent<Rigidbody2D>().isKinematic = false;
+        GetComponent<SpriteRenderer>().enabled = false;
+        GetComponent<BoxCollider2D>().enabled = false;
         MovePlayer(false);
         destinyAlone = destiny;
         speedTmp = speed;

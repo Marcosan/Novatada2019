@@ -20,4 +20,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/RoomMarco.unity
     guid: b0e2004116fc6e146afa58bb757f7701
+  - enabled: 1
+    path: Assets/Scenes/ANIFONIX.unity
+    guid: 664a97fdc975d63488dd6f91a7935eaf
+  - enabled: 1
+    path: Assets/Scenes/CuartoNPCPrueba.unity
+    guid: 48c3de9a34f012240a195fa1215e80b8
+  - enabled: 1
+    path: Assets/Scenes/FANPOL.unity
+    guid: 7f4ffe70667f04d4e8303f0c989754d4
   m_configObjects: {}
