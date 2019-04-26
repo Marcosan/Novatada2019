@@ -679,7 +679,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 445781706}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.42, y: -13.72, z: 0}
+  m_LocalPosition: {x: -6.52, y: -11.94, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1943310592}
@@ -25678,7 +25678,6 @@ PrefabInstance:
       propertyPath: m_ColliderPaths.Array.data[13].m_ColliderPaths.Array.data[0].Array.data[3].Y
       value: -140000000
       objectReference: {fileID: 0}
-<<<<<<< HEAD
     - target: {fileID: 6600002, guid: 06538c6e00ea49f47aecde70f8cf8467, type: 3}
       propertyPath: m_CompositePaths.m_Paths.Array.data[0].Array.data[2].y
       value: -4
@@ -25695,8 +25694,6 @@ PrefabInstance:
       propertyPath: m_CompositePaths.m_Paths.Array.data[1].Array.data[3].y
       value: -4
       objectReference: {fileID: 0}
-=======
->>>>>>> refs/remotes/origin/master
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 06538c6e00ea49f47aecde70f8cf8467, type: 3}
 --- !u!60 &2081725742 stripped

@@ -10,6 +10,7 @@ public class Player : MonoBehaviour{
     Rigidbody2D rb2d;
     public float speed = 4f;
     Animator anim;
+    private bool CanMove = true;
 
     private static PlayerData PlData;
     //private static GlobalDataGame GmData;
@@ -33,10 +34,14 @@ public class Player : MonoBehaviour{
     public Joystick joystick;
 
     /* Desde el player se carga la partida y los otros componentes necesarios, asi que por eso esta como objeto en el menu principal
-     * de juego, para que no salgan errores por la falta de joystick y etc pondremos un booleano
-     */
-     public bool isMainMenu = false;
-    
+    * de juego, para que no salgan errores por la falta de joystick y etc pondremos un booleano
+    */
+    public bool isMainMenu = false;
+
+    private bool isMovingAlone = false;
+    private float speedTmp = 4f;
+    private Vector3 destinyAlone;
+
     private void Awake(){
         Assert.IsNotNull(initialMap);
 
@@ -127,7 +132,7 @@ public class Player : MonoBehaviour{
     // Update is called once per frame
     void Update(){
 
-        if (!isMainMenu)
+        if (!isMainMenu && CanMove)
         {
             if (isActionButton)
             {
@@ -145,7 +150,18 @@ public class Player : MonoBehaviour{
 
             Interact();
         }
-        
+        if (isMovingAlone) {
+            if (transform.position == destinyAlone){
+                Debug.Log("Llegp al punto");
+                GetComponent<BoxCollider2D>().enabled = true;
+                GetComponent<SpriteRenderer>().enabled = true;
+                MovePlayer(true);
+                isMovingAlone = false;
+            }
+            else
+                transform.position = Vector3.MoveTowards(transform.position, destinyAlone, speedTmp * Time.deltaTime);
+            
+        }
     }
     
     private void FixedUpdate(){
@@ -372,4 +388,21 @@ public class Player : MonoBehaviour{
         SoundManager.SetClip("M");
     }
 
+    public void MovePlayer(bool move) {
+        mov = new Vector2(0f,0f);
+        this.CanMove = move;
+    }
+
+    public void MainMenu() {
+        SceneManager.LoadScene("MenuScene", LoadSceneMode.Single);
+    }
+
+    public void MoveAlone(Vector3 destiny, float speed) {
+        GetComponent<SpriteRenderer>().enabled = false;
+        GetComponent<BoxCollider2D>().enabled = false;
+        MovePlayer(false);
+        destinyAlone = destiny;
+        speedTmp = speed;
+        isMovingAlone = true;
+    }
 }

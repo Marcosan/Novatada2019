@@ -12,11 +12,11 @@ public class Area : MonoBehaviour{
         anim = GetComponent<Animator>();
     }
 
-    public IEnumerator ShowArea(string name){
+    public IEnumerator ShowArea(string name, float time){
         anim.Play("Area_show");
         transform.GetChild(0).GetComponent<Text>().text = name;
         transform.GetChild(1).GetComponent<Text>().text = name;
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(time);
 
         anim.Play("Area_fadeout");
     }
