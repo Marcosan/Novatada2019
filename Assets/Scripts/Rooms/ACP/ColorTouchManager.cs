@@ -5,6 +5,7 @@ using UnityEngine;
 public class ColorTouchManager : MonoBehaviour {
 
     private SpriteRenderer color;
+    private bool isPlayer;
 
     private void Start(){
         color = GetComponent<SpriteRenderer>();
@@ -13,9 +14,14 @@ public class ColorTouchManager : MonoBehaviour {
     }
 
     private void OnTriggerEnter2D(Collider2D collision){
-        if (collision.gameObject.tag == "Player"){
+        if (collision.gameObject.tag == "Player")
+            isPlayer = true;
+        if (collision.gameObject.tag == "NPC")
+            isPlayer = false;
+
+        if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "NPC"){
             color.color = new Color(color.color.r, color.color.g, color.color.b, 1f);
-            transform.parent.GetComponent<ColorManager>().SetContadorVeces();
+            transform.parent.GetComponent<ColorManager>().SetContadorVeces(isPlayer);
             transform.GetComponent<BoxCollider2D>().enabled = false;
         }
     }

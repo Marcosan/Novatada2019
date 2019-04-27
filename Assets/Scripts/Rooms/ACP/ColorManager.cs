@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ColorManager : MonoBehaviour {
 
@@ -14,11 +15,16 @@ public class ColorManager : MonoBehaviour {
     private Vector2 PosColor;
     private int cantColores;
     private Area areaScript;
+    private GameObject ContadorUI;
+    private Image ColorCorrecto;
 
     void Start(){
         listaX = new List<float>() { 0, 2, 4, 6, 8, 10 };
         listaY = new List<float>() { 0, -2, -4, -6, -8 };
         areaScript = GameObject.Find("Area").GetComponent<Area>();
+        ColorCorrecto = GameObject.Find("Area/ColorCorrecto").GetComponent<Image>();
+        ContadorUI = GameObject.Find("Area/Contador");
+
         ChildrenColores = new List<Transform>();
         foreach (Transform child in colores){
             //child.GetComponent<SpriteRenderer>().enabled = false;
@@ -45,14 +51,25 @@ public class ColorManager : MonoBehaviour {
         }
 
         ChildrenColores[colorRandom].GetComponent<BoxCollider2D>().enabled = true;
+        Color colorUI = ChildrenColores[colorRandom].GetComponent<SpriteRenderer>().color;
+        ColorCorrecto.color = new Color(colorUI.r, colorUI.g, colorUI.b, 1f);
     }
 
-    public void SetContadorVeces() {
-        contadorVeces++;
-        Debug.Log(contadorVeces);
+    public void SetContadorVeces(bool isPlayer) {
+        if(isPlayer)
+            contadorVeces++;
+        else
+            contadorVeces--;
+
+        contadorVeces = Mathf.Clamp(contadorVeces, 0, numeroVeces);
+
+        ContadorUI.transform.GetChild(0).GetComponent<Text>().text = contadorVeces + "";
+        ContadorUI.transform.GetChild(1).GetComponent<Text>().text = contadorVeces + "";
+
         if (CheckIfWin()) {
             DoSomethingForWinner();
         }
+
     }
 
     public void DoSomethingForWinner() {
