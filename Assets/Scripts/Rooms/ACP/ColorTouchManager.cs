@@ -16,10 +16,10 @@ public class ColorTouchManager : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision){
         if (collision.gameObject.tag == "Player")
             isPlayer = true;
-        if (collision.gameObject.tag == "NPC")
+        if (collision.gameObject.tag == "Neko")
             isPlayer = false;
 
-        if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "NPC"){
+        if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "Neko"){
             color.color = new Color(color.color.r, color.color.g, color.color.b, 1f);
             transform.parent.GetComponent<ColorManager>().SetContadorVeces(isPlayer);
             transform.GetComponent<BoxCollider2D>().enabled = false;

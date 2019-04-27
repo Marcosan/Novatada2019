@@ -17,11 +17,13 @@ public class ColorManager : MonoBehaviour {
     private Area areaScript;
     private GameObject ContadorUI;
     private Image ColorCorrecto;
+    private Transform ColorNeko;
 
     void Start(){
         listaX = new List<float>() { 0, 2, 4, 6, 8, 10 };
         listaY = new List<float>() { 0, -2, -4, -6, -8 };
         areaScript = GameObject.Find("Area").GetComponent<Area>();
+        ColorNeko = GameObject.Find("MapaGame/PixelCat").transform;
         ColorCorrecto = GameObject.Find("Area/ColorCorrecto").GetComponent<Image>();
         ContadorUI = GameObject.Find("Area/Contador");
 
@@ -53,6 +55,7 @@ public class ColorManager : MonoBehaviour {
         ChildrenColores[colorRandom].GetComponent<BoxCollider2D>().enabled = true;
         Color colorUI = ChildrenColores[colorRandom].GetComponent<SpriteRenderer>().color;
         ColorCorrecto.color = new Color(colorUI.r, colorUI.g, colorUI.b, 1f);
+        ColorNeko.GetComponent<ColorNeko>().DestinyPoint(ChildrenColores[colorRandom].position);
     }
 
     public void SetContadorVeces(bool isPlayer) {
