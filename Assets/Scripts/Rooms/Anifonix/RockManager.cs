@@ -5,7 +5,7 @@ using UnityEngine;
 public class RockManager : MonoBehaviour {
 
     public float rotateSpeed = 0.2f;
-    public float gravedad = 0.2f;
+    public float gravedad = 0.25f;
     public Transform LimiteSuperior;
 
     private int rotateDirection;
@@ -28,7 +28,7 @@ public class RockManager : MonoBehaviour {
     }
 
     private void MoveRocRandomPositionX() {
-        float random = Random.Range(0, 8);
+        float random = Random.Range(0, 16);
         Vector3 toLocalPos = transform.parent.InverseTransformPoint(LimiteSuperior.position);
         transform.localPosition = new Vector3(random, toLocalPos.y, transform.position.z);
     }
@@ -43,7 +43,7 @@ public class RockManager : MonoBehaviour {
     }
 
     private void RandomGravity() {
-        porcentaje = Random.Range(1, 11);
+        porcentaje = Random.Range(1, 16);
         porcentaje = porcentaje / 10;
         rigidbody.gravityScale = porcentaje * gravedad;
     }
