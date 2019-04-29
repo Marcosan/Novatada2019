@@ -48,7 +48,7 @@ public class ColorNeko : MonoBehaviour {
 
         //Si llega al punto destiny cambia el indice del destino y origen
         if (transform.position == destiny){
-            Debug.Log("Llego al punto");
+            //Debug.Log("Llego al punto");
         }
         
     }

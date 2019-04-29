@@ -17,7 +17,10 @@ public class ColorManager : MonoBehaviour {
     private Area areaScript;
     private GameObject ContadorUI;
     private Image ColorCorrecto;
+    private Image Marco;
     private Transform ColorNeko;
+    private ShowScore showScore;
+    private bool LevelClear = false;
 
     void Start(){
         listaX = new List<float>() { 0, 2, 4, 6, 8, 10 };
@@ -26,6 +29,8 @@ public class ColorManager : MonoBehaviour {
         ColorNeko = GameObject.Find("MapaGame/PixelCat").transform;
         ColorCorrecto = GameObject.Find("Area/ColorCorrecto").GetComponent<Image>();
         ContadorUI = GameObject.Find("Area/Contador");
+        showScore = GameObject.Find("MapaGame/ShowScore").GetComponent<ShowScore>();
+        Marco = GameObject.Find("Area/Marco").GetComponent<Image>();
 
         ChildrenColores = new List<Transform>();
         foreach (Transform child in colores){
@@ -76,7 +81,15 @@ public class ColorManager : MonoBehaviour {
     }
 
     public void DoSomethingForWinner() {
+        LevelClear = true;
         StartCoroutine(areaScript.ShowArea("¡Nivel Superado!", 1f));
+
+        ColorCorrecto.enabled = false;
+        Marco.enabled = false;
+        ContadorUI.SetActive(false);
+        showScore.enabled = false;
+        ColorNeko.GetComponent<ColorNeko>().enabled = false;
+        ColorNeko.GetComponent<NpcChase>().enabled = true;
     }
 
     public void ResetContadorVeces() {
@@ -100,5 +113,9 @@ public class ColorManager : MonoBehaviour {
             lista[i] = lista[r];
             lista[r] = tmp;
         }
+    }
+
+    public bool CheckIsClear() {
+        return LevelClear;
     }
 }

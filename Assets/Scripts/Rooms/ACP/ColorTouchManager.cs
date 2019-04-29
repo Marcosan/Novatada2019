@@ -21,7 +21,8 @@ public class ColorTouchManager : MonoBehaviour {
 
         if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "Neko"){
             color.color = new Color(color.color.r, color.color.g, color.color.b, 1f);
-            transform.parent.GetComponent<ColorManager>().SetContadorVeces(isPlayer);
+            if(!transform.parent.GetComponent<ColorManager>().CheckIsClear())
+                transform.parent.GetComponent<ColorManager>().SetContadorVeces(isPlayer);
             transform.GetComponent<BoxCollider2D>().enabled = false;
         }
     }
