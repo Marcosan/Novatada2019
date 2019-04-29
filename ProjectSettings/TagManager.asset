@@ -12,11 +12,7 @@ TagManager:
   - Zoom
   - Neko
   - PlayerNeko
-  - Color01
-  - Color02
-  - Color03
-  - Color04
-  - Color05
+  - LimiteInferior
   layers:
   - Default
   - TransparentFX

@@ -9,6 +9,7 @@ public class Player : MonoBehaviour{
     Vector2 lastMov;
     Rigidbody2D rb2d;
     public float speed = 4f;
+    private float originalSpeed;
     Animator anim;
     private bool CanMove = true;
 
@@ -54,7 +55,9 @@ public class Player : MonoBehaviour{
 
     // Start is called before the first frame update
     void Start(){
-        
+
+        originalSpeed = speed;
+
         anim = GetComponent<Animator>();
         rb2d = GetComponent<Rigidbody2D>();
 
@@ -404,5 +407,13 @@ public class Player : MonoBehaviour{
         destinyAlone = destiny;
         speedTmp = speed;
         isMovingAlone = true;
+    }
+
+    public void SetSpeed(float newSpeed) {
+        speed = newSpeed;
+    }
+
+    public void ResetToNormalSpeed() {
+        speed = originalSpeed;
     }
 }
