@@ -21,7 +21,10 @@ public class PortalLightScript : MonoBehaviour {
 
             animacion.SetFloat("Entrada", 1);
             animacion.SetFloat("Salida", 0);
-           // Debug.Log("Esta entrando!");
+
+
+            // En este punto se activa el boton de Accion
+            changer.StartAction();
 
         }
     }   
@@ -32,7 +35,10 @@ private void OnTriggerStay2D(Collider2D collision)
         if (collision.gameObject.tag == "Player")
         {
             animacion.SetFloat("Estadia", 1);
-          //  Debug.Log("Permanece!");
+
+
+            // En este punto se activa el boton de Accion
+            changer.StartAction();
         }
     }
 
@@ -44,7 +50,9 @@ private void OnTriggerStay2D(Collider2D collision)
             animacion.SetFloat("Salida", 1);
             animacion.SetFloat("Entrada", 0);
             animacion.SetFloat("Estadia", 0);
-           // Debug.Log("Se va!!");
+            // En este punto se desactiva el boton de Accion
+            changer.DisableButton();
         }
+        
  }
 }

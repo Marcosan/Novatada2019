@@ -28,9 +28,6 @@ public class PickWeapon : MonoBehaviour
     RaycastHit2D hit;
 
 
-    
-
-
     void Start()
     {
         anim = GetComponent<Animator>();
