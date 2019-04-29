@@ -8,11 +8,15 @@ public class RockManager : MonoBehaviour {
     public float gravedad = 0.25f;
     public Transform LimiteSuperior;
 
+    private Transform retroceso;
     private int rotateDirection;
     private float porcentaje;
     private Rigidbody2D rigidbody;
+    private Player PlayerScript;
 
     void Start(){
+        PlayerScript = GameObject.Find("Player").GetComponent<Player>();
+        retroceso = GameObject.Find("Player/Retroceso").transform;
         rigidbody = GetComponent<Rigidbody2D>();
     }
 
@@ -24,6 +28,12 @@ public class RockManager : MonoBehaviour {
             RandomDirectionRotate();
             RandomGravity();
             MoveRocRandomPositionX();
+        }        
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision){
+        if (collision.gameObject.tag == "Player"){
+            PlayerDamage();
         }
     }
 
@@ -46,6 +56,10 @@ public class RockManager : MonoBehaviour {
         porcentaje = Random.Range(1, 16);
         porcentaje = porcentaje / 10;
         rigidbody.gravityScale = porcentaje * gravedad;
+    }
+
+    private void PlayerDamage() {
+        PlayerScript.MoveAlone(retroceso.position, 8f);
     }
 
     private bool GetRandomBoolean(){

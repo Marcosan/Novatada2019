@@ -16,9 +16,9 @@ public class SpeedDown : MonoBehaviour {
         if (collision.gameObject.tag == "Player"){
             //Si mov es negativo es porque Player va hacia abajo
             if (PlayerScript.getMov().y > 0){
-                PlayerScript.SetSpeed(2.5f);
+                PlayerScript.SetSpeed(2f);
             } else{
-                PlayerScript.SetSpeed(5.5f);
+                PlayerScript.SetSpeed(6f);
             }
             
         }
