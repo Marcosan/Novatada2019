@@ -13,6 +13,7 @@ TagManager:
   - Neko
   - PlayerNeko
   - LimiteInferior
+  - Ground
   layers:
   - Default
   - TransparentFX

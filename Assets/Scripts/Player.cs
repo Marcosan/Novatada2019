@@ -12,7 +12,10 @@ public class Player : MonoBehaviour{
     private float originalSpeed;
     Animator anim;
     private bool CanMove = true;
-
+    public bool isPlatformer = false;
+    public bool isGrounded= false;
+    public bool isJumping = false;
+    public float jumpForce = 100f;
     private static PlayerData PlData;
     //private static GlobalDataGame GmData;
 
@@ -253,6 +256,16 @@ public class Player : MonoBehaviour{
     // Mover al jugador
     void MoveCharacter(){
         rb2d.MovePosition(rb2d.position + getMov() * speed * Time.deltaTime);
+        if (isPlatformer) {
+            if (isJumping && !isGrounded) {
+                JumpPhysics();
+                isJumping = false;
+            }
+            if(rb2d.velocity.y == 0) {
+                //isJumping = false;
+            }
+            
+        }
     }
 
     // Asignar al player la posicion indicada
@@ -415,5 +428,25 @@ public class Player : MonoBehaviour{
 
     public void ResetToNormalSpeed() {
         speed = originalSpeed;
+    }
+
+    public void ApplyPhysicsPlatform(float moveForce, float maxSpeed) {
+        GetComponent<Rigidbody2D>().velocity = Vector3.ClampMagnitude(GetComponent<Rigidbody2D>().velocity, maxSpeed);
+        GetComponent<Rigidbody2D>().AddForce(mov.normalized * moveForce);
+    }
+
+    public void Jump(float moveForce) {
+        if (isPlatformer) {
+            isJumping = true;
+            //jumpForce = moveForce;
+        }            
+    }
+
+    private void JumpPhysics() {
+        GetComponent<Rigidbody2D>().AddForce(Vector2.up * jumpForce);
+    }
+
+    public void SetGrounded(bool grounded) {
+        isGrounded = grounded;
     }
 }
