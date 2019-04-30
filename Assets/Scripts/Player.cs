@@ -353,6 +353,14 @@ public class Player : MonoBehaviour{
 
     }
 
+    public void LoadAboutUs()
+    {
+
+        SceneManager.LoadScene("AboutUs", LoadSceneMode.Single);
+        SoundManager.BackgroundMusic.mute = true;
+
+    }
+
     // No preguntes por que esta esto aqui, el editor me lo dio como solucion y no se por que no coge sin ponerlo en metodo
     // Trata de mandar todos los datos que estaban guardados en el GlobalDataGame en una variable de datos temporales en
     // Save System para evitar que se eliminen o sobreescriban datos que no quieres
