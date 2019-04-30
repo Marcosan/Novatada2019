@@ -2610,6 +2610,122 @@ Transform:
   m_Father: {fileID: 1996797346}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &391308676
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5261137158636983941, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_Name
+      value: NPC (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -8.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.095703125
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983943, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300002, guid: bb7f1561b6f479444adb05866713afde,
+        type: 3}
+    - target: {fileID: 5261137158636983940, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: spriteSheetName
+      value: Chica04
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983936, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636984061, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 056431f14c0aaae4a9e9208651b9569e, type: 3}
+--- !u!1 &391308677 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5261137158636983941, guid: 056431f14c0aaae4a9e9208651b9569e,
+    type: 3}
+  m_PrefabInstance: {fileID: 391308676}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &391308678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 391308677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 381951265af33904bbbb71d562f3b155, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: David
+    sentences:
+    - Que tal, soy David, bienvenido al mundo que creamos.
+    - no te dejes llevar por las apariencias.
+    - "detras de estas duras paredes y oscuridad hay un gran amante de ....  s\xED"
+    - Metallica.
+    - Unete te esperamos.
 --- !u!4 &519420032 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4330474358076234574, guid: dc67428942e45b441b33c28921ff06e1,
@@ -2652,6 +2768,121 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 7109734856141279108}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &616701639
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5261137158636983941, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_Name
+      value: NPC (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.095703125
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983943, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 5fd9fb39b6bfeee4b9eeeb9b3e07d8ed,
+        type: 3}
+    - target: {fileID: 5261137158636983940, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: spriteSheetName
+      value: Chica04
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983936, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636984061, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 056431f14c0aaae4a9e9208651b9569e, type: 3}
+--- !u!1 &616701640 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5261137158636983941, guid: 056431f14c0aaae4a9e9208651b9569e,
+    type: 3}
+  m_PrefabInstance: {fileID: 616701639}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &616701641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 616701640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 381951265af33904bbbb71d562f3b155, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Marco
+    sentences:
+    - Bienvenido, Soy Marco elLider de este grupo
+    - "Me gustan los video juegos en Especial Mario y zelda, adem\xE1s del anime"
+    - "Actualmente ya soyingeniero espero \nt\xFA pronto puedas ser arte de esta familia"
+    - Te esperamos
 --- !u!1 &617103234
 GameObject:
   m_ObjectHideFlags: 0
@@ -3224,6 +3455,123 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &1511824396
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5261137158636983941, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_Name
+      value: NPC (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6.77
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.095703125
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983943, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300002, guid: 1e40b60b40840f94dae665bb4195da52,
+        type: 3}
+    - target: {fileID: 5261137158636983940, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: spriteSheetName
+      value: Chica04
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983936, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636984061, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 056431f14c0aaae4a9e9208651b9569e, type: 3}
+--- !u!1 &1511824397 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5261137158636983941, guid: 056431f14c0aaae4a9e9208651b9569e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1511824396}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1511824398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1511824397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 381951265af33904bbbb71d562f3b155, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Chris
+    sentences:
+    - 'Hola soy Chrisian otro creador del juego '
+    - Me gusta mucho los video juegos , Spiderman y el rock alternativo
+    - "Actualemente estoy viendo en Estados unidos per a\xFAn asi colaboro con los
+      chicos"
+    - 'Esperamos que puedas unirte para poder aprender y pasar increibles momentos '
+    - Te esperamos
 --- !u!1 &1614738622
 GameObject:
   m_ObjectHideFlags: 0
@@ -3841,6 +4189,124 @@ Animator:
     type: 3}
   m_PrefabInstance: {fileID: 1980782311}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1989425409
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5261137158636983941, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_Name
+      value: NPC (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.095703125
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983943, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300002, guid: a0aa69ca87a3a1b47bb8abe3240fe5f5,
+        type: 3}
+    - target: {fileID: 5261137158636983940, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: spriteSheetName
+      value: Chica04
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983936, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636984061, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 056431f14c0aaae4a9e9208651b9569e, type: 3}
+--- !u!1 &1989425410 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5261137158636983941, guid: 056431f14c0aaae4a9e9208651b9569e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1989425409}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1989425411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1989425410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 381951265af33904bbbb71d562f3b155, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Nicole
+    sentences:
+    - Bienvenido me llamo Nicole y soy una de los creadores de este juego
+    - Soy fan de las series de heroes especialmente the flash, me gusta el kpop particularmente
+      BTS
+    - "estoy en la carrera de computaci\xF3n en  la Facultad de Fiec"
+    - "me encantar\xEDa que te unas a esta hermosa familia si quieres saber m\xE1s
+      de kokoa ac\xE9rcate al club o escr\xEDbenos en nuestras redes sociales"
+    - no olvides nunca se es demasiado inexperto para estar en un club, te esperamos!!
 --- !u!1 &1996797345
 GameObject:
   m_ObjectHideFlags: 0
