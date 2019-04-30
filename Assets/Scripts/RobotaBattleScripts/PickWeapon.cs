@@ -27,45 +27,28 @@ public class PickWeapon : MonoBehaviour
     Vector3 forward;
     RaycastHit2D hit;
 
-
     void Start()
     {
-        anim = GetComponent<Animator>();
-
-
         // Para recuperar al player
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
-    // Detectamos la colisión con una corrutina
-    IEnumerator OnTriggerEnter2D(Collider2D col)
-    {
 
-        // Si es un ataque
-        if (col.tag == "Action")
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Action")
         {
+
             SoundManager.SetClip("A");
+            Debug.Log("RECOGELA");
+            GameObject laEspada = Instantiate(NPCname,player.transform);
+            laEspada.transform.position = player.transform.position;
+            laEspada.GetComponent<SwordIdle>().enabled = true;
 
-            // Reproducimos la animación de destrucción y esperamos
-            anim.Play(PickAnim);
-            yield return new WaitForSeconds(timeForDisable);
-
-            // Pasados los segundos de espera desactivamos los colliders 2D
-            foreach (Collider2D c in GetComponents<Collider2D>())
-            {
-                c.enabled = false;
-            }
-
+            SwordIdle.NewWeapon(laEspada);
         }
-
     }
 
-    // Podemos dibujar el radio de visión y ataque sobre la escena dibujando una esfera
-    void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, visionRadius);
-    }
 
     private void OnDestroy()
     {
@@ -77,56 +60,27 @@ public class PickWeapon : MonoBehaviour
 
         // "Destruir" el objeto al finalizar la animación de destrucción
         // El estado debe tener el atributo 'loop' a false para no repetirse
-        AnimatorStateInfo stateInfo = anim.GetCurrentAnimatorStateInfo(0);
+        //  AnimatorStateInfo stateInfo = anim.GetCurrentAnimatorStateInfo(0);
 
         //stateInfo.normalizedTime >= 1 porque significa que termino la animacion, de [0,1]
-        if (stateInfo.IsName(PickAnim) && stateInfo.normalizedTime >= 1)
-        {
-            //MODIFICACION DE DAVID PARA ARMA
-            //Antes de destruir el objeto se crea uno nuevo para el jugador
-          /*  GameObject laEspada = Instantiate(NPCname,player.transform);
-            Vector3 A = new Vector3(0,-0.22f,-1f);
-            Quaternion B = Quaternion.Euler(0f,0f,-45f);
-           // laEspada.transform.position = player.transform.position ;
-           // laEspada.transform.rotation =  Quaternion.Slerp(player.transform.rotation,B,1);
-            */
-           // SwordIdle.NewWeapon(laEspada);
+        /*      if (stateInfo.IsName(PickAnim) && stateInfo.normalizedTime >= 1)
+              {
+                  //MODIFICACION DE DAVID PARA ARMA
+                  //Antes de destruir el objeto se crea uno nuevo para el jugador
+                 GameObject laEspada = Instantiate(NPCname,player.transform);
+                  Vector3 A = new Vector3(0,-0.22f,-1f);
+                  Quaternion B = Quaternion.Euler(0f,0f,-45f);
+                 // laEspada.transform.position = player.transform.position ;
+                 // laEspada.transform.rotation =  Quaternion.Slerp(player.transform.rotation,B,1);
 
-            Destroy(gameObject);
-            // En el futuro podríamos almacenar la instancia y su transform
-            // para crearlos de nuevo después de un tiempo
-        }
+                 // SwordIdle.NewWeapon(laEspada);
 
-        // Raycast desde el jarron hasta el player
-        hit = Physics2D.Raycast(
-            transform.position,
-            player.transform.position - transform.position,
-            visionRadius,
-            1 << LayerMask.NameToLayer("Default")
-            // Poner el propio Enemy en una layer distinta a Default para evitar el raycast
-            // También poner al objeto Attack y al Prefab Slash una Layer Attack 
-            // Sino los detectará como entorno y se mueve atrás al hacer ataques
-            );
+                  Destroy(gameObject);
+                  // En el futuro podríamos almacenar la instancia y su transform
+                  // para crearlos de nuevo después de un tiempo
+              } */
 
-        // Aquí podemos debugear el Raycast
-        forward = transform.TransformDirection(player.transform.position - transform.position);
-        Debug.DrawRay(transform.position, forward, Color.red);
 
-        // Si el Raycast encuentra al jugador habilitamos el boton
-        if (hit.collider != null)
-        {
-            if (hit.collider.tag == player.tag)
-            {
-                changer.StartAction();
-            }
-        }
-        else
-        {
-            if (!changer.GetBusyBtn())
-            {
-                changer.DisableButton();
-            }
-        }
 
     }
 
