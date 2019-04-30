@@ -2403,7 +2403,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &235568306
 Transform:
   m_ObjectHideFlags: 0
@@ -3020,6 +3020,105 @@ Transform:
   m_Father: {fileID: 510826762}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &329945355
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1996797346}
+    m_Modifications:
+    - target: {fileID: 5261137158636983941, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_Name
+      value: NPC3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.044921875
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983940, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: spriteSheetName
+      value: Otaku3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983936, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636984061, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 056431f14c0aaae4a9e9208651b9569e, type: 3}
 --- !u!1 &346330549
 GameObject:
   m_ObjectHideFlags: 0
@@ -3165,6 +3264,105 @@ Transform:
   m_Father: {fileID: 1393733096}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &365851147
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1996797346}
+    m_Modifications:
+    - target: {fileID: 5261137158636983941, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_Name
+      value: NPC4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 8.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.044921875
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983940, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: spriteSheetName
+      value: Otaku4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983936, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636984061, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 056431f14c0aaae4a9e9208651b9569e, type: 3}
 --- !u!1 &367999158
 GameObject:
   m_ObjectHideFlags: 0
@@ -4534,6 +4732,105 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &556535664
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1996797346}
+    m_Modifications:
+    - target: {fileID: 5261137158636983941, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_Name
+      value: NPC2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 15.71
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.044921875
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983940, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: spriteSheetName
+      value: Otaku2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983936, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636984061, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 056431f14c0aaae4a9e9208651b9569e, type: 3}
 --- !u!1 &561049684
 GameObject:
   m_ObjectHideFlags: 0
@@ -7479,6 +7776,35 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &942109492 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5261137158636983941, guid: 056431f14c0aaae4a9e9208651b9569e,
+    type: 3}
+  m_PrefabInstance: {fileID: 365851147}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &942109493 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+    type: 3}
+  m_PrefabInstance: {fileID: 365851147}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &942109494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 942109492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 381951265af33904bbbb71d562f3b155, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Transeunte
+    sentences:
+    - 'No nos limitamos a la cultura japonesa, '
+    - tambien vemos la coreana y la china!
 --- !u!1 &973814132
 GameObject:
   m_ObjectHideFlags: 0
@@ -7558,6 +7884,35 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &981112796 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5261137158636983941, guid: 056431f14c0aaae4a9e9208651b9569e,
+    type: 3}
+  m_PrefabInstance: {fileID: 556535664}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &981112797 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+    type: 3}
+  m_PrefabInstance: {fileID: 556535664}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &981112798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 981112796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 381951265af33904bbbb71d562f3b155, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: '"Miku"'
+    sentences:
+    - Nuestro club tiene las puertas abiertas para cualquier entusiasta, sientete
+      libre de unirtenos!
 --- !u!1 &992232485
 GameObject:
   m_ObjectHideFlags: 0
@@ -9291,6 +9646,105 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &1236546674
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1996797346}
+    m_Modifications:
+    - target: {fileID: 5261137158636983941, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_Name
+      value: NPC1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.73031
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 8.959956
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.044921875
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983940, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: spriteSheetName
+      value: Otaku1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636983936, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261137158636984061, guid: 056431f14c0aaae4a9e9208651b9569e,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 056431f14c0aaae4a9e9208651b9569e, type: 3}
 --- !u!1 &1237945237
 GameObject:
   m_ObjectHideFlags: 0
@@ -13220,6 +13674,34 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!1 &1870334187 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5261137158636983941, guid: 056431f14c0aaae4a9e9208651b9569e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1236546674}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1870334188 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1236546674}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1870334189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1870334187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 381951265af33904bbbb71d562f3b155, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Kaichou
+    sentences:
+    - Bienvenido a FANPOL, club dedicado a la cultura asiatica!
 --- !u!1 &1874747411
 GameObject:
   m_ObjectHideFlags: 0
@@ -14211,6 +14693,35 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1956292412 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5261137158636983941, guid: 056431f14c0aaae4a9e9208651b9569e,
+    type: 3}
+  m_PrefabInstance: {fileID: 329945355}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1956292413 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5261137158636983942, guid: 056431f14c0aaae4a9e9208651b9569e,
+    type: 3}
+  m_PrefabInstance: {fileID: 329945355}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1956292414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1956292412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 381951265af33904bbbb71d562f3b155, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Dio
+    sentences:
+    - Soy yo, Dio!
+    - O no?
 --- !u!1 &1973517233
 GameObject:
   m_ObjectHideFlags: 0
@@ -14527,7 +15038,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1996797346
 Transform:
   m_ObjectHideFlags: 0
@@ -14542,6 +15053,10 @@ Transform:
   - {fileID: 1196528808}
   - {fileID: 235568306}
   - {fileID: 590567012}
+  - {fileID: 1870334188}
+  - {fileID: 981112797}
+  - {fileID: 1956292413}
+  - {fileID: 942109493}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -16026,7 +16541,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 102817666, guid: 9bb0cdcc2d0eff247912544efbf2f661, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 590567012, guid: 9bb0cdcc2d0eff247912544efbf2f661, type: 3}
       propertyPath: m_LocalPosition.x

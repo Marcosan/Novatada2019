@@ -14,13 +14,13 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: EjeX
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -46,15 +46,15 @@ BlendTree:
     m_Motion: {fileID: 7400000, guid: 26d7b323d0ec5114e9977f01e78422d3, type: 2}
     m_Threshold: 0
     m_Position: {x: 0, y: -1}
-    m_TimeScale: 1
+    m_TimeScale: 20
     m_CycleOffset: 0
-    m_DirectBlendParameter: EjeY
+    m_DirectBlendParameter: EjeX
     m_Mirror: 0
   - serializedVersion: 2
     m_Motion: {fileID: 7400000, guid: f52eb7e195c728248a969a5bf647f9b0, type: 2}
     m_Threshold: 0.33333334
     m_Position: {x: 0, y: 1}
-    m_TimeScale: 1
+    m_TimeScale: 20
     m_CycleOffset: 0
     m_DirectBlendParameter: EjeY
     m_Mirror: 0
@@ -62,7 +62,7 @@ BlendTree:
     m_Motion: {fileID: 7400000, guid: 3840a77a9acc33346b5c57f822a8c7d6, type: 2}
     m_Threshold: 0.6666667
     m_Position: {x: -1, y: 0}
-    m_TimeScale: 1
+    m_TimeScale: 20
     m_CycleOffset: 0
     m_DirectBlendParameter: EjeY
     m_Mirror: 0
@@ -70,7 +70,7 @@ BlendTree:
     m_Motion: {fileID: 7400000, guid: f892ad0937345cf479f17eaddc26febc, type: 2}
     m_Threshold: 1
     m_Position: {x: 1, y: 0}
-    m_TimeScale: 1
+    m_TimeScale: 20
     m_CycleOffset: 0
     m_DirectBlendParameter: EjeY
     m_Mirror: 0
@@ -80,7 +80,7 @@ BlendTree:
   m_MaxThreshold: 1
   m_UseAutomaticThresholds: 1
   m_NormalizedBlendValues: 0
-  m_BlendType: 3
+  m_BlendType: 2
 --- !u!1102 &1102627746542418962
 AnimatorState:
   serializedVersion: 5
