@@ -20,7 +20,6 @@ public class SingletonVars : Singleton<SingletonVars>{
 
     void Start(){
         targetOrtho = Camera.main.orthographicSize;
-        Debug.Log("start " + targetOrtho);
     }
 
     public string SetNameCurrentMap(string nameMap) {

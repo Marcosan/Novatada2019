@@ -12,6 +12,7 @@ TagManager:
   - Zoom
   - Neko
   - PlayerNeko
+  - LimiteInferior
   layers:
   - Default
   - TransparentFX
