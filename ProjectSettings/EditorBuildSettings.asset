@@ -18,6 +18,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Lobby.unity
     guid: 1f62f74cabe732941ad36fad35a58fbb
   - enabled: 1
+    path: Assets/Scenes/Argumentum.unity
+    guid: 3b416b4707c1f9a43bdc4c45d2f6fc93
+  - enabled: 1
+    path: Assets/Scenes/ArgumentumRoom.unity
+    guid: 9abbcfbb664ccb0418c77ffeaa1ce2c9
+  - enabled: 1
     path: Assets/Scenes/RoomMarco.unity
     guid: b0e2004116fc6e146afa58bb757f7701
   - enabled: 1

@@ -16,6 +16,7 @@ public class Player : MonoBehaviour{
     public bool isGrounded= false;
     public bool isJumping = false;
     public float jumpForce = 100f;
+    private int numChildren = 0;
     private static PlayerData PlData;
     //private static GlobalDataGame GmData;
 
@@ -58,6 +59,9 @@ public class Player : MonoBehaviour{
 
     // Start is called before the first frame update
     void Start(){
+        foreach (Transform t in transform){
+            numChildren++;
+        }
 
         originalSpeed = speed;
 
@@ -257,14 +261,10 @@ public class Player : MonoBehaviour{
     void MoveCharacter(){
         rb2d.MovePosition(rb2d.position + getMov() * speed * Time.deltaTime);
         if (isPlatformer) {
-            if (isJumping && !isGrounded) {
+            if (isJumping && isGrounded) {
                 JumpPhysics();
                 isJumping = false;
             }
-            if(rb2d.velocity.y == 0) {
-                //isJumping = false;
-            }
-            
         }
     }
 
@@ -443,7 +443,9 @@ public class Player : MonoBehaviour{
     }
 
     private void JumpPhysics() {
-        GetComponent<Rigidbody2D>().AddForce(Vector2.up * jumpForce);
+        float jump = transform.GetChild(numChildren - 1).localPosition.y;
+        Debug.Log(jump * jumpForce);
+        GetComponent<Rigidbody2D>().AddForce(new Vector2(0, jump) * jumpForce);
     }
 
     public void SetGrounded(bool grounded) {
